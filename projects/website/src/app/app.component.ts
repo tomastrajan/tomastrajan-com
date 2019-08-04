@@ -21,9 +21,7 @@ export class AppComponent implements OnInit {
   isSmallOrSmaller: Observable<boolean>;
   sidenavMode: Observable<string>;
 
-  constructor(
-    private responsiveLayoutService: ResponsiveLayoutService,
-  ) {}
+  constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
 
   ngOnInit() {
     this.isSmallOrSmaller = combineLatest(

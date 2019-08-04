@@ -11,10 +11,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule,
-        SharedModule
-      ],
+      imports: [HttpClientTestingModule, SharedModule],
       declarations: [HomeComponent]
     }).compileComponents();
   }));
