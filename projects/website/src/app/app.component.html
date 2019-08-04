@@ -1,7 +1,20 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-
-<router-outlet></router-outlet>
+<tt-toolbar
+  (toggle)="onNavToggle()"
+  [navOpened]="navOpened | async"
+></tt-toolbar>
+<mat-sidenav-container
+  [hasBackdrop]="isSmallOrSmaller | async"
+  (backdropClick)="onBackdropClick()"
+>
+  <mat-sidenav
+    [mode]="sidenavMode | async"
+    [opened]="navOpened | async"
+    disableClose
+  >
+    <tt-navigation></tt-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<tt-footer></tt-footer>
