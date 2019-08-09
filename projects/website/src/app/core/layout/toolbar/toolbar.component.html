@@ -21,7 +21,7 @@
     ></mat-icon>
   </a>
   <span class="project-name"
-    >{{ (isResponsiveLayout | async) ? '' : '' }}Tomas Trajan</span
+    >{{ (isResponsiveLayout | async) ? '' : '' }}TOMAS TRAJAN</span
   >
   <iframe
     *ngIf="!(isResponsiveLayout | async)"
@@ -70,13 +70,7 @@
     ></mat-icon>
   </a>
   <mat-icon
-    svgIcon="lightbulb-off"
-    *ngIf="!isDarkMode"
-    (click)="toggleDarkMode()"
-  ></mat-icon>
-  <mat-icon
-    svgIcon="lightbulb"
-    *ngIf="isDarkMode"
+    [svgIcon]="isDarkMode ? 'lightbulb' : 'lightbulb-off'"
     (click)="toggleDarkMode()"
   ></mat-icon>
 </mat-toolbar>

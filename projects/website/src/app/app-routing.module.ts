@@ -9,6 +9,13 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'workshops',
+    loadChildren: () =>
+      import('./features/workshops/workshops.module').then(
+        m => m.WorkshopsModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

@@ -20,7 +20,7 @@
       }
     }
 
-    a {
+    a, mat-icon {
       &:hover {
         color: mat-color($primary) !important;
       }
