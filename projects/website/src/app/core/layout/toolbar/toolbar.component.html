@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <button
     mat-icon-button
     *ngIf="isResponsiveLayout | async"
@@ -23,24 +23,36 @@
   <span class="project-name"
     >{{ (isResponsiveLayout | async) ? '' : '' }}Tomas Trajan</span
   >
+  <iframe
+    *ngIf="!(isResponsiveLayout | async)"
+    allowtransparency="true"
+    frameborder="0"
+    scrolling="no"
+    src="//platform.twitter.com/widgets/follow_button.html?screen_name=tomastrajan&show_screen_name=false"
+  ></iframe>
 
   <span class="spacer"></span>
   <ng-container *ngIf="(isResponsiveLayout | async) === false">
-    <button
-      mat-flat-button
-      routerLink="home"
-      routerLinkActive="active"
-      color="primary"
-    >
+    <button mat-flat-button routerLink="home" routerLinkActive="active">
       HOME
     </button>
-    <button
-      mat-flat-button
-      routerLink="workshops"
-      routerLinkActive="active"
-      color="primary"
-    >
+    <button mat-flat-button routerLink="workshops" routerLinkActive="active">
       WORKSHOPS
+    </button>
+    <button mat-flat-button routerLink="consulting" routerLinkActive="active">
+      CONSULTING
+    </button>
+    <button mat-flat-button routerLink="speaking" routerLinkActive="active">
+      SPEAKING
+    </button>
+    <button mat-flat-button routerLink="open-source" routerLinkActive="active">
+      OPEN SOURCE
+    </button>
+    <button mat-flat-button routerLink="blog" routerLinkActive="active">
+      BLOG
+    </button>
+    <button mat-flat-button routerLink="community" routerLinkActive="active">
+      COMMUNITY
     </button>
   </ng-container>
   <a mat-icon-button href="https://github.com/tomastrajan" target="_blank">
@@ -57,4 +69,14 @@
       aria-label="Twitter"
     ></mat-icon>
   </a>
+  <mat-icon
+    svgIcon="lightbulb-off"
+    *ngIf="!isDarkMode"
+    (click)="toggleDarkMode()"
+  ></mat-icon>
+  <mat-icon
+    svgIcon="lightbulb"
+    *ngIf="isDarkMode"
+    (click)="toggleDarkMode()"
+  ></mat-icon>
 </mat-toolbar>

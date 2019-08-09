@@ -1,18 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 185.6 210">
-  <defs>
-    <style>
+<svg viewBox="0 0 195 210" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>
       .cls-1{fill: #ffffff; stroke: #eeeeee; stroke-width: 5; stroke-location: outside; stroke-linecap: square;}
       .cls-2{fill: #eeeeee;}
-      .cls-3{fill: #880e4f;}
-      .cls-4{fill: #d32f2f;}
-    </style>
-  </defs><title>components</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      <polygon class="cls-1" points="92.4 0 92.4 0 92.4 0 0 33.3 14 156.1 92.4 200 92.4 200 92.4 200 171.3 156.1 185.6 33.3 92.4 0"/>
-      <polygon class="cls-2" points="92.4 0 92.4 22.2 92.4 22.2 92.4 123.2 92.4 123.2 92.4 200 92.4 200 171.3 156.1 185.6 33.3 92.4 0"/>
-      <polygon class="cls-3" points="73.6 131.4 54.3 98 84.3 46.1 62.8 46.1 32.8 98 62.8 150 84.4 150 73.6 131.4 73.6 131.4"/>
-      <polygon class="cls-4" points="152.8 98 122.8 46.1 84.3 46.1 54.3 98 73.6 64.7 112.1 64.7 131.3 98 112.1 131.4 73.6 131.4 84.4 150 122.8 150 152.8 98"/>
-    </g>
+      .cls-3{fill: #333333;}
+  </style>
+ </defs>
+ <title>components</title>
+ <g>
+  <title>Layer 1</title>
+  <g id="Layer_1-2">
+   <polygon id="svg_1" points="97.09999465942383,4.9295783042907715 97.09999465942383,4.9295783042907715 97.09999465942383,4.9295783042907715 4.700004577636719,38.22956466674805 18.700000762939453,161.02957153320312 97.09999465942383,204.9295654296875 97.09999465942383,204.9295654296875 97.09999465942383,204.9295654296875 175.99999618530273,161.02957153320312 190.29999923706055,38.22956466674805 97.09999465942383,4.9295783042907715 " class="cls-1"/>
+   <polygon id="svg_2" points="96.9774560034275,4.9295783042907715 96.9774560034275,27.129566192626953 96.9774560034275,27.129566192626953 96.9774560034275,128.1295623779297 96.9774560034275,128.1295623779297 96.9774560034275,204.9295654296875 96.9774560034275,204.9295654296875 175.8774575293064,161.02957153320312 190.17746058106422,38.22956466674805 96.9774560034275,4.9295783042907715 " class="cls-2"/>
+   <rect id="svg_3" class="cls-3" height="28" width="108" y="50" x="43" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="null"/>
+   <rect id="svg_4" class="cls-3" transform="rotate(90 97.5,105.05659484863283)" height="28" width="108" y="90" x="43" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="null"/>
   </g>
+ </g>
 </svg>

@@ -1,12 +1,9 @@
-<span>© {{ year }} 📆</span>
-<a
-  mat-icon-button
-  class="signature"
-  href="https://twitter.com/tomastrajan"
-  target="_blank"
->
-  <span>Made with ❤️ by </span>
+<span>© {{ year }}</span>
+<span class="signature">
+  <span>Made with</span>
+  <mat-icon>favorite</mat-icon>
+  <span> by </span>
   <img src="assets/tomastrajan.png" alt="Tomas Trajan" />
-  @tomastrajan
-</a>
-<span>🚀 {{ version }}</span>
+  <a href="https://twitter.com/tomastrajan" target="_blank">@tomastrajan</a>
+</span>
+<span>{{ version }}</span>

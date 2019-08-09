@@ -49,6 +49,18 @@ export class SharedModule {
       )
     );
     this.matIconRegistry.addSvgIcon(
+      'lightbulb-off',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/logo/lightbulb_off.svg'
+      )
+    );
+    this.matIconRegistry.addSvgIcon(
+      'lightbulb',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/logo/lightbulb.svg'
+      )
+    );
+    this.matIconRegistry.addSvgIcon(
       'logo',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/logo/logo.svg')
     );

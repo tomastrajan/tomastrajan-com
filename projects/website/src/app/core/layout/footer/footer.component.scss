@@ -6,10 +6,18 @@
 
   .signature {
     flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       border-radius: 50%;
       height: 36px;
+      margin: 0 10px;
+    }
+
+    mat-icon {
+      margin: 0 10px;
     }
   }
 }

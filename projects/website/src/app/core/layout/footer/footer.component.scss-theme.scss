@@ -8,17 +8,15 @@
   $background: map-get($theme, background);
 
   tt-footer {
-    color: mat-color($primary, lighter-contrast);
-    background-color: mat-color($primary, lighter);
+    color: mat-color($foreground, text);
+    background-color: mat-color($background, status-bar);
 
     a {
-      &:hover {
-        color: mat-color($primary, lighter-contrast);
-      }
-    }
+      color: mat-color($primary) !important;
 
-    img {
-      border: 1px solid mat-color($foreground, text);
+      &:hover {
+        color: mat-color($primary, darker) !important;
+      }
     }
   }
 }

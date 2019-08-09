@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+@mixin tt-toolbar-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  mat-toolbar {
+    background-color: mat-color($background, card) !important;
+
+    button {
+      &:hover {
+        color: mat-color($primary) !important;
+      }
+      &.active {
+        color: mat-color($primary, lighter-contrast) !important;
+        background-color: mat-color($primary, lighter) !important;
+      }
+    }
+
+    a {
+      &:hover {
+        color: mat-color($primary) !important;
+      }
+    }
+  }
+}

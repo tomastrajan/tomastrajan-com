@@ -18,6 +18,26 @@ const NAVIGATION = [
         url: 'workshops/angular-mastery'
       }
     ]
+  },
+  {
+    label: 'CONSULTING',
+    url: 'consulting'
+  },
+  {
+    label: 'SPEAKING',
+    url: 'speaking'
+  },
+  {
+    label: 'OPEN SOURCE',
+    url: 'open-source'
+  },
+  {
+    label: 'BLOG',
+    url: 'blog'
+  },
+  {
+    label: 'COMMUNITY',
+    url: 'community'
   }
 ];
 

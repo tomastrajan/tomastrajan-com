@@ -11,11 +11,12 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$elements-tt-primary: mat-palette($mat-red, 700, 600, 900);
-$elements-tt-accent: mat-palette($mat-pink, 900);
+$elements-tt-primary: mat-palette($mat-indigo, 500, 400, 800);
+$elements-tt-primary-dark: mat-palette($mat-indigo, 200, 100, 400);
+$elements-tt-accent: mat-palette($mat-light-blue, 700, 500, 900);
 
 // The warn palette is optional (defaults to red).
-$elements-tt-warn: mat-palette($mat-deep-orange);
+$elements-tt-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $elements-tt-theme: mat-light-theme(
@@ -24,9 +25,17 @@ $elements-tt-theme: mat-light-theme(
   $elements-tt-warn
 );
 
+// Create the theme object (a Sass map containing all of the palettes).
+$elements-tt-theme-dark: mat-dark-theme(
+  $elements-tt-primary-dark,
+  $elements-tt-accent,
+  $elements-tt-warn
+);
+
 // custom theme imports
 @import './styles-reset.scss-theme';
 @import './app/app.component.scss-theme';
+@import './app/core/layout/toolbar/toolbar.component.scss-theme';
 @import './app/core/layout/navigation/navigation.component.scss-theme';
 @import './app/core/layout/footer/footer.component.scss-theme';
 
@@ -34,6 +43,7 @@ $elements-tt-theme: mat-light-theme(
   // include custom components themes
   @include styles-reset-theme($theme);
   @include tt-root-component-theme($theme);
+  @include tt-toolbar-component-theme($theme);
   @include tt-navigation-component-theme($theme);
   @include tt-footer-component-theme($theme);
 }
@@ -43,3 +53,8 @@ $elements-tt-theme: mat-light-theme(
 // that you are using.
 @include angular-material-theme($elements-tt-theme);
 @include custom-components-theme($elements-tt-theme);
+
+.dark {
+  @include angular-material-theme($elements-tt-theme-dark);
+  @include custom-components-theme($elements-tt-theme-dark);
+}

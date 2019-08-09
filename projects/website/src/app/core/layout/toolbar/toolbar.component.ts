@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  Renderer2
+} from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ResponsiveLayoutService } from '../responsive-layout.service';
@@ -13,8 +20,12 @@ export class ToolbarComponent implements OnInit {
   @Output() toggle = new EventEmitter<void>();
 
   isResponsiveLayout: Observable<boolean>;
+  isDarkMode = false;
 
-  constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
+  constructor(
+    private renderer: Renderer2,
+    private responsiveLayoutService: ResponsiveLayoutService
+  ) {}
 
   ngOnInit() {
     this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller;
@@ -22,5 +33,14 @@ export class ToolbarComponent implements OnInit {
 
   toggleMenu() {
     this.toggle.emit();
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      this.renderer.addClass(document.body, 'dark');
+    } else {
+      this.renderer.removeClass(document.body, 'dark');
+    }
   }
 }
