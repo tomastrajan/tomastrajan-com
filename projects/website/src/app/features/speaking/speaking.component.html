@@ -1,0 +1,55 @@
+<h3>Speaking</h3>
+
+<div class="wrapper">
+  <h1>Conferences & Meetups</h1>
+
+  <div class="talks">
+    <mat-card *ngFor="let talk of talks">
+      <mat-card-header>
+        <div mat-card-avatar>
+          <img
+            [src]="'assets/images/speaking/' + talk.logo"
+            [alt]="talk.logoAlt"
+          />
+        </div>
+        <mat-card-title>{{ talk.title }}</mat-card-title>
+        <mat-card-subtitle>{{ talk.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        [src]="'assets/images/speaking/' + talk.photo"
+        [alt]="talk.photoAlt"
+      />
+      <mat-card-content>
+        <p>
+          {{ talk.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a
+          *ngIf="talk.slides"
+          color="primary"
+          mat-flat-button
+          [href]="talk.slides"
+          target="_blank"
+          >Slides</a
+        >
+        <a
+          *ngIf="talk.recording"
+          color="accent"
+          mat-flat-button
+          [href]="talk.recording"
+          target="_blank"
+          >Recording</a
+        >
+        <a
+          *ngIf="talk.event"
+          mat-flat-button
+          [href]="talk.event"
+          target="_blank"
+          >Event</a
+        >
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

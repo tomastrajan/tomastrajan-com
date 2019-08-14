@@ -16,6 +16,11 @@ const routes: Routes = [
       )
   },
   {
+    path: 'speaking',
+    loadChildren: () =>
+      import('./features/speaking/speaking.module').then(m => m.SpeakingModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

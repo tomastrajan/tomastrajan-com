@@ -28,6 +28,10 @@ export class ToolbarComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    const hours = new Date().getHours();
+    if (hours < 7 || hours > 20) {
+      this.toggleDarkMode();
+    }
     this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller;
   }
 
