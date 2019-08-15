@@ -18,7 +18,7 @@ const TALKS = [
     title: 'Angular Schematics',
     subtitle: 'NG-MY 2019 - Kuala Lumpur / Malaysia',
     description:
-      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns and best practices.',
+      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
     logo: 'ngmy-logo.png',
     logoAlt: 'NG-MY 2019',
     photo: 'ngmy2019.png',
@@ -31,7 +31,7 @@ const TALKS = [
     title: 'How to build custom Angular Schematics',
     subtitle: 'Angular Day 2019 - Verona / Italy',
     description:
-      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns and best practices.',
+      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned best practices.',
     logo: 'angularday-logo.png',
     logoAlt: 'Angular Day Verona',
     photo: 'angularday2019.png',
