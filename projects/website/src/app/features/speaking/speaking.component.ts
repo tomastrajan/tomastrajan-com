@@ -96,5 +96,41 @@ const TALKS = [
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://www.meetup.com/Barner-JS-Talks/events/261475983/',
     recording: ''
+  },
+  {
+    title: 'Common Angular anti-patterns in Enterprise Applications',
+    subtitle: 'Die Mobiliar 2019 - Switzerland',
+    description:
+      'This presentation explored most common anti-patterns in the enteprise codebases related to performance, and implementation of the RxJs streams and proposed solutions and improvements to remedy the situation.',
+    logo: 'diemobiliar-logo.png',
+    logoAlt: 'Die Mobiliar 2019',
+    photo: 'diemobiliar2019.jpg',
+    photoAlt: 'Tomas Trajan speaking about Angular enterprise anti-patterns in Die Mobiliar',
+    recording: 'https://www.youtube.com/watch?v=lOMpq1rfrSM'
+  },
+  {
+    title: 'Theming of Angular Material Apps',
+    subtitle: 'BernerJS Meetup 2017 - Switzerland',
+    description:
+      'Angular Material is a great component framework for Angular! It also comes with amazing theming support which enables us to customize primary, accent and wanr colors, define custom colors and even get and dark theme out of the box.',
+    logo: 'bernerjs-logo.png',
+    logoAlt: 'Berner JS 2017',
+    photo: 'bernerjs2017.jpg',
+    photoAlt: 'Tomas Trajan speaking about custom theming of Angular Material',
+    slides: 'https://slides.com/tomastrajan/angular-material-themes-guide',
+    recording: 'https://www.youtube.com/watch?v=5I3BAL63QRM',
+    event: 'https://www.meetup.com/Barner-JS-Talks/events/242348660/'
+  },
+  {
+    title: 'Proper unit testing of Angular JS apps',
+    subtitle: 'BernerJS Meetup 2015 - Switzerland',
+    description:
+      'Standard way of testing of Angular JS 1.X app is using “official” Karma / Jasmine solution, which uses a lot of Angular specific APIs. Let’s explore how can we implement our unit-tests independently from Angular with help of (ES6) modules and Mocha.',
+    logo: 'bernerjs-logo.png',
+    logoAlt: 'Berner JS 2015',
+    photo: 'bernerjs2015.jpg',
+    photoAlt: 'Tomas Trajan speaking about proper unit testing of Angular JS apps',
+    slides: 'https://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules',
+    recording: 'https://www.youtube.com/watch?v=sz37GQ45rVI'
   }
 ];
