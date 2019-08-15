@@ -21,7 +21,7 @@ const TALKS = [
       'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
     logo: 'ngmy-logo.png',
     logoAlt: 'NG-MY 2019',
-    photo: 'ngmy2019.png',
+    photo: 'ngmy2019.jpg',
     photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics-ng-my',
     event: 'https://2019.ng-my.org/speakers/tomas-trajan',
@@ -34,7 +34,7 @@ const TALKS = [
       'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned best practices.',
     logo: 'angularday-logo.png',
     logoAlt: 'Angular Day Verona',
-    photo: 'angularday2019.png',
+    photo: 'angularday2019.jpg',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Day Verona 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -48,7 +48,7 @@ const TALKS = [
       'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
     logo: 'voxxeddays-logo.png',
     logoAlt: 'Voxxed Days Zurich 2019',
-    photo: 'voxxeddays2019.png',
+    photo: 'voxxeddays2019.jpg',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Voxxed Days Zurich 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -62,7 +62,7 @@ const TALKS = [
       'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
     logo: 'angularzurich-logo.png',
     logoAlt: 'Angular Zurich Meetup 03 2019',
-    photo: 'angularzurich201903.png',
+    photo: 'angularzurich201903.jpg',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -76,7 +76,7 @@ const TALKS = [
       'Release Butler - A twitter bot that helps you to stay up to date by with releases with popular frontend framework and libraries like Angular, React, Vue... by tweeting their changelogs!',
     logo: 'kljs-logo.png',
     logoAlt: 'Kuala Lumpur JS Meetup 2019',
-    photo: 'kljs2019.png',
+    photo: 'kljs2019.jpg',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/release-butler/',
@@ -90,7 +90,7 @@ const TALKS = [
       'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
     logo: 'bernerjs-logo.png',
     logoAlt: 'BernerJS Meetup 04 2019',
-    photo: 'bernerjs201904.png',
+    photo: 'bernerjs201904.jpg',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
