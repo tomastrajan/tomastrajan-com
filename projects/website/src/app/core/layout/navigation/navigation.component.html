@@ -25,7 +25,12 @@
         </a>
       </ng-container>
     </ng-container>
-    <a *ngIf="nav.externalUrl" mat-list-item [href]="nav.externalUrl" target="_blank">
+    <a
+      *ngIf="nav.externalUrl"
+      mat-list-item
+      [href]="nav.externalUrl"
+      target="_blank"
+    >
       {{ nav.label }}
       <mat-icon matListIcon>chevron_right</mat-icon>
     </a>

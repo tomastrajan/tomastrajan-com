@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AngularZurichComponent } from './angular-zurich.component';
+import { ConsultingComponent } from './consulting.component';
 
-describe('AngularZurichComponent', () => {
-  let component: AngularZurichComponent;
-  let fixture: ComponentFixture<AngularZurichComponent>;
+describe('ConsultingComponent', () => {
+  let component: ConsultingComponent;
+  let fixture: ComponentFixture<ConsultingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AngularZurichComponent]
+      declarations: [ConsultingComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AngularZurichComponent);
+    fixture = TestBed.createComponent(ConsultingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

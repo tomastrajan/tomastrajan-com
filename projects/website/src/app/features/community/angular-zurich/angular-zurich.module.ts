@@ -4,12 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AngularZurichRoutingModule } from './angular-zurich-routing.module';
 import { AngularZurichComponent } from './angular-zurich.component';
 
-
 @NgModule({
   declarations: [AngularZurichComponent],
-  imports: [
-    CommonModule,
-    AngularZurichRoutingModule
-  ]
+  imports: [CommonModule, AngularZurichRoutingModule]
 })
-export class AngularZurichModule { }
+export class AngularZurichModule {}

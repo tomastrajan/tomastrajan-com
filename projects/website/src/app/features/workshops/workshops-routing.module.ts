@@ -19,6 +19,13 @@ const routes: Routes = [
           import('./angular-mastery/angular-mastery.module').then(
             m => m.AngularMasteryModule
           )
+      },
+      {
+        path: 'angular-state-management-workshop-with-ngrx',
+        loadChildren: () =>
+          import(
+            './angular-state-management/angular-state-management.module'
+          ).then(m => m.AngularStateManagementModule)
       }
     ]
   }

@@ -10,12 +10,12 @@ const NAVIGATION = [
     url: 'workshops',
     children: [
       {
-        label: 'Angular Intro',
-        url: 'workshops/angular-intro'
-      },
-      {
         label: 'Angular Mastery',
         url: 'workshops/angular-mastery'
+      },
+      {
+        label: 'Angular State Management',
+        url: 'workshops/angular-state-management-workshop-with-ngrx'
       }
     ]
   },
