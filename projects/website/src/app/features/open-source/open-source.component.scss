@@ -70,3 +70,33 @@
     }
   }
 }
+
+:host-context(.responsive) {
+  mat-spinner {
+    margin: 100px 50% 0 50%;
+  }
+
+  mat-card {
+    width: 100% !important;
+    overflow: hidden !important;
+    margin: 0 0 40px 0 !important;
+
+    [mat-card-avatar] {
+      display: none !important;
+    }
+
+    mat-card-header {
+      height: auto !important;
+      position: relative !important;
+      left: -13px !important;
+    }
+
+    mat-card-title {
+      width: 100% !important;
+    }
+
+    mat-card-subtitle {
+      width: 100% !important;
+    }
+  }
+}
