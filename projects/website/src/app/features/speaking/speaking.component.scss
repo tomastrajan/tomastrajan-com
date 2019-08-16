@@ -50,6 +50,45 @@
         padding: 0 10px 10px 10px;
         a {
           margin: 0 10px 0 0;
+
+          mat-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+:host-context(.responsive) {
+  mat-spinner {
+    margin: 100px 50% 0 50%;
+  }
+
+  mat-card {
+    width: 100% !important;
+    overflow: hidden !important;
+    margin: 0 0 40px 0 !important;
+
+    p {
+      height: auto !important;
+    }
+
+    mat-card-title {
+      width: 100% !important;
+    }
+
+    mat-card-subtitle {
+      width: 100% !important;
+    }
+
+    mat-card-actions {
+      a {
+        mat-icon {
+          display: inline-block !important;
+        }
+        span {
+          display: none !important;
         }
       }
     }

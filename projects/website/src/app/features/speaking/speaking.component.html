@@ -34,21 +34,21 @@
           mat-flat-button
           [href]="talk.recording"
           target="_blank"
-          >Recording</a
+          ><mat-icon title="Recording">videocam</mat-icon><span>Recording</span></a
         >
         <a
           *ngIf="talk.slides"
           mat-stroked-button
           [href]="talk.slides"
           target="_blank"
-          >Slides</a
+          ><mat-icon title="Slides">slideshow</mat-icon><span>Slides</span></a
         >
         <a
           *ngIf="talk.event"
           mat-stroked-button
           [href]="talk.event"
           target="_blank"
-          >Event</a
+          ><mat-icon title="Event">calendar_today</mat-icon><span>Event</span></a
         >
       </mat-card-actions>
     </mat-card>
