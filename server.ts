@@ -42,7 +42,7 @@ app.get('/api/github/repositories', async (req, res) => {
   const options = { headers: { Authorization: `Basic ${API_TOKEN_GITHUB}` } };
   Promise.all([
     fetch(`${API_URL_GITHUB}/users/angular/repos?per_page=10`, options),
-    fetch(`${API_URL_GITHUB}/users/tomastrajan/repos?per_page=50`, options),
+    fetch(`${API_URL_GITHUB}/users/tomastrajan/repos?per_page=100`, options),
     fetch(`${API_URL_GITHUB}/users/angular-extensions/repos`, options)
   ])
     .then(responses => Promise.all(responses.map(r => r.json())))

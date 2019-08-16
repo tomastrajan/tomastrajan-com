@@ -11,8 +11,9 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatGridListModule,
+  MatSnackBarModule,
   MatExpansionModule,
-  MatSnackBarModule
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 const ANGULAR_MATERIAL_MODULES = [
@@ -24,8 +25,9 @@ const ANGULAR_MATERIAL_MODULES = [
   MatToolbarModule,
   MatSidenavModule,
   MatGridListModule,
+  MatSnackBarModule,
   MatExpansionModule,
-  MatSnackBarModule
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

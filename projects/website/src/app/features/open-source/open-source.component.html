@@ -6,6 +6,8 @@
     Tomas is a contributor, maker or maintainer of the following libraries...
   </p>
 
+  <mat-spinner *ngIf="!(projects | async)"></mat-spinner>
+
   <div class="projects">
     <mat-card *ngFor="let project of projects | async">
       <mat-card-header>
