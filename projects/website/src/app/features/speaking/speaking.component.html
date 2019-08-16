@@ -29,14 +29,6 @@
       </mat-card-content>
       <mat-card-actions>
         <a
-          *ngIf="talk.slides"
-          color="primary"
-          mat-flat-button
-          [href]="talk.slides"
-          target="_blank"
-          >Slides</a
-        >
-        <a
           *ngIf="talk.recording"
           color="accent"
           mat-flat-button
@@ -45,8 +37,15 @@
           >Recording</a
         >
         <a
+          *ngIf="talk.slides"
+          mat-stroked-button
+          [href]="talk.slides"
+          target="_blank"
+          >Slides</a
+        >
+        <a
           *ngIf="talk.event"
-          mat-flat-button
+          mat-stroked-button
           [href]="talk.event"
           target="_blank"
           >Event</a

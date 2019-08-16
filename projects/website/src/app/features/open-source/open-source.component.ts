@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-
-import { GithubService } from '../../core/api/github.service';
 import { take } from 'rxjs/operators';
+
+import { GithubService, Repository } from '../../core/api/github.service';
 
 @Component({
   selector: 'tt-open-source',
@@ -10,7 +10,7 @@ import { take } from 'rxjs/operators';
   styleUrls: ['./open-source.component.scss']
 })
 export class OpenSourceComponent implements OnInit {
-  projects: Observable<any>;
+  projects: Observable<Repository[]>;
 
   constructor(private githubService: GithubService) {}
 
