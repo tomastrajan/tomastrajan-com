@@ -8,6 +8,7 @@
       <mat-card-header>
         <div mat-card-avatar>
           <img
+            loading="lazy"
             [src]="'assets/images/speaking/' + talk.logo"
             [alt]="talk.logoAlt"
           />
@@ -16,6 +17,7 @@
         <mat-card-subtitle>{{ talk.subtitle }}</mat-card-subtitle>
       </mat-card-header>
       <img
+        loading="lazy"
         mat-card-image
         [src]="'assets/images/speaking/' + talk.photo"
         [alt]="talk.photoAlt"
