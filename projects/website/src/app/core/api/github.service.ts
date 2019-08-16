@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { combineLatest, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-const API_URL_GITHUB = 'https://api.github.com';
+const API_URL = `/api/github/repositories`;
 
 const REPO_NAMES = [
   'angular/angular',
@@ -27,12 +27,7 @@ export class GithubService {
   constructor(private http: HttpClient) {}
 
   getRepositories(): Observable<Repository[]> {
-    return combineLatest([
-      this.http.get(`${API_URL_GITHUB}/users/angular/repos?per_page=100`),
-      this.http.get(`${API_URL_GITHUB}/users/tomastrajan/repos?per_page=100`),
-      this.http.get(`${API_URL_GITHUB}/users/angular-extensions/repos?per_page=100`)
-    ]).pipe(
-      map((allRepos: any[]) => allRepos.flat()),
+    return this.http.get(API_URL).pipe(
       map((repos: Repository[]) => {
         const repoItems = repos.map(this.buildRepositoryItem);
         return REPO_NAMES.map(name =>

@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://tomastrajan-com.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

@@ -28,7 +28,7 @@
 
 :host-context(.responsive) {
   .signature {
-    span {
+    span, mat-icon {
       display: none;
     }
   }
