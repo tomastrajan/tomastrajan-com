@@ -21,6 +21,13 @@ const routes: Routes = [
       import('./features/speaking/speaking.module').then(m => m.SpeakingModule)
   },
   {
+    path: 'open-source',
+    loadChildren: () =>
+      import('./features/open-source/open-source.module').then(
+        m => m.OpenSourceModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

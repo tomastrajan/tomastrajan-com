@@ -15,6 +15,7 @@
       "node_modules/@types"
     ],
     "lib": [
+      "esnext.array",
       "es2018",
       "dom"
     ]

@@ -1,0 +1,57 @@
+<h3>Open source</h3>
+
+<div class="wrapper">
+  <h1>Creator, maintainer & contributor</h1>
+
+  <div class="projects">
+    <mat-card *ngFor="let project of projects | async">
+      <mat-card-header>
+        <!--              <div mat-card-avatar>-->
+        <!--                <img-->
+        <!--                  loading="lazy"-->
+        <!--                  [src]="'assets/images/speaking/' + talk.logo"-->
+        <!--                  [alt]="talk.logoAlt"-->
+        <!--                />-->
+        <!--              </div>-->
+        <mat-card-title>{{ project.name }}</mat-card-title>
+        <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
+      </mat-card-header>
+      <!--      <img-->
+      <!--        loading="lazy"-->
+      <!--        mat-card-image-->
+      <!--        [src]="'assets/images/speaking/' + talk.photo"-->
+      <!--        [alt]="talk.photoAlt"-->
+      <!--      />-->
+      <!--      <mat-card-content>-->
+      <!--        <p>-->
+      <!--          {{ talk.description }}-->
+      <!--        </p>-->
+      <!--      </mat-card-content>-->
+      <!--      <mat-card-actions>-->
+      <!--        <a-->
+      <!--          *ngIf="talk.slides"-->
+      <!--          color="primary"-->
+      <!--          mat-flat-button-->
+      <!--          [href]="talk.slides"-->
+      <!--          target="_blank"-->
+      <!--        >Slides</a-->
+      <!--        >-->
+      <!--        <a-->
+      <!--          *ngIf="talk.recording"-->
+      <!--          color="accent"-->
+      <!--          mat-flat-button-->
+      <!--          [href]="talk.recording"-->
+      <!--          target="_blank"-->
+      <!--        >Recording</a-->
+      <!--        >-->
+      <!--        <a-->
+      <!--          *ngIf="talk.event"-->
+      <!--          mat-flat-button-->
+      <!--          [href]="talk.event"-->
+      <!--          target="_blank"-->
+      <!--        >Event</a-->
+      <!--        >-->
+      <!--      </mat-card-actions>-->
+    </mat-card>
+  </div>
+</div>

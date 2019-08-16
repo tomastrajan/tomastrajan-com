@@ -80,7 +80,8 @@ const TALKS = [
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/release-butler/',
-    event: 'https://www.meetup.com/Junior-Developers-Malaysia/events/262661606/',
+    event:
+      'https://www.meetup.com/Junior-Developers-Malaysia/events/262661606/',
     recording: ''
   },
   {
@@ -105,7 +106,8 @@ const TALKS = [
     logo: 'diemobiliar-logo.png',
     logoAlt: 'Die Mobiliar 2019',
     photo: 'diemobiliar2019.jpg',
-    photoAlt: 'Tomas Trajan speaking about Angular enterprise anti-patterns in Die Mobiliar',
+    photoAlt:
+      'Tomas Trajan speaking about Angular enterprise anti-patterns in Die Mobiliar',
     recording: 'https://www.youtube.com/watch?v=lOMpq1rfrSM'
   },
   {
@@ -129,8 +131,10 @@ const TALKS = [
     logo: 'bernerjs-logo.png',
     logoAlt: 'Berner JS 2015',
     photo: 'bernerjs2015.jpg',
-    photoAlt: 'Tomas Trajan speaking about proper unit testing of Angular JS apps',
-    slides: 'https://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules',
+    photoAlt:
+      'Tomas Trajan speaking about proper unit testing of Angular JS apps',
+    slides:
+      'https://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules',
     recording: 'https://www.youtube.com/watch?v=sz37GQ45rVI'
   }
 ];
