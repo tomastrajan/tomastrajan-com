@@ -32,12 +32,18 @@ const NAVIGATION = [
     url: 'open-source'
   },
   {
-    label: 'BLOG',
-    externalUrl: 'https://medium.com/@tomastrajan'
+    label: 'COMMUNITY',
+    url: 'community',
+    children: [
+      {
+        label: 'Angular Zurich Meetup',
+        url: 'community/angular-zurich'
+      }
+    ]
   },
   {
-    label: 'COMMUNITY',
-    url: 'community'
+    label: 'BLOG',
+    externalUrl: 'https://medium.com/@tomastrajan'
   }
 ];
 

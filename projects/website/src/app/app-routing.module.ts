@@ -28,6 +28,13 @@ const routes: Routes = [
       )
   },
   {
+    path: 'community',
+    loadChildren: () =>
+      import('./features/community/community.module').then(
+        m => m.CommunityModule
+      )
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
