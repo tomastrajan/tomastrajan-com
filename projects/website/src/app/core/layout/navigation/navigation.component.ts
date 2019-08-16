@@ -33,7 +33,7 @@ const NAVIGATION = [
   },
   {
     label: 'BLOG',
-    url: 'blog'
+    externalUrl: 'https://medium.com/@tomastrajan'
   },
   {
     label: 'COMMUNITY',
