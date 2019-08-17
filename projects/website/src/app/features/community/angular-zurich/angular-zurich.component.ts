@@ -1,4 +1,10 @@
+import { SafeResourceUrl } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
+
+import { YoutubeService } from '../../../core/api/youtube.service';
+import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 
 @Component({
   selector: 'tt-angular-zurich',
@@ -6,7 +12,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./angular-zurich.component.scss']
 })
 export class AngularZurichComponent implements OnInit {
-  constructor() {}
+  videoUrls: Observable<SafeResourceUrl[]>;
+  columnCount: Observable<number>;
 
-  ngOnInit() {}
+  constructor(
+    private youtubeService: YoutubeService,
+    private responsiveLayoutService: ResponsiveLayoutService
+  ) {}
+
+  ngOnInit() {
+    this.videoUrls = this.youtubeService
+      .getAngularZurichVideoUrls()
+      .pipe(shareReplay({ bufferSize: 1, refCount: true }));
+
+    this.columnCount = this.responsiveLayoutService.columnCount.pipe(
+      shareReplay({ bufferSize: 1, refCount: true })
+    );
+  }
 }

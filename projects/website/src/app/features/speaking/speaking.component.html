@@ -3,56 +3,63 @@
 <div class="wrapper">
   <h1>Conferences & Meetups</h1>
 
-  <div class="talks">
-    <mat-card *ngFor="let talk of talks">
-      <mat-card-header>
-        <div mat-card-avatar>
-          <img
-            loading="lazy"
-            [src]="'assets/images/speaking/' + talk.logo"
-            [alt]="talk.logoAlt"
-          />
-        </div>
-        <mat-card-title>{{ talk.title }}</mat-card-title>
-        <mat-card-subtitle>{{ talk.subtitle }}</mat-card-subtitle>
-      </mat-card-header>
-      <img
-        loading="lazy"
-        mat-card-image
-        [src]="'assets/images/speaking/' + talk.photo"
-        [alt]="talk.photoAlt"
-      />
-      <mat-card-content>
-        <p>
-          {{ talk.description }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <a
-          *ngIf="talk.recording"
-          color="accent"
-          mat-flat-button
-          [href]="talk.recording"
-          target="_blank"
-          ><mat-icon title="Recording">videocam</mat-icon
-          ><span>Recording</span></a
-        >
-        <a
-          *ngIf="talk.slides"
-          mat-stroked-button
-          [href]="talk.slides"
-          target="_blank"
-          ><mat-icon title="Slides">slideshow</mat-icon><span>Slides</span></a
-        >
-        <a
-          *ngIf="talk.event"
-          mat-stroked-button
-          [href]="talk.event"
-          target="_blank"
-          ><mat-icon title="Event">calendar_today</mat-icon
-          ><span>Event</span></a
-        >
-      </mat-card-actions>
-    </mat-card>
-  </div>
+  <mat-grid-list
+    class="talks"
+    [cols]="columnCount | async"
+    rowHeight="630px"
+    gutterSize="40"
+  >
+    <mat-grid-tile *ngFor="let talk of talks">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar>
+            <img
+              loading="lazy"
+              [src]="'assets/images/speaking/' + talk.logo"
+              [alt]="talk.logoAlt"
+            />
+          </div>
+          <mat-card-title>{{ talk.title }}</mat-card-title>
+          <mat-card-subtitle>{{ talk.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          loading="lazy"
+          mat-card-image
+          [src]="'assets/images/speaking/' + talk.photo"
+          [alt]="talk.photoAlt"
+        />
+        <mat-card-content>
+          <p>
+            {{ talk.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a
+            *ngIf="talk.recording"
+            color="accent"
+            mat-flat-button
+            [href]="talk.recording"
+            target="_blank"
+            ><mat-icon title="Recording">videocam</mat-icon
+            ><span>Recording</span></a
+          >
+          <a
+            *ngIf="talk.slides"
+            mat-stroked-button
+            [href]="talk.slides"
+            target="_blank"
+            ><mat-icon title="Slides">slideshow</mat-icon><span>Slides</span></a
+          >
+          <a
+            *ngIf="talk.event"
+            mat-stroked-button
+            [href]="talk.event"
+            target="_blank"
+            ><mat-icon title="Event">calendar_today</mat-icon
+            ><span>Event</span></a
+          >
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

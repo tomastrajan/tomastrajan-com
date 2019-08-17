@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
+
+import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.service';
 
 @Component({
   selector: 'tt-speaking',
@@ -7,10 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpeakingComponent implements OnInit {
   talks = TALKS;
+  columnCount: Observable<number>;
 
-  constructor() {}
+  constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.columnCount = this.responsiveLayoutService.columnCount.pipe(
+      shareReplay({ bufferSize: 1, refCount: true })
+    );
+  }
 }
 
 const TALKS = [

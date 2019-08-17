@@ -1,2 +1,22 @@
 <h1>Angular Zurich Meetup</h1>
-<p>Content ...</p>
+
+<div class="wrapper">
+  <p>Content ...</p>
+  <h2>Angular Zurich Meetup Presentations</h2>
+</div>
+
+<mat-grid-list
+  class="videos"
+  [cols]="columnCount | async"
+  rowHeight="16:9"
+  gutterSize="40"
+>
+  <mat-grid-tile *ngFor="let videoUrl of videoUrls | async">
+    <iframe
+      loading="lazy"
+      [src]="videoUrl"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </mat-grid-tile>
+</mat-grid-list>

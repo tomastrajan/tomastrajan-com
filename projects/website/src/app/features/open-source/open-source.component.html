@@ -6,40 +6,45 @@
     Tomas is a contributor, maker or maintainer of the following libraries...
   </p>
 
-  <mat-spinner *ngIf="!(projects | async)"></mat-spinner>
-
-  <div class="projects">
-    <mat-card *ngFor="let project of projects | async">
-      <mat-card-header>
-        <div mat-card-avatar>
-          <img
-            loading="lazy"
-            [src]="project.owner.avatar"
-            [alt]="project.name"
-          />
-        </div>
-        <mat-card-title>{{ project.name }}</mat-card-title>
-        <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-actions>
-        <a
-          *ngIf="project.url"
-          mat-stroked-button
-          [href]="project.url"
-          target="_blank"
-          >Repo</a
-        >
-        <a
-          *ngIf="project.homepage"
-          mat-stroked-button
-          [href]="project.homepage"
-          target="_blank"
-          >Web</a
-        >
-        <div class="spacer"></div>
-        <span><mat-icon>star</mat-icon> {{ project.stargazers }}</span>
-        <span><mat-icon>call_split</mat-icon> {{ project.forks }}</span>
-      </mat-card-actions>
-    </mat-card>
-  </div>
+  <mat-grid-list
+    class="projects"
+    [cols]="columnCount | async"
+    rowHeight="190px"
+    gutterSize="40"
+  >
+    <mat-grid-tile *ngFor="let project of projects | async">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar>
+            <img
+              loading="lazy"
+              [src]="project.owner.avatar"
+              [alt]="project.name"
+            />
+          </div>
+          <mat-card-title>{{ project.name }}</mat-card-title>
+          <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <a
+            *ngIf="project.url"
+            mat-stroked-button
+            [href]="project.url"
+            target="_blank"
+            >Repo</a
+          >
+          <a
+            *ngIf="project.homepage"
+            mat-stroked-button
+            [href]="project.homepage"
+            target="_blank"
+            >Web</a
+          >
+          <div class="spacer"></div>
+          <span><mat-icon>star</mat-icon> {{ project.stargazers }}</span>
+          <span><mat-icon>call_split</mat-icon> {{ project.forks }}</span>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
