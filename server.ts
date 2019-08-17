@@ -33,6 +33,7 @@ const CORS_OPTIONS = {
       'https://tomastrajan.com',
       'https://tomastrajan-com.herokuapp.com'
     ];
+    console.log('[CORS]', origin);
     if (WHITELIST.includes(origin)) {
       callback(null, true);
     } else {
