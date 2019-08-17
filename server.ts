@@ -3,12 +3,15 @@ import * as express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import { join } from 'path';
+import { send as sendEmail, setApiKey as setSendGridApiKey } from '@sendgrid/mail';
 import { enableProdMode } from '@angular/core';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
+import { Request, Response } from 'express';
 
 enableProdMode();
 dotenv.config();
+setSendGridApiKey(process.env.API_TOKEN_SENDGRID);
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
@@ -51,6 +54,35 @@ app.get('/api/github/repositories', async (req, res) => {
     )
     .then(repos => res.json(repos));
 });
+app.get('/api/github/repositories', (req, res) => {
+  const options = { headers: { Authorization: `Basic ${API_TOKEN_GITHUB}` } };
+  Promise.all([
+    fetch(`${API_URL_GITHUB}/users/angular/repos?per_page=10`, options),
+    fetch(`${API_URL_GITHUB}/users/tomastrajan/repos?per_page=100`, options),
+    fetch(`${API_URL_GITHUB}/users/angular-extensions/repos`, options)
+  ])
+    .then(responses => Promise.all(responses.map(r => r.json())))
+    .then(responses =>
+      responses.reduce((result, next) => result.concat(next), [])
+    )
+    .then(repos => res.json(repos));
+});
+app.post('/api/email', (req: Request, res: Response) => {
+  const msg = {
+    to: 'tomas.trajan@gmail.com',
+    from: req.body.from,
+    subject: 'tomastrajan.com - Get in touch form',
+    text: `
+      From: ${req.body.from}
+      Type: ${req.body.type}
+      Text: ${req.body.text}
+    `
+  };
+  sendEmail(msg)
+    .then(() => res.sendStatus(200))
+    .catch(error => res.send(error));
+});
+
 
 // Serve static files from /browser
 app.get(
