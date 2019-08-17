@@ -34,7 +34,7 @@ const CORS_OPTIONS = {
       'https://tomastrajan-com.herokuapp.com'
     ];
     console.log('[CORS]', origin);
-    if (!origin || WHITELIST.includes(origin)) {
+    if (WHITELIST.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
@@ -43,6 +43,7 @@ const CORS_OPTIONS = {
 };
 
 const app = express();
+// app.use(cors);
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine(
@@ -57,7 +58,7 @@ app.set('view engine', 'html');
 app.set('views', DIST_FOLDER);
 
 // Example Express Rest API endpoints
-app.get('/api/github/repositories', cors(CORS_OPTIONS), (req, res) => {
+app.get('/api/github/repositories', (req, res) => {
   const options = { headers: { Authorization: `Basic ${API_TOKEN_GITHUB}` } };
   Promise.all([
     fetch(`${API_URL_GITHUB}/users/angular/repos?per_page=10`, options),
@@ -70,7 +71,7 @@ app.get('/api/github/repositories', cors(CORS_OPTIONS), (req, res) => {
     )
     .then(repos => res.json(repos));
 });
-app.post('/api/email', cors(CORS_OPTIONS), (req: Request, res: Response) => {
+app.post('/api/email', (req: Request, res: Response) => {
   const msg = {
     to: 'tomas.trajan@gmail.com',
     from: req.body.from,
