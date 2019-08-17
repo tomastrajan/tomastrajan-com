@@ -1,17 +1,18 @@
 import {
-  Component,
-  EventEmitter,
-  Inject,
   Input,
+  Inject,
   OnInit,
   Output,
-  PLATFORM_ID,
-  Renderer2
+  Renderer2,
+  Component,
+  EventEmitter,
+  PLATFORM_ID
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Observable } from 'rxjs';
 
 import { ResponsiveLayoutService } from '../responsive-layout.service';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'tt-toolbar',
@@ -22,13 +23,16 @@ export class ToolbarComponent implements OnInit {
   @Input() navOpened: boolean;
   @Output() toggle = new EventEmitter<void>();
 
+  isLoading: Observable<boolean>;
   isResponsiveLayout: Observable<boolean>;
   isDarkMode = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
+    @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,
-    private responsiveLayoutService: ResponsiveLayoutService
+    private responsiveLayoutService: ResponsiveLayoutService,
+    private loadingService: LoadingService
   ) {}
 
   ngOnInit() {
@@ -37,6 +41,7 @@ export class ToolbarComponent implements OnInit {
       this.toggleDarkMode();
     }
     this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller;
+    this.isLoading = this.loadingService.isLoading;
   }
 
   toggleMenu() {
@@ -47,9 +52,9 @@ export class ToolbarComponent implements OnInit {
     this.isDarkMode = !this.isDarkMode;
 
     if (this.isDarkMode) {
-      this.renderer.addClass(document.body, 'dark');
+      this.renderer.addClass(this.document.body, 'dark');
     } else {
-      this.renderer.removeClass(document.body, 'dark');
+      this.renderer.removeClass(this.document.body, 'dark');
     }
   }
 }

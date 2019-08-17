@@ -78,3 +78,8 @@
     (click)="toggleDarkMode()"
   ></mat-icon>
 </mat-toolbar>
+<mat-progress-bar
+  *ngIf="isLoading | async"
+  color="accent"
+  mode="indeterminate"
+></mat-progress-bar>
