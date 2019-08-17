@@ -34,7 +34,7 @@ const CORS_OPTIONS = {
       'https://tomastrajan-com.herokuapp.com'
     ];
     console.log('[CORS]', origin);
-    if (WHITELIST.includes(origin)) {
+    if (!origin || WHITELIST.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
