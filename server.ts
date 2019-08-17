@@ -28,7 +28,7 @@ const API_TOKEN_GITHUB = Buffer.from(
 const CORS_OPTIONS = {
   origin: (origin, callback) => {
     const WHITELIST = [
-      'http://localhost:4200',
+      'http://localhost',
       'https://www.tomastrajan.com',
       'https://tomastrajan.com',
       'https://tomastrajan-com.herokuapp.com'
