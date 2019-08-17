@@ -1,4 +1,5 @@
 import 'zone.js/dist/zone-node';
+import * as cors from 'cors';
 import * as express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
@@ -8,6 +9,11 @@ import { enableProdMode } from '@angular/core';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 import { Request, Response } from 'express';
+
+const {
+  AppServerModuleNgFactory,
+  LAZY_MODULE_MAP
+} = require('./dist/server/main'); // hast to be require
 
 enableProdMode();
 dotenv.config();
@@ -19,14 +25,24 @@ const API_URL_GITHUB = 'https://api.github.com';
 const API_TOKEN_GITHUB = Buffer.from(
   `tomastrajan:${process.env.API_TOKEN_GITHUB}`
 ).toString('base64');
+const CORS_OPTIONS = {
+  origin: (origin, callback) => {
+    const WHITELIST = [
+      'https://www.tomastrajan.com',
+      'https://tomastrajan.com',
+      'https://tomastrajan-com.herokuapp.com/'
+    ];
+    if (WHITELIST.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
 
 const app = express();
 
-// * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const {
-  AppServerModuleNgFactory,
-  LAZY_MODULE_MAP
-} = require('./dist/server/main');
+app.use(cors(CORS_OPTIONS));
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine(
