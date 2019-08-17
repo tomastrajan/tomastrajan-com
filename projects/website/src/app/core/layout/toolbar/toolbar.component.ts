@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
 
 import { ResponsiveLayoutService } from '../responsive-layout.service';
 import { LoadingService } from '../../services/loading.service';
@@ -40,7 +41,9 @@ export class ToolbarComponent implements OnInit {
     if ((hours < 7 || hours > 20) && isPlatformBrowser(this.platformId)) {
       this.toggleDarkMode();
     }
-    this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller;
+    this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller.pipe(
+      shareReplay({ bufferSize: 1, refCount: true })
+    );
     this.isLoading = this.loadingService.isLoading;
   }
 

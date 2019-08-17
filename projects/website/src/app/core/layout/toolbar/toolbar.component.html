@@ -12,7 +12,7 @@
 
   <span class="spacer-responsive"></span>
 
-  <a mat-icon-button routerLink="home">
+  <a mat-icon-button routerLink="home" class="logo">
     <mat-icon
       inline
       svgIcon="logo"
@@ -21,7 +21,7 @@
     ></mat-icon>
   </a>
   <span class="project-name"
-    >{{ (isResponsiveLayout | async) ? '' : '' }}TOMAS TRAJAN</span
+    >{{ (isResponsiveLayout | async) ? '' : 'TOMAS TRAJAN' }}</span
   >
   <iframe
     *ngIf="!(isResponsiveLayout | async)"
