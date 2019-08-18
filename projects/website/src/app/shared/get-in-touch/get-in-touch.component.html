@@ -1,0 +1,77 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <mat-card>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="firstname" />
+        <mat-error *ngIf="form.get('firstname').hasError('required')">
+          First name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input matInput formControlName="lastname" />
+        <mat-error *ngIf="form.get('lastname').hasError('required')">
+          Last name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error
+          *ngIf="
+            form.get('email').hasError('email') &&
+            !form.get('email').hasError('required')
+          "
+        >
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="form.get('email').hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Company</mat-label>
+        <input matInput formControlName="company" />
+        <mat-error *ngIf="form.get('company').hasError('required')">
+          Company name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message" rows="4"></textarea>
+      <mat-hint align="start"
+        >{{ form.get('message').value?.length || 0 }}/250</mat-hint
+      >
+      <mat-error
+        *ngIf="
+          form.get('message').hasError('maxlength') &&
+          !form.get('message').hasError('required')
+        "
+      >
+        The message can only have {{form.get('message').errors.maxlength.requiredLength }} characters but has <strong>{{form.get('message').errors.maxlength.actualLength}}</strong> characters
+      </mat-error>
+      <mat-error *ngIf="form.get('message').hasError('required')">
+        Message is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <div class="row">
+      <button type="submit" mat-flat-button color="accent">Send message</button>
+      <button type="reset" mat-button (click)="resetForm()">Reset</button>
+    </div>
+  </mat-card>
+</form>
+<div>
+  <h1>GET IN TOUCH</h1>
+  <p>
+    I am here to help and answer any question you might have. I look forward to
+    hearing from you
+  </p>
+</div>

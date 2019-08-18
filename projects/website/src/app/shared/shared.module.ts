@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import {
   MatCardModule,
   MatIconModule,
   MatListModule,
   MatTreeModule,
+  MatInputModule,
   MatIconRegistry,
   MatButtonModule,
   MatSidenavModule,
@@ -13,27 +15,36 @@ import {
   MatGridListModule,
   MatSnackBarModule,
   MatExpansionModule,
+  MatFormFieldModule,
   MatProgressBarModule
 } from '@angular/material';
+import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 
 const ANGULAR_MATERIAL_MODULES = [
   MatCardModule,
   MatIconModule,
   MatListModule,
   MatTreeModule,
+  MatInputModule,
   MatButtonModule,
   MatToolbarModule,
   MatSidenavModule,
   MatGridListModule,
   MatSnackBarModule,
   MatExpansionModule,
+  MatFormFieldModule,
   MatProgressBarModule
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, ...ANGULAR_MATERIAL_MODULES],
-  exports: [CommonModule, ...ANGULAR_MATERIAL_MODULES]
+  declarations: [GetInTouchComponent],
+  imports: [CommonModule, ReactiveFormsModule, ...ANGULAR_MATERIAL_MODULES],
+  exports: [
+    CommonModule,
+    ReactiveFormsModule,
+    ...ANGULAR_MATERIAL_MODULES,
+    GetInTouchComponent
+  ]
 })
 export class SharedModule {
   constructor(

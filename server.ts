@@ -1,5 +1,4 @@
 import 'zone.js/dist/zone-node';
-import * as cors from 'cors';
 import * as express from 'express';
 import * as email from '@sendgrid/mail';
 import fetch from 'node-fetch';
@@ -25,25 +24,8 @@ const API_URL_GITHUB = 'https://api.github.com';
 const API_TOKEN_GITHUB = Buffer.from(
   `tomastrajan:${process.env.API_TOKEN_GITHUB}`
 ).toString('base64');
-const CORS_OPTIONS = {
-  origin: (origin, callback) => {
-    const WHITELIST = [
-      'http://localhost',
-      'https://www.tomastrajan.com',
-      'https://tomastrajan.com',
-      'https://tomastrajan-com.herokuapp.com'
-    ];
-    console.log('[CORS]', origin);
-    if (WHITELIST.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-};
 
 const app = express();
-// app.use(cors);
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine(
@@ -74,12 +56,13 @@ app.get('/api/github/repositories', (req, res) => {
 app.post('/api/email', (req: Request, res: Response) => {
   const msg = {
     to: 'tomas.trajan@gmail.com',
-    from: req.body.from,
+    from: req.body.email,
     subject: 'tomastrajan.com - Get in touch form',
     text: `
-      From: ${req.body.from}
-      Type: ${req.body.type}
-      Text: ${req.body.text}
+      From: ${req.body.firstname} ${req.body.lastname}
+      Email: ${req.body.email}
+      Company: ${req.body.company}
+      MEssage: ${req.body.message}
     `
   };
   email.send(msg)
