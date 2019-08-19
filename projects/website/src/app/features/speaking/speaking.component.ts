@@ -94,6 +94,20 @@ const TALKS = [
     recording: ''
   },
   {
+    title: 'How to lazy load ANgular Elements',
+    subtitle: 'Angular Zurich Meetup 08 2019 - Switzerland',
+    description:
+      'Web components and Angular elements are exciting new web technologies! They enable us to build and compose our frontend application in unprecedented ways. Learn about the new seamless way of using them in your Angular applications & various use cases.',
+    logo: 'angularzurich-logo.png',
+    logoAlt: 'Angular Zurich Meetup 08 2019',
+    photo: 'angularzurich201908.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about Angular Elements at Angular Zurich Meetup 08 2019',
+    slides: 'https://slides.com/tomastrajan/angular-elements/',
+    event: 'https://www.meetup.com/AngularZRH/events/263770872/',
+    recording: 'https://www.youtube.com/watch?v=X__jkPGYRUs'
+  },
+  {
     title: 'How to build Angular Schematics',
     subtitle: 'BernerJS Meetup 04 2019 - Switzerland',
     description:
