@@ -7,6 +7,9 @@
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
+  $success-colors: mat-palette($mat-green, 400);
+  $warning-colors: mat-palette($mat-amber, 400);
+
   a {
     color: mat-color($primary);
 
@@ -33,5 +36,25 @@
       color: mat-color($warn, default-contrast);
       background-color: mat-color($warn);
     }
+  }
+
+  .error-notification-overlay {
+    color: mat-color($warn, default-contrast);
+    background-color: mat-color($warn);
+  }
+
+  .info-notification-overlay {
+    color: mat-color($accent, default-contrast);
+    background-color: mat-color($accent);
+  }
+
+  .success-notification-overlay {
+    color: mat-color($success-colors, default-contrast);
+    background-color: mat-color($success-colors);
+  }
+
+  .warning-notification-overlay {
+    color: mat-color($warning-colors, default-contrast);
+    background-color: mat-color($warning-colors);
   }
 }
