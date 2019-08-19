@@ -1,5 +1,18 @@
 :host {
+  width: 100%;
   display: flex;
+  padding: 40px 20%;
+
+  .cta {
+    .title {
+      font-size: 4em;
+      font-weight: 700;
+    }
+    .subtitle {
+      font-size: 1.5em;
+      opacity: 0.6;
+    }
+  }
 
   form {
     display: flex;

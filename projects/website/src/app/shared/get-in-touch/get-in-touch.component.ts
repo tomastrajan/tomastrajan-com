@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { EmailService } from '../../core/api/email.service';
+import { NotificationService } from '../../core/services/notification.service';
 
 @Component({
   selector: 'tt-get-in-touch',
@@ -11,7 +12,11 @@ import { EmailService } from '../../core/api/email.service';
 export class GetInTouchComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private emailService: EmailService) {}
+  constructor(
+    private fb: FormBuilder,
+    private emailService: EmailService,
+    private notificationService: NotificationService
+  ) {}
 
   ngOnInit() {
     this.createForm();
@@ -20,7 +25,18 @@ export class GetInTouchComponent implements OnInit {
   submitForm() {
     console.log('called');
     if (this.form.valid) {
-      this.emailService.sendEmail(this.form.getRawValue()).subscribe();
+      this.emailService.sendEmail(this.form.getRawValue()).subscribe(
+        () => {
+          this.notificationService.success('Message sent');
+          this.resetForm();
+        },
+        () => {
+          this.notificationService.error(
+            'Something went wrong, please contact me using @tomastrajan on Twitter'
+          );
+          this.resetForm();
+        }
+      );
     }
   }
 
