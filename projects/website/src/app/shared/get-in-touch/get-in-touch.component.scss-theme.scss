@@ -10,7 +10,12 @@
   tt-get-in-touch {
     .cta {
       .call {
-        color: mat-color($accent);
+        color: mat-color($accent) !important;
+
+        a {
+          text-decoration: underline;
+          color: mat-color($accent) !important;
+        }
       }
     }
   }
