@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { shareReplay } from 'rxjs/operators';
+import { shareReplay, startWith } from 'rxjs/operators';
 
 import { GithubService, Repository } from '../../core/api/github.service';
 import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.service';
+
+const PLACEHOLDERS: Placeholder[] = new Array(10).fill({ isPlaceholder: true });
 
 @Component({
   selector: 'tt-open-source',
@@ -11,7 +13,7 @@ import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.ser
   styleUrls: ['./open-source.component.scss']
 })
 export class OpenSourceComponent implements OnInit {
-  projects: Observable<Repository[]>;
+  projects: Observable<Repository[] | Placeholder[]>;
   columnCount: Observable<number>;
 
   constructor(
@@ -20,12 +22,17 @@ export class OpenSourceComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.projects = this.githubService
-      .getRepositories()
-      .pipe(shareReplay({ bufferSize: 1, refCount: true }));
-
     this.columnCount = this.responsiveLayoutService.columnCount.pipe(
       shareReplay({ bufferSize: 1, refCount: true })
     );
+
+    this.projects = this.githubService.getRepositories().pipe(
+      startWith(PLACEHOLDERS),
+      shareReplay({ bufferSize: 1, refCount: true })
+    );
   }
+}
+
+interface Placeholder {
+  isPlaceholder: boolean;
 }

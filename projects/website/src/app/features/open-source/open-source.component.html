@@ -13,7 +13,18 @@
     gutterSize="40"
   >
     <mat-grid-tile *ngFor="let project of projects | async">
-      <mat-card>
+      <mat-card *ngIf="project.isPlaceholder" class="placeholder">
+        <mat-card-header>
+          <div mat-card-avatar></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <a mat-flat-button disabled></a>
+          <a mat-flat-button disabled></a>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card *ngIf="!project.isPlaceholder">
         <mat-card-header>
           <div mat-card-avatar>
             <img
