@@ -8,8 +8,7 @@ const API_URL = `/api/email`;
   providedIn: 'root'
 })
 export class EmailService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   sendEmail(email: Email): Observable<any> {
     return this.http.post(API_URL, email);

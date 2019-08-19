@@ -8,9 +8,8 @@ describe('GetInTouchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GetInTouchComponent ]
-    })
-    .compileComponents();
+      declarations: [GetInTouchComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

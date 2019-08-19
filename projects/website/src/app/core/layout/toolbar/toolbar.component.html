@@ -20,9 +20,9 @@
       aria-label="Tomas Trajan"
     ></mat-icon>
   </a>
-  <span class="project-name"
-    >{{ (isResponsiveLayout | async) ? '' : 'TOMAS TRAJAN' }}</span
-  >
+  <span class="project-name">{{
+    (isResponsiveLayout | async) ? '' : 'TOMAS TRAJAN'
+  }}</span>
   <iframe
     *ngIf="!(isResponsiveLayout | async)"
     allowtransparency="true"

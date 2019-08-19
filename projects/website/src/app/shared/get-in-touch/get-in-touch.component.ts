@@ -13,7 +13,8 @@ export class GetInTouchComponent implements OnInit {
   @Input() title = 'Get in touch';
   @Input() subtitle =
     'Could you use some expertise and training in your project or organization to enable your team and deliver more value to your end users?';
-  @Input() call = `Let's get in touch to figure out the best way I can help you to achieve <strong>achieve your goals</strong>!`;
+  @Input()
+  call = `Let's get in touch to figure out the best way I can help you to achieve <strong>achieve your goals</strong>!`;
 
   form: FormGroup;
 
