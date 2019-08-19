@@ -68,7 +68,7 @@ app.post('/api/email', (req: Request, res: Response) => {
     `
   };
   email.send(msg)
-    .then(() => res.sendStatus(200))
+    .then(() => res.status(200).json('success'))
     .catch(error => res.send(error));
 });
 
