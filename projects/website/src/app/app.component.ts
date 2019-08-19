@@ -26,16 +26,17 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.isSmallOrSmaller = combineLatest(
       this.responsiveLayoutService.isSmallOrSmaller,
-      this.responsiveLayoutService.isLargeOrBigger
+      this.responsiveLayoutService.isLargeOrBigger,
+      this.responsiveLayoutService.columnCount
     ).pipe(
       delay(1),
-      tap(([isSmall, isLarge]) => {
-        this.demoRootCssClass = '';
+      tap(([isSmall, isLarge, columnCount]) => {
+        this.demoRootCssClass = `cols-${columnCount}`;
         if (isSmall) {
-          this.demoRootCssClass = 'responsive';
+          this.demoRootCssClass = `responsive cols-${columnCount}`;
         }
         if (isLarge) {
-          this.demoRootCssClass = 'responsive-large';
+          this.demoRootCssClass = `responsive-large cols-${columnCount}`;
         }
       }),
       map(([isSmall]) => isSmall)
