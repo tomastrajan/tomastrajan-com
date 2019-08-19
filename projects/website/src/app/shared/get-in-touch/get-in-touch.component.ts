@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 import { EmailService } from '../../core/api/email.service';
 import { NotificationService } from '../../core/services/notification.service';
@@ -16,6 +16,7 @@ export class GetInTouchComponent implements OnInit {
   @Input()
   call = `Let's get in touch to figure out the best way I can help you to achieve <strong>achieve your goals</strong>!`;
 
+  @ViewChild('formElement', { static: true }) formElement: NgForm;
   form: FormGroup;
 
   constructor(
@@ -25,18 +26,24 @@ export class GetInTouchComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.createForm();
+    this.form = this.fb.group({
+      firstname: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      company: ['', [Validators.required]],
+      message: ['', [Validators.required, Validators.maxLength(250)]]
+    });
   }
 
   submitForm() {
-    console.log('called');
     if (this.form.valid) {
       this.emailService.sendEmail(this.form.getRawValue()).subscribe(
         () => {
           this.notificationService.success('Message sent');
           this.resetForm();
         },
-        () => {
+        error => {
+          console.error(error);
           this.notificationService.error(
             'Something went wrong, please contact me using @tomastrajan on Twitter'
           );
@@ -47,16 +54,6 @@ export class GetInTouchComponent implements OnInit {
   }
 
   resetForm() {
-    this.createForm();
-  }
-
-  private createForm() {
-    this.form = this.fb.group({
-      firstname: ['', [Validators.required]],
-      lastname: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      company: ['', [Validators.required]],
-      message: ['', [Validators.required, Validators.maxLength(250)]]
-    });
+    this.formElement.resetForm();
   }
 }

@@ -5,7 +5,7 @@
     <p class="call" [innerHTML]="call"></p>
   </div>
 
-  <form [formGroup]="form" (ngSubmit)="submitForm()">
+  <form #formElement="ngForm" [formGroup]="form" (ngSubmit)="submitForm()">
     <mat-card>
       <div class="row">
         <mat-form-field appearance="outline">

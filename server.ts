@@ -64,7 +64,7 @@ app.post('/api/email', (req: Request, res: Response) => {
       From: ${req.body.firstname} ${req.body.lastname}
       Email: ${req.body.email}
       Company: ${req.body.company}
-      MEssage: ${req.body.message}
+      Message: ${req.body.message}
     `
   };
   email.send(msg)

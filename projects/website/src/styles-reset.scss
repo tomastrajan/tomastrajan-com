@@ -61,7 +61,7 @@ blockquote {
   }
 }
 
-// CUSTOMIZE CONSUMED WEB COMPONENTS
-ion-picker {
-  position: fixed !important;
+snack-bar-container {
+  position: relative;
+  top: 60px;
 }
