@@ -1,5 +1,6 @@
 import 'zone.js/dist/zone-node';
 import * as express from 'express';
+import * as bodyParser from 'body-parser';
 import * as email from '@sendgrid/mail';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
@@ -26,6 +27,7 @@ const API_TOKEN_GITHUB = Buffer.from(
 ).toString('base64');
 
 const app = express();
+app.use(bodyParser.json());
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine(
