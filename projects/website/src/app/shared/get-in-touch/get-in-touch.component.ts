@@ -14,7 +14,7 @@ export class GetInTouchComponent implements OnInit {
   @Input() subtitle =
     'Could you use some expertise and training in your project or organization to enable your team and deliver more value to your end users?';
   @Input()
-  call = `Let's get in touch to figure out the best way I can help you to achieve <strong>achieve your goals</strong>!`;
+  call = `Let's get in touch to figure out the best way I can help you to <strong>achieve your goals</strong>!`;
 
   @ViewChild('formElement', { static: true }) formElement: NgForm;
   form: FormGroup;

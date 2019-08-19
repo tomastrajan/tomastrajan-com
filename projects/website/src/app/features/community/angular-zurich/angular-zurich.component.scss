@@ -1,4 +1,12 @@
 :host {
+  position: relative;
+
+  .logo {
+    position: absolute;
+    right: 0;
+    top: -64px;
+    height: 96px;
+  }
   .videos {
     mat-grid-tile {
       overflow: visible;
@@ -15,5 +23,15 @@
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
       }
     }
+  }
+}
+
+:host-context(.responsive-large) {
+  .logo {
+    top: -32px;
+    height: 128px;
+  }
+  .wrapper {
+    width: 70%;
   }
 }
