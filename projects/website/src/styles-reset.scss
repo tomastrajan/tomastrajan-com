@@ -10,6 +10,13 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 3em !important;
+  line-height: 1.5em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+
 ul,
 ol {
   list-style-position: inside;
@@ -42,6 +49,8 @@ blockquote {
   padding: 10px 20px;
   border-left: 2px solid;
   margin: 20px 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
 
   &.large {
     font-style: normal;
