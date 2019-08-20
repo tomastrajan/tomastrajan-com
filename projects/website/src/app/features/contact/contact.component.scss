@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  overflow: hidden;
+
+  h3 {
+    opacity: 0.5;
+  }
+}
+
+:host-context(.responsive-large) {
+  .wrapper {
+    width: 70%;
+  }
+}

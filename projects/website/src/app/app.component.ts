@@ -1,5 +1,4 @@
-import { MatSidenav } from '@angular/material';
-import { Component, OnInit, ViewChild, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { delay, map, tap } from 'rxjs/operators';
 
@@ -13,8 +12,6 @@ import { ResponsiveLayoutService } from './core/layout/responsive-layout.service
 export class AppComponent implements OnInit {
   @HostBinding('class')
   demoRootCssClass = '';
-
-  @ViewChild('sidenav', { static: false }) sidenav: MatSidenav;
 
   navOpened: Observable<boolean>;
   navToggled = new BehaviorSubject(false);

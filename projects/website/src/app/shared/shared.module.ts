@@ -62,6 +62,24 @@ export class SharedModule {
       )
     );
     this.matIconRegistry.addSvgIcon(
+      'medium',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/logo/medium.svg'
+      )
+    );
+    this.matIconRegistry.addSvgIcon(
+      'instagram',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/logo/instagram.svg'
+      )
+    );
+    this.matIconRegistry.addSvgIcon(
+      'youtube',
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        'assets/logo/youtube.svg'
+      )
+    );
+    this.matIconRegistry.addSvgIcon(
       'lightbulb-off',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
         'assets/logo/lightbulb_off.svg'

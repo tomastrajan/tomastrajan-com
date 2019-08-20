@@ -6,6 +6,7 @@
         [routerLink]="nav.url"
         routerLinkActive="active"
         #rla="routerLinkActive"
+        (click)="close(!nav.children || nav.children.length < 2)"
       >
         {{ nav.label }}
         <mat-icon matListIcon>{{
@@ -20,6 +21,7 @@
           *ngFor="let child of nav.children"
           [routerLink]="child.url"
           routerLinkActive="active"
+          (click)="close(true)"
         >
           {{ child.label }}
         </a>

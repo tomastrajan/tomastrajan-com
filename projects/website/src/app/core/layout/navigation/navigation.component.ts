@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 const NAVIGATION = [
   {
@@ -44,6 +44,10 @@ const NAVIGATION = [
   {
     label: 'BLOG',
     externalUrl: 'https://medium.com/@tomastrajan'
+  },
+  {
+    label: 'CONTACT',
+    url: 'contact'
   }
 ];
 
@@ -53,9 +57,18 @@ const NAVIGATION = [
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  @Output() closeSideNav = new EventEmitter<void>();
+
   navigation = NAVIGATION;
 
   constructor() {}
 
   ngOnInit() {}
+
+  close(close: boolean) {
+    console.log({ close });
+    if (close) {
+      this.closeSideNav.emit();
+    }
+  }
 }

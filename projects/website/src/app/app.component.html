@@ -11,7 +11,7 @@
     [opened]="navOpened | async"
     disableClose
   >
-    <tt-navigation></tt-navigation>
+    <tt-navigation (closeSideNav)="onBackdropClick()"></tt-navigation>
   </mat-sidenav>
   <mat-sidenav-content>
     <router-outlet></router-outlet>
