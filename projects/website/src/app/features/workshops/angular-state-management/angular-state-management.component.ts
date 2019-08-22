@@ -9,7 +9,6 @@ import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.
   styleUrls: ['./angular-state-management.component.scss']
 })
 export class AngularStateManagementComponent implements OnInit {
-
   isSmallOrSmaller: Observable<boolean>;
 
   constructor(private responsiveLayoutService: ResponsiveLayoutService) {}

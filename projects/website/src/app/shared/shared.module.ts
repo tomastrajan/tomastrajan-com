@@ -65,9 +65,7 @@ export class SharedModule {
     );
     this.matIconRegistry.addSvgIcon(
       'medium',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/logo/medium.svg'
-      )
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/logo/medium.svg')
     );
     this.matIconRegistry.addSvgIcon(
       'instagram',
