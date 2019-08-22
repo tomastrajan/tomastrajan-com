@@ -9,6 +9,7 @@ import {
   PLATFORM_ID
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { NavigationEnd, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 
@@ -32,15 +33,25 @@ export class ToolbarComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
     @Inject(DOCUMENT) private document: Document,
+    private router: Router,
     private renderer: Renderer2,
     private responsiveLayoutService: ResponsiveLayoutService,
     private loadingService: LoadingService
   ) {}
 
   ngOnInit() {
-    const hours = new Date().getHours();
-    if ((hours < 7 || hours > 20) && isPlatformBrowser(this.platformId)) {
-      this.toggleDarkMode();
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          (this.document.defaultView as any).gtag('config', 'UA-53234284-4', {
+            page_url: event.urlAfterRedirects
+          });
+        }
+      });
+      const hours = new Date().getHours();
+      if ((hours < 7 || hours > 20)) {
+        this.toggleDarkMode();
+      }
     }
     this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller.pipe(
       shareReplay({ bufferSize: 1, refCount: true })
