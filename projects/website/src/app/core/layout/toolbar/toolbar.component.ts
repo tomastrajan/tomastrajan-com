@@ -49,7 +49,7 @@ export class ToolbarComponent implements OnInit {
         }
       });
       const hours = new Date().getHours();
-      if ((hours < 7 || hours > 20)) {
+      if (hours < 7 || hours > 20) {
         this.toggleDarkMode();
       }
     }

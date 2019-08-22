@@ -66,7 +66,6 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {}
 
   close(close: boolean) {
-    console.log({ close });
     if (close) {
       this.closeSideNav.emit();
     }

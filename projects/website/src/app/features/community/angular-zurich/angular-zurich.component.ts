@@ -14,7 +14,7 @@ import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.
 export class AngularZurichComponent implements OnInit {
   videoUrls: Observable<SafeResourceUrl[]>;
   columnCount: Observable<number>;
-  cta = `Drop us a line or fill out the <a href="https://docs.google.com/forms/d/12VJwBa7DZHRsKkoaZyqIzgEgDDyjeDe4jMoIWijY8FQ" target="_blank">CFP form</a> at angularzurich.dev website`;
+  cta = `Drop us a line or fill out the <a href="https://docs.google.com/forms/d/12VJwBa7DZHRsKkoaZyqIzgEgDDyjeDe4jMoIWijY8FQ" target="_blank"  rel="noopener">CFP form</a> at angularzurich.dev website`;
 
   constructor(
     private youtubeService: YoutubeService,
