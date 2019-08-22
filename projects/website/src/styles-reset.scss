@@ -53,11 +53,22 @@ blockquote {
   line-height: 1.2em;
 
   &.large {
+    font-family: Patua One, serif;
+    position: relative;
     font-style: normal;
     border: 0;
     font-size: 2em;
     line-height: 1.6em;
     padding: 10px 80px;
+
+    &::after {
+      pointer-events: none;
+      content: '“';
+      position: absolute;
+      top: 25px;
+      left: 0;
+      font-size: 5em;
+    }
   }
 }
 
@@ -66,6 +77,7 @@ blockquote {
     &.large {
       font-size: 1.6em;
       padding: 10px 20px;
+      padding-left: 65px;
     }
   }
 }
