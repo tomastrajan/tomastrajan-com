@@ -26,6 +26,7 @@ export class ToolbarComponent implements OnInit {
 
   isLoading: Observable<boolean>;
   isResponsiveLayout: Observable<boolean>;
+  columnCount: Observable<number>;
   isDarkMode = false;
 
   constructor(
@@ -44,6 +45,7 @@ export class ToolbarComponent implements OnInit {
     this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller.pipe(
       shareReplay({ bufferSize: 1, refCount: true })
     );
+    this.columnCount = this.responsiveLayoutService.columnCount;
     this.isLoading = this.loadingService.isLoading;
   }
 

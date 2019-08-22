@@ -24,7 +24,7 @@
     (isResponsiveLayout | async) ? '' : 'TOMAS TRAJAN'
   }}</span>
   <iframe
-    *ngIf="!(isResponsiveLayout | async)"
+    *ngIf="(columnCount | async) > 2"
     allowtransparency="true"
     frameborder="0"
     scrolling="no"
@@ -46,10 +46,7 @@
       SPEAKING
     </button>
     <button mat-flat-button routerLink="open-source" routerLinkActive="active">
-      OPEN SOURCE
-    </button>
-    <button mat-flat-button routerLink="community" routerLinkActive="active">
-      COMMUNITY
+      {{(columnCount | async) > 2 ? 'OPEN SOURCE' : 'OSS'}}
     </button>
     <a
       href="https://www.medium.com/@tomastrajan"
