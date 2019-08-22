@@ -24,6 +24,7 @@
             "tsConfig": "projects/website/tsconfig.app.json",
             "assets": [
               "projects/website/src/favicon.ico",
+              "projects/website/src/robots.txt",
               "projects/website/src/assets"
             ],
             "styles": [
