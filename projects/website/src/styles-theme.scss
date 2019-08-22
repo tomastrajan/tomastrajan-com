@@ -39,6 +39,7 @@ $elements-tt-theme-dark: mat-dark-theme(
 @import './app/core/layout/navigation/navigation.component.scss-theme';
 @import './app/core/layout/footer/footer.component.scss-theme';
 @import './app/shared/get-in-touch/get-in-touch.component.scss-theme';
+@import './app/features/home/home/home.component.scss-theme';
 @import './app/features/open-source/open-source.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
@@ -49,6 +50,7 @@ $elements-tt-theme-dark: mat-dark-theme(
   @include tt-navigation-component-theme($theme);
   @include tt-footer-component-theme($theme);
   @include tt-get-in-touch-component-theme($theme);
+  @include tt-home-component-theme($theme);
   @include tt-open-source-component-theme($theme);
 }
 
