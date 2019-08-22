@@ -7,6 +7,15 @@
   h3 {
     opacity: 0.5;
   }
+
+  a {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+
+    mat-icon {
+      font-size: 32px;
+    }
+  }
 }
 
 :host-context(.responsive-large) {
