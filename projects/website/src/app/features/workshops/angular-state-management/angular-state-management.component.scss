@@ -1,9 +1,10 @@
 :host {
   .wrapper {
     display: flex;
+    margin: 0 0 40px 0;
 
-    &:first-of-type {
-      margin: 0 0 40px 0;
+    &:last-of-type {
+      margin: 0 0 0 0;
     }
 
     .description {
@@ -33,12 +34,14 @@
     ol {
       margin: 0 0 40px 0 !important;
 
-      &:last-of-type {
-        margin: 0 0 0 0 !important;
-      }
-
       ol {
         margin-bottom: 10px !important;
+      }
+    }
+
+    .description:last-of-type {
+      ol {
+        margin: 0 0 0 0 !important;
       }
     }
   }

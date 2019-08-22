@@ -1,5 +1,48 @@
-:host-context(.responsive-large) {
+:host {
   .wrapper {
-    width: 70%;
+    display: flex;
+    margin: 0 0 40px 0;
+
+    &:last-of-type {
+      margin: 0 0 0 0;
+    }
+
+    .description {
+      flex: 1 1 0;
+
+      ol {
+        ol {
+          margin: 10px 0 10px 40px;
+        }
+      }
+    }
+    .banner {
+      flex: 1 1 0;
+
+      img {
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+:host-context(.responsive) {
+  .wrapper {
+    flex-direction: column;
+
+    ol {
+      margin: 0 0 40px 0 !important;
+
+      ol {
+        margin-bottom: 10px !important;
+      }
+    }
+
+    .description:last-of-type {
+      ol {
+        margin: 0 0 0 0 !important;
+      }
+    }
   }
 }
