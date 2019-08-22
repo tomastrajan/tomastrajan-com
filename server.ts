@@ -28,6 +28,7 @@ const API_TOKEN_GITHUB = Buffer.from(
 
 const app = express();
 app.use(bodyParser.json());
+app.use(requireHTTPS);
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine(
@@ -67,11 +68,11 @@ app.post('/api/email', (req: Request, res: Response) => {
       Message: ${req.body.message}
     `
   };
-  email.send(msg)
+  email
+    .send(msg)
     .then(() => res.status(200).json('success'))
     .catch(error => res.send(error));
 });
-
 
 // Serve static files from /browser
 app.get(
@@ -90,3 +91,15 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
 });
+
+function requireHTTPS(req, res, next) {
+  // The 'x-forwarded-proto' check is for Heroku
+  if (
+    !req.secure &&
+    req.get('x-forwarded-proto') !== 'https' &&
+    process.env.NODE_ENV !== 'development'
+  ) {
+    return res.redirect(`https://${req.get('host')}${req.url}`);
+  }
+  next();
+}
