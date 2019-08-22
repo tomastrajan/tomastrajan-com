@@ -19,7 +19,9 @@ h1 {
 
 ul,
 ol {
-  list-style-position: inside;
+  position: relative;
+  left: 15px;
+  list-style-position: outside;
   line-height: 2em;
 }
 
