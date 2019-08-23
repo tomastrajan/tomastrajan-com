@@ -6,11 +6,11 @@ import { map } from 'rxjs/operators';
 const API_URL = `/api/github/repositories`;
 
 const REPO_NAMES = [
+  'angular-extensions/elements',
+  'angular-extensions/model',
+  'angular-ngrx-material-starter',
   'angular/angular',
   'angular/angular-cli',
-  'angular-ngrx-material-starter',
-  'angular-extensions/model',
-  'angular-extensions/elements',
   'medium-enhanced-stats',
   'ngx-model',
   'angular-js-es6-testing-example',
