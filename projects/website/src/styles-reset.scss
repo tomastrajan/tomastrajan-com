@@ -40,6 +40,12 @@ pre {
 
 h2 {
   font-size: 26px !important;
+  mat-icon {
+    font-size: 30px !important;
+    position: relative;
+    left: -6px;
+    top: 5px;
+  }
 }
 h3 {
   font-size: 20px !important;
