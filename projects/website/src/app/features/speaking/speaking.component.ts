@@ -51,20 +51,6 @@ const TALKS = [
     recording: ''
   },
   {
-    title: 'How to leverage Angular Schematics',
-    subtitle: 'Voxed Days Zurich 2019 - Switzerland',
-    description:
-      'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
-    logo: 'voxxeddays-logo.png',
-    logoAlt: 'Voxxed Days Zurich 2019',
-    photo: 'voxxeddays2019.jpg',
-    photoAlt:
-      'Tomas Trajan speaking about Angular Schematics at Voxxed Days Zurich 2019',
-    slides: 'https://slides.com/tomastrajan/angular-schematics',
-    event: 'https://cfpvdz19.confinabox.com/talk/DMF-3644',
-    recording: 'https://www.youtube.com/watch?v=eFzjY4uWgCA'
-  },
-  {
     title: 'Guide to custom Angular Schematics',
     subtitle: 'Angular Zurich Meetup 03 2019 - Switzerland',
     description:
@@ -77,6 +63,20 @@ const TALKS = [
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://www.meetup.com/AngularZRH/events/258725129/',
     recording: 'https://www.youtube.com/watch?v=M5YSPas3qFo'
+  },
+  {
+    title: 'How to leverage Angular Schematics',
+    subtitle: 'Voxed Days Zurich 2019 - Switzerland',
+    description:
+      'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
+    logo: 'voxxeddays-logo.png',
+    logoAlt: 'Voxxed Days Zurich 2019',
+    photo: 'voxxeddays2019.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about Angular Schematics at Voxxed Days Zurich 2019',
+    slides: 'https://slides.com/tomastrajan/angular-schematics',
+    event: 'https://cfpvdz19.confinabox.com/talk/DMF-3644',
+    recording: 'https://www.youtube.com/watch?v=eFzjY4uWgCA'
   },
   {
     title: 'Release Butler (Twitter Bot Sideproject)',
