@@ -1,7 +1,7 @@
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
-import { delay, map, tap } from 'rxjs/operators';
+import { delay, map, startWith, tap } from 'rxjs/operators';
 
 import { ResponsiveLayoutService } from './core/layout/responsive-layout.service';
 
@@ -47,7 +47,8 @@ export class AppComponent implements OnInit {
       this.isSmallOrSmaller,
       this.navToggled
     ]).pipe(
-      map(([isSmallScreen, navToggled]) => (!isSmallScreen ? true : navToggled))
+      map(([isSmallScreen, navToggled]) => (!isSmallScreen ? true : navToggled)),
+      startWith(true)
     );
 
     this.sidenavMode = this.isSmallOrSmaller.pipe(
