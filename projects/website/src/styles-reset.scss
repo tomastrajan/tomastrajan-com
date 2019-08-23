@@ -39,14 +39,15 @@ pre {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px !important;
 }
 h3 {
-  font-size: 24px;
+  font-size: 20px !important;
 }
 p, ul, ol {
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 40px !important;
 }
 
 a {
