@@ -47,7 +47,9 @@ export class AppComponent implements OnInit {
       this.isSmallOrSmaller,
       this.navToggled
     ]).pipe(
-      map(([isSmallScreen, navToggled]) => (!isSmallScreen ? true : navToggled)),
+      map(([isSmallScreen, navToggled]) =>
+        !isSmallScreen ? true : navToggled
+      ),
       startWith(true)
     );
 

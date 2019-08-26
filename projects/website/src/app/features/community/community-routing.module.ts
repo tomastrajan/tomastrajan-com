@@ -19,6 +19,20 @@ const routes: Routes = [
           import('./angular-zurich/angular-zurich.module').then(
             m => m.AngularZurichModule
           )
+      },
+      {
+        path: 'release-butler',
+        loadChildren: () =>
+          import('./release-butler/release-butler.module').then(
+            m => m.ReleaseButlerModule
+          )
+      },
+      {
+        path: 'medium-enhanced-stats',
+        loadChildren: () =>
+          import('./medium-enhanced-stats/medium-enhanced-stats.module').then(
+            m => m.MediumEnhancedStatsModule
+          )
       }
     ]
   }
