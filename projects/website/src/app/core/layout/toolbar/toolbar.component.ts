@@ -15,6 +15,7 @@ import { shareReplay } from 'rxjs/operators';
 
 import { ResponsiveLayoutService } from '../responsive-layout.service';
 import { LoadingService } from '../../services/loading.service';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'tt-toolbar',
@@ -36,7 +37,8 @@ export class ToolbarComponent implements OnInit {
     private router: Router,
     private renderer: Renderer2,
     private responsiveLayoutService: ResponsiveLayoutService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private settingsService: SettingsService
   ) {}
 
   ngOnInit() {
@@ -48,8 +50,13 @@ export class ToolbarComponent implements OnInit {
           });
         }
       });
+      const settings = this.settingsService.getSettings();
       const hours = new Date().getHours();
-      if (hours < 7 || hours > 20) {
+      if (settings.isDarkMode !== undefined) {
+        if (settings.isDarkMode) {
+          this.toggleDarkMode();
+        }
+      } else if (hours < 7 || hours > 20) {
         this.toggleDarkMode();
       }
     }
@@ -66,6 +73,7 @@ export class ToolbarComponent implements OnInit {
 
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
+    this.settingsService.updateSettings({ isDarkMode: this.isDarkMode });
 
     if (this.isDarkMode) {
       this.renderer.addClass(this.document.body, 'dark');
