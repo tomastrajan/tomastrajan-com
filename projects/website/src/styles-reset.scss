@@ -17,12 +17,43 @@ h1 {
   font-weight: 700 !important;
 }
 
-ul,
-ol {
+h2 {
+  font-size: 26px !important;
+  mat-icon {
+    font-size: 30px !important;
+    position: relative;
+    left: -6px;
+    top: 5px;
+  }
+}
+
+h3 {
+  font-size: 20px !important;
+}
+
+p, ul, ol {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 40px !important;
+}
+
+ul, ol {
   position: relative;
-  left: 15px;
+  left: 24px;
   list-style-position: outside;
-  line-height: 2em;
+  line-height: 35px;
+
+  li {
+    padding-left: 6px;
+  }
+}
+
+ul {
+  left: 22px;
+}
+
+a {
+  text-decoration: none;
 }
 
 code {
@@ -36,28 +67,6 @@ pre {
   border-radius: 10px;
   padding: 20px !important;
   margin: 0 0 20px 0;
-}
-
-h2 {
-  font-size: 26px !important;
-  mat-icon {
-    font-size: 30px !important;
-    position: relative;
-    left: -6px;
-    top: 5px;
-  }
-}
-h3 {
-  font-size: 20px !important;
-}
-p, ul, ol {
-  font-size: 18px;
-  line-height: 30px;
-  margin-bottom: 40px !important;
-}
-
-a {
-  text-decoration: none;
 }
 
 blockquote {
