@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 
 const API_URL = `/api/github/repositories`;
 
@@ -33,7 +33,8 @@ export class GithubService {
         return REPO_NAMES.map(name =>
           repoItems.find(repo => repo.name === name)
         );
-      })
+      }),
+      shareReplay(1)
     );
   }
 
