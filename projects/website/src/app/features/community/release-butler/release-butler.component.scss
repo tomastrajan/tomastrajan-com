@@ -7,7 +7,20 @@
     top: -64px;
     height: 96px;
   }
+
+  .quote-wrapper {
+    padding: 40px 10%;
+    display: flex;
+    justify-content: center;
+  }
 }
+
+:host-context(.responsive) {
+  .quote-wrapper {
+    padding: 0;
+  }
+}
+
 
 :host-context(.responsive-large) {
   .logo {

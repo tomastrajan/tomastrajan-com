@@ -38,7 +38,15 @@ const NAVIGATION = [
       {
         label: 'Angular Zurich Meetup',
         url: 'community/angular-zurich'
+      },
+      {
+        label: 'Release Butler',
+        url: 'community/release-butler'
       }
+      // {
+      //   label: 'Medium Enhanced Stats',
+      //   url: 'community/medium-enhanced-stats'
+      // }
     ]
   },
   {

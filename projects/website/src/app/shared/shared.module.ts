@@ -19,7 +19,9 @@ import {
   MatFormFieldModule,
   MatProgressBarModule
 } from '@angular/material';
+
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const ANGULAR_MATERIAL_MODULES = [
   MatCardModule,
@@ -39,13 +41,14 @@ const ANGULAR_MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  declarations: [GetInTouchComponent],
+  declarations: [GetInTouchComponent, GalleryComponent],
   imports: [CommonModule, ReactiveFormsModule, ...ANGULAR_MATERIAL_MODULES],
   exports: [
     CommonModule,
     ReactiveFormsModule,
     ...ANGULAR_MATERIAL_MODULES,
-    GetInTouchComponent
+    GetInTouchComponent,
+    GalleryComponent
   ]
 })
 export class SharedModule {

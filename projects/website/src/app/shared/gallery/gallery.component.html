@@ -1,0 +1,14 @@
+<mat-grid-list
+  class="images"
+  [cols]="columnCount | async"
+  rowHeight="3:2"
+  gutterSize="40"
+>
+  <mat-grid-tile
+    *ngFor="let image of images"
+    [matTooltip]="image.description"
+    matTooltipPosition="above"
+  >
+    <img [src]="image.src" [alt]="image.alt" />
+  </mat-grid-tile>
+</mat-grid-list>
