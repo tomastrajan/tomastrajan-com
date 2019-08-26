@@ -6,8 +6,7 @@ export const LOCAL_STORAGE_KEY = 'tomastrajan-com';
   providedIn: 'root'
 })
 export class SettingsService {
-
-  constructor() { }
+  constructor() {}
 
   getSettings(): Settings {
     return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || {};
@@ -15,7 +14,10 @@ export class SettingsService {
 
   updateSettings(update: Partial<Settings>) {
     const settings = this.getSettings();
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify({...settings, ...update}));
+    localStorage.setItem(
+      LOCAL_STORAGE_KEY,
+      JSON.stringify({ ...settings, ...update })
+    );
   }
 }
 

@@ -67,6 +67,7 @@ const IMAGES: GalleryImage[] = [
   {
     src: '../../../../assets/images/community/release-butler/stats.jpg',
     alt: 'Release Butler stats',
-    description: 'Release Butler has more than 2200 followers as of 2019, follow him on Twitter and get up to date!'
+    description:
+      'Release Butler has more than 2200 followers as of 2019, follow him on Twitter and get up to date!'
   }
 ];

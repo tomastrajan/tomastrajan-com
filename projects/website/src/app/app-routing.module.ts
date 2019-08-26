@@ -6,7 +6,10 @@ import { HomeComponent } from './features/home/home/home.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {
+      title: 'Angular Workshops and Consulting'
+    }
   },
   {
     path: 'consulting',

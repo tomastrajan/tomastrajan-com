@@ -16,6 +16,9 @@
 }
 
 :host-context(.responsive) {
+  .logo {
+    right: -30px;
+  }
   .quote-wrapper {
     padding: 0;
   }

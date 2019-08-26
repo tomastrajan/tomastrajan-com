@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { TitleService } from './services/title.service';
 
 @NgModule({
   declarations: [ToolbarComponent, NavigationComponent, FooterComponent],
@@ -18,4 +19,8 @@ import { FooterComponent } from './layout/footer/footer.component';
   ],
   exports: [ToolbarComponent, NavigationComponent, FooterComponent]
 })
-export class CoreModule {}
+export class CoreModule {
+  constructor(private titleService: TitleService) {
+    this.titleService.start();
+  }
+}

@@ -4,7 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AngularStateManagementComponent } from './angular-state-management.component';
 
 const routes: Routes = [
-  { path: '', component: AngularStateManagementComponent }
+  {
+    path: '',
+    component: AngularStateManagementComponent,
+    data: {
+      title: 'Angular NgRx State Management Workshop'
+    }
+  }
 ];
 
 @NgModule({

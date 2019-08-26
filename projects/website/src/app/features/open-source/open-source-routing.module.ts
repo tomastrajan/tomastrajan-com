@@ -3,7 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { OpenSourceComponent } from './open-source.component';
 
-const routes: Routes = [{ path: '', component: OpenSourceComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: OpenSourceComponent,
+    data: {
+      title: 'Open source projects'
+    }
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

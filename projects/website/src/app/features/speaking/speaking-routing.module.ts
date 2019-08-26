@@ -3,7 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SpeakingComponent } from './speaking.component';
 
-const routes: Routes = [{ path: '', component: SpeakingComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: SpeakingComponent,
+    data: {
+      title: 'Conference and Meetups speaking'
+    }
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
