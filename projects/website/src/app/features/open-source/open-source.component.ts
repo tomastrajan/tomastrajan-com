@@ -26,7 +26,7 @@ export class OpenSourceComponent implements OnInit {
       shareReplay({ bufferSize: 1, refCount: true })
     );
 
-    this.projects = this.githubService.getRepositories().pipe(
+    this.projects = this.githubService.repositories$.pipe(
       startWith(PLACEHOLDERS),
       shareReplay({ bufferSize: 1, refCount: true })
     );

@@ -24,19 +24,15 @@ const REPO_NAMES = [
   providedIn: 'root'
 })
 export class GithubService {
-  constructor(private http: HttpClient) {}
+  repositories$: Observable<Repository[]> = this.http.get(API_URL).pipe(
+    map((repos: Repository[]) => {
+      const repoItems = repos.map(this.buildRepositoryItem);
+      return REPO_NAMES.map(name => repoItems.find(repo => repo.name === name));
+    }),
+    shareReplay(1)
+  );
 
-  getRepositories(): Observable<Repository[]> {
-    return this.http.get(API_URL).pipe(
-      map((repos: Repository[]) => {
-        const repoItems = repos.map(this.buildRepositoryItem);
-        return REPO_NAMES.map(name =>
-          repoItems.find(repo => repo.name === name)
-        );
-      }),
-      shareReplay(1)
-    );
-  }
+  constructor(private http: HttpClient) {}
 
   private buildRepositoryItem(item: any): Repository {
     return {
