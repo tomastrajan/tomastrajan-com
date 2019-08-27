@@ -159,5 +159,20 @@ const TALKS = [
     slides:
       'https://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules',
     recording: 'https://www.youtube.com/watch?v=sz37GQ45rVI'
+  },
+  {
+    title: 'Getting Serious with Angular Schematics',
+    subtitle: 'Adventures in Angular Podcast #233',
+    description:
+      'In this episode of Adventures in Angular, the panel speaks with Tomas Trajan a Google Developer Expert for Angular from Switzerland. Tomas explains what Angular Schematics is and how it simplifies a developer’s life. He goes through cases where Angular Schematics would be great to use.',
+    logo: 'devchat-logo.png',
+    logoAlt: 'Devchat',
+    photo: 'aid201904.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about getting serious with Angular Schematics',
+    recording:
+      'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/',
+    event:
+      'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/'
   }
 ];
