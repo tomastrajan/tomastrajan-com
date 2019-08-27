@@ -42,7 +42,7 @@ const NAVIGATION = [
       {
         label: 'Release Butler',
         url: 'community/release-butler'
-      }
+      },
       // {
       //   label: 'Medium Enhanced Stats',
       //   url: 'community/medium-enhanced-stats'

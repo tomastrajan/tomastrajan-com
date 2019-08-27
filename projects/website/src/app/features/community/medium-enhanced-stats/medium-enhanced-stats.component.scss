@@ -1,0 +1,36 @@
+:host {
+  position: relative;
+
+  .logo {
+    position: absolute;
+    right: 0;
+    top: -64px;
+    height: 96px;
+  }
+
+  .quote-wrapper {
+    padding: 40px 10%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+:host-context(.responsive) {
+  .logo {
+    right: -30px;
+  }
+  .quote-wrapper {
+    padding: 0;
+  }
+}
+
+
+:host-context(.responsive-large) {
+  .logo {
+    top: -32px;
+    height: 128px;
+  }
+  .wrapper {
+    width: 70%;
+  }
+}
