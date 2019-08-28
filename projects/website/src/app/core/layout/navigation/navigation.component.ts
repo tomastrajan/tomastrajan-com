@@ -25,7 +25,17 @@ const NAVIGATION = [
   },
   {
     label: 'SPEAKING',
-    url: 'speaking'
+    url: 'speaking',
+    children: [
+      {
+        label: 'Conferences & Meetups',
+        url: 'speaking/conferences'
+      },
+      // {
+      //   label: 'Conference Kit',
+      //   url: 'speaking/conference-kit'
+      // }
+    ]
   },
   {
     label: 'OPEN SOURCE',

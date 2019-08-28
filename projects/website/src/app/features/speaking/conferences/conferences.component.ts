@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 
-import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.service';
+import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 
 @Component({
-  selector: 'tt-speaking',
-  templateUrl: './speaking.component.html',
-  styleUrls: ['./speaking.component.scss']
+  selector: 'tt-conferences',
+  templateUrl: './conferences.component.html',
+  styleUrls: ['./conferences.component.scss']
 })
-export class SpeakingComponent implements OnInit {
+export class ConferencesComponent implements OnInit {
   talks = TALKS;
   columnCount: Observable<number>;
 
