@@ -1,7 +1,66 @@
 <h1>Conference Kit</h1>
 
 <div class="wrapper">
+  <blockquote class="large">
+    Would you like to provide interesting and valuable Angular content for the
+    attendees of your conference or meetup?
+  </blockquote>
 
+  <h2><mat-icon>menu_book</mat-icon> Current topics</h2>
+  <ul>
+    <li>How to build custom Angular Schematics
+      <mat-chip-list>
+        <mat-chip color="primary" selected>Live coding</mat-chip>
+      </mat-chip-list>
+    </li>
+    <li>The best way to lazy load Angular Elements
+      <mat-chip-list>
+        <mat-chip color="accent" selected>Presentation + demo</mat-chip>
+      </mat-chip-list>
+    </li>
+    <li>
+      Release Butler - A Twitter bot that Tweets changelogs of popular frontend
+      frameworks and libraries
+      <mat-chip-list>
+        <mat-chip>⚡ talk</mat-chip>
+      </mat-chip-list>
+    </li>
+  </ul>
+  <h2><mat-icon>emoji_people</mat-icon> Speakers bio</h2>
+  <p>
+    Tomas Trajan is a Google Developer Expert for Angular and Web technologies.
+    He is currently working as a consultant and Angular trainer with Swiss based enterprise
+    organizations where he strives to provide a lot of value by empowering developer
+    teams, sharing know-how and leveraging large network of experts and core contributors.
+    This enables him to get things done - anything from a complex infrastructure topic, process automation
+    or mission critical feature... Besides that he also writes an Angular focused blog, works on open source
+    and speaks at various local and international meetups and conferences.
+  </p>
+
+  <h2><mat-icon>person</mat-icon> Profile pictures</h2>
 </div>
 
-<tt-get-in-touch></tt-get-in-touch>
+<tt-gallery [images]="images" rowHeight="1:1" columns="4"></tt-gallery>
+
+<tt-get-in-touch
+  title="Let's chat"
+  subtitle="Are you an organizer of a great conference or meetup and would you like to get some thought provoking Angular or frontend talk for you attendees?"
+  call="Drop me a line or just ping me on Twitter @tomastrajan and we will figure out how to make that happen!"
+></tt-get-in-touch>
+
+Tomas is a Fullstack Software Engineer with a weak spot for frontend and
+especially Angular. His humble beginnings as a graphic designer can explain his
+strong affinity for the frontend even though he doesn't shy from complex
+backends be it nodejs or Java. Originally from Kosice Slovakia, Angular JS was
+the technology which enabled him to provide value to the developer teams in
+Switzerland and eventually travel around the world while working on open source
+and blogging about the Angular and other frontend technologies. He strives to
+empower teams he is working with by building tools, introducing best practices
+and work flows that automate the mundane and enable full focus on creating value
+for the end users. While acknowledging that as of 2018, it is possible to
+develop robust web applications using any of the available open source
+frameworks, he prefers to work with Angular & Typescript because they are the
+best fit for large teams and complex realities of big enterprise organizations.
+When not working, Tomas enjoys exploring the world, preferably from the back of
+a rented scooter in a remote location. Playing old school (90s) computer games
+and listening to audiobooks.

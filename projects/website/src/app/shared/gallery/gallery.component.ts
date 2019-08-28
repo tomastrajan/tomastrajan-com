@@ -11,6 +11,8 @@ import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.ser
 })
 export class GalleryComponent implements OnInit {
   @Input() images: GalleryImage[];
+  @Input() rowHeight: string;
+  @Input() columns: number;
 
   columnCount: Observable<number>;
 

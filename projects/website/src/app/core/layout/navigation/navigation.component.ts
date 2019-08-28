@@ -31,10 +31,10 @@ const NAVIGATION = [
         label: 'Conferences & Meetups',
         url: 'speaking/conferences'
       },
-      // {
-      //   label: 'Conference Kit',
-      //   url: 'speaking/conference-kit'
-      // }
+      {
+        label: 'Conference Kit',
+        url: 'speaking/conference-kit'
+      }
     ]
   },
   {

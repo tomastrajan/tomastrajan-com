@@ -1,7 +1,7 @@
 <mat-grid-list
   class="images"
-  [cols]="columnCount | async"
-  rowHeight="3:2"
+  [cols]="columns || (columnCount | async)"
+  [rowHeight]="rowHeight || '3:2'"
   gutterSize="40"
 >
   <mat-grid-tile

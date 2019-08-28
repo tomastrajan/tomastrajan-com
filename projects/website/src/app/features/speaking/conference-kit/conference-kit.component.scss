@@ -1,3 +1,30 @@
 :host {
 
+  mat-chip-list {
+    display: inline-block;
+  }
+
+  ul {
+    li {
+      line-height: 50px;
+    }
+  }
+
+  .quote-wrapper {
+    padding: 40px 10%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+:host-context(.responsive) {
+  .quote-wrapper {
+    padding: 0;
+  }
+}
+
+:host-context(.responsive-large) {
+  .wrapper {
+    width: 70%;
+  }
 }
