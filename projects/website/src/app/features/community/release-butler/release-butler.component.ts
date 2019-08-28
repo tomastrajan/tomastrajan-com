@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 
-import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 import { GalleryImage } from '../../../shared/gallery/gallery.component';
 
 @Component({
@@ -11,22 +8,11 @@ import { GalleryImage } from '../../../shared/gallery/gallery.component';
   styleUrls: ['./release-butler.component.scss']
 })
 export class ReleaseButlerComponent implements OnInit {
-  galleryColumnCount: Observable<number>;
   images = IMAGES;
 
-  constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.galleryColumnCount = combineLatest([
-      this.responsiveLayoutService.isXSmallScreen,
-      this.responsiveLayoutService.isLargeOrBigger
-    ]).pipe(
-      map(([isXSmall, isLargeOrBigger]) =>
-        isXSmall ? 1 : isLargeOrBigger ? 3 : 2
-      ),
-      shareReplay({ bufferSize: 1, refCount: true })
-    );
-  }
+  ngOnInit() {}
 }
 
 const IMAGES: GalleryImage[] = [
