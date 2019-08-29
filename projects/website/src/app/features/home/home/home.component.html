@@ -1,66 +1,106 @@
-<img class="avatar" src="assets/tomastrajan.png" alt="Tomas Trajan" />
-<div class="intro">
-  <h1>TOMAS TRAJAN</h1>
-  <h3>
-    Empowering developer teams, taking initiative and getting things done with
-    Angular focused consulting services and workshops
-  </h3>
-  <div class="cta">
-    <button mat-flat-button color="accent" routerLink="../consulting">
-      Consulting
-    </button>
-    <button mat-flat-button color="primary" routerLink="../workshops">
-      Workshops
-    </button>
-    <button mat-flat-button color="warn" routerLink="../speaking">
-      Speaking
-    </button>
-    <button mat-stroked-button routerLink="../open-source">
-      Open Source
-    </button>
+<div class="wrapper">
+  <img class="avatar" src="assets/tomastrajan.png" alt="Tomas Trajan" />
+  <div class="intro">
+    <h1>TOMAS TRAJAN</h1>
+    <div class="cta">
+      <button mat-flat-button color="accent" routerLink="../consulting">
+        Consulting
+      </button>
+      <button mat-flat-button color="primary" routerLink="../workshops">
+        Workshops
+      </button>
+      <button mat-flat-button color="warn" routerLink="../speaking">
+        Speaking
+      </button>
+      <button mat-stroked-button routerLink="../open-source">
+        Open Source
+      </button>
+    </div>
+    <blockquote class="large">
+      Empowering developer teams, taking initiative and getting things done with
+      Angular focused consulting services and workshops
+    </blockquote>
+  </div>
+  <div class="technologies">
+    <img
+      src="../../../../assets/logo/angular.svg"
+      alt="Angular"
+      matTooltip="Angular"
+      matTooltipPosition="above"
+    />
+    <img
+      src="../../../../assets/logo/ngrx.svg"
+      alt="NgRx"
+      matTooltip="NgRx"
+      matTooltipPosition="above"
+    />
+    <img
+      src="../../../../assets/logo/rxjs.svg"
+      alt="RxJs"
+      matTooltip="RxJs"
+      matTooltipPosition="above"
+    />
+    <img
+      src="../../../../assets/logo/webcomponents.svg"
+      alt="Web components"
+      matTooltip="Web components"
+      matTooltipPosition="above"
+    />
+    <img
+      src="../../../../assets/logo/typescript.svg"
+      alt="Typescript"
+      matTooltip="Typescript"
+      matTooltipPosition="above"
+    />
+    <img
+      src="../../../../assets/logo/javascript.svg"
+      alt="Javascript"
+      matTooltip="Javascript"
+      matTooltipPosition="above"
+    />
+    <img
+      src="../../../../assets/logo/gde.png"
+      alt="Google Developer Experts"
+      matTooltip="Google Developer Expert for Angular"
+      matTooltipPosition="above"
+    />
   </div>
 </div>
-<div class="technologies">
-  <img
-    src="../../../../assets/logo/angular.svg"
-    alt="Angular"
-    matTooltip="Angular"
-    matTooltipPosition="above"
-  />
-  <img
-    src="../../../../assets/logo/ngrx.svg"
-    alt="NgRx"
-    matTooltip="NgRx"
-    matTooltipPosition="above"
-  />
-  <img
-    src="../../../../assets/logo/rxjs.svg"
-    alt="RxJs"
-    matTooltip="RxJs"
-    matTooltipPosition="above"
-  />
-  <img
-    src="../../../../assets/logo/webcomponents.svg"
-    alt="Web components"
-    matTooltip="Web components"
-    matTooltipPosition="above"
-  />
-  <img
-    src="../../../../assets/logo/typescript.svg"
-    alt="Typescript"
-    matTooltip="Typescript"
-    matTooltipPosition="above"
-  />
-  <img
-    src="../../../../assets/logo/javascript.svg"
-    alt="Javascript"
-    matTooltip="Javascript"
-    matTooltipPosition="above"
-  />
-  <img
-    src="../../../../assets/logo/gde.png"
-    alt="Google Developer Experts"
-    matTooltip="Google Developer Expert for Angular"
-    matTooltipPosition="above"
-  />
+
+<div class="wrapper-normal">
+  <h2><mat-icon>favorites</mat-icon> Highlights</h2>
+  <mat-grid-list
+    class="highlights"
+    [cols]="columnCount | async"
+    rowHeight="640px"
+    gutterSize="40"
+  >
+    <mat-grid-tile *ngFor="let item of highlights">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar>
+            <img loading="lazy" [src]="item.logo" [alt]="item.logoAlt" />
+          </div>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+          <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          loading="lazy"
+          mat-card-image
+          [src]="item.photo"
+          [alt]="item.photoAlt"
+        />
+        <mat-card-content>
+          <p>{{ item.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a color="accent" mat-flat-button [routerLink]="item.link">{{
+            item.linkLabel
+          }}</a>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <tt-get-in-touch></tt-get-in-touch>
 </div>
