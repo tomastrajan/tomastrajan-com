@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 const HIGHLIGHTS = [
   {
     title: 'Angular Schematics',
-    subtitle: 'NG-MY 2019 - Kuala Lumpur / Malaysia',
+    subtitle: 'Angular Conference - NG-MY 2019 - Kuala Lumpur / Malaysia',
     description:
       'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
     logo: 'assets/images/speaking/ngmy-logo.png',
@@ -35,7 +35,7 @@ const HIGHLIGHTS = [
   },
   {
     title: 'Release Butler',
-    subtitle: 'Twitter bot that tweets changelogs',
+    subtitle: 'Twitter bot that tweets changelogs of popular frontend frameworks and libraries',
     description: 'Release Butler is a Twitter bot that helps you to stay up to date with releases of popular frontend frameworks & libraries!',
     logo: 'assets/logo/releasebutler.png',
     logoAlt: 'Release Butler',
@@ -46,7 +46,7 @@ const HIGHLIGHTS = [
   },
   {
     title: 'Medium Enhanced Stats',
-    subtitle: 'Get better Medium stats!',
+    subtitle: 'Chrome extension that gives you better Medium stats with a single click!',
     description: 'Medium Enhanced Stats is a Chrome extension which gives your total reach and summary stats of your articles (and responses) with a single click plus lots of useful improvements and information to the original Medium stats page!',
     logo: 'assets/logo/mediumenhancedstats.png',
     logoAlt: 'Medium Enhanced Stats Chrome extension',
