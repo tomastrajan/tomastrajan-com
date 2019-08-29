@@ -43,5 +43,16 @@ const HIGHLIGHTS = [
     photoAlt: 'Release Butler a Twitter bot that tweets changelogs of popular frontend frameworks and libraries, follow @releasebutler',
     linkLabel: 'Learn more',
     link: '../community/release-butler',
+  },
+  {
+    title: 'Medium Enhanced Stats',
+    subtitle: 'Get better Medium stats!',
+    description: 'Medium Enhanced Stats is a Chrome extension which gives your total reach and summary stats of your articles (and responses) with a single click plus lots of useful improvements and information to the original Medium stats page!',
+    logo: 'assets/logo/mediumenhancedstats.png',
+    logoAlt: 'Medium Enhanced Stats Chrome extension',
+    photo: 'assets/images/community/medium-enhanced-stats/contribution.jpg',
+    photoAlt: '',
+    linkLabel: 'Learn more',
+    link: '../community/medium-enhanced-stats',
   }
 ];
