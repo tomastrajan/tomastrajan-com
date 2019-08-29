@@ -10,7 +10,7 @@
     "serve": "ng serve -o",
     "build:ssr": "npm run build:client-and-server-bundles && npm run build:server",
     "build:server": "webpack --config webpack.server.config.js --progress --colors",
-    "build:client-and-server-bundles": "ng build --prod && ng run website:server:production",
+    "build:client-and-server-bundles": "ng build --prod && ng run website:server:production --bundleDependencies all",
     "ssr": "npm run build:ssr && npm run start",
     "heroku-postbuild": "npm run build:ssr",
     "format:write": "prettier projects/**/*.{ts,json,md,html} --write",

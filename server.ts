@@ -6,14 +6,14 @@ import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import { join } from 'path';
 import { enableProdMode } from '@angular/core';
-import { ngExpressEngine } from '@nguniversal/express-engine';
-import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 import { Request, Response } from 'express';
 
 const {
   AppServerModuleNgFactory,
-  LAZY_MODULE_MAP
-} = require('./dist/server/main'); // hast to be require
+  LAZY_MODULE_MAP,
+  ngExpressEngine,
+  provideModuleMap
+} = require('./dist/server/main');
 
 enableProdMode();
 dotenv.config();
@@ -97,7 +97,7 @@ function requireHTTPS(req, res, next) {
   if (
     !req.secure &&
     req.get('x-forwarded-proto') !== 'https' &&
-    process.env.NODE_ENV !== 'development'
+    process.env.ENV !== 'development'
   ) {
     return res.redirect(`https://${req.get('host')}${req.url}`);
   }

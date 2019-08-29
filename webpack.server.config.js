@@ -43,5 +43,8 @@ module.exports = {
       path.join(__dirname, 'projects/website/src'),
       {}
     )
-  ]
+  ],
+  externals: {
+    './dist/server/main': 'require("./server/main")'
+  }
 };
