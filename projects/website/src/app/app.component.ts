@@ -35,8 +35,9 @@ export class AppComponent implements OnInit {
     private responsiveLayoutService: ResponsiveLayoutService
   ) {
     if (isPlatformServer(this.platformId)) {
-      if (this.req && this.req.useragent && this.req.useragent.isMobile) {
-        this.initialNavOpened = false;
+      console.log('DEBUG server', this.req.useragent);
+      if (this.req && this.req.useragent) {
+        this.initialNavOpened = this.req.useragent.isDesktop;
       }
     }
     if (isPlatformBrowser(this.platformId)) {
