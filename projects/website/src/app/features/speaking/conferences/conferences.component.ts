@@ -34,7 +34,7 @@ const TALKS = [
     photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics-ng-my',
     event: 'https://2019.ng-my.org/speakers/tomas-trajan',
-    recording: ''
+    recording: 'https://www.youtube.com/watch?v=Y7irT8OS2zg'
   },
   {
     title: 'How to build custom Angular Schematics',
