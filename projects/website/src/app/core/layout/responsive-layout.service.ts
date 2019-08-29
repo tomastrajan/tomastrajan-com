@@ -18,8 +18,12 @@ export class ResponsiveLayoutService {
   columnCount: Observable<number>;
   isSmallOrSmaller: Observable<boolean>;
   isLargeOrBigger: Observable<boolean>;
+  isSmallOrSmallerSync: boolean;
 
   constructor(private breakpointObserver: BreakpointObserver) {
+    this.isSmallOrSmallerSync =
+      this.breakpointObserver.isMatched(Breakpoints.XSmall) ||
+      this.breakpointObserver.isMatched(Breakpoints.Small);
     this.isXSmallScreen = this.breakpointObserver
       .observe([Breakpoints.XSmall])
       .pipe(map(result => result.matches));

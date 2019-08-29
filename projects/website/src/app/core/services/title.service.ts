@@ -4,7 +4,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { tap, map, filter } from 'rxjs/operators';
 
 const TITLE_SUFFIX =
-  ' by Tomas Trajan - Google Developer Expert for Angular & Web';
+  'by Tomas Trajan - Google Developer Expert for Angular and Web';
 
 @Injectable({
   providedIn: 'root'

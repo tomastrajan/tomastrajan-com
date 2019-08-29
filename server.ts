@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import { join } from 'path';
 import { enableProdMode } from '@angular/core';
 import { Request, Response } from 'express';
+import * as useragent from 'express-useragent';
 
 const {
   AppServerModuleNgFactory,
@@ -28,6 +29,7 @@ const API_TOKEN_GITHUB = Buffer.from(
 
 const app = express();
 app.use(bodyParser.json());
+app.use(useragent.express());
 app.use(requireHTTPS);
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
@@ -84,7 +86,10 @@ app.get(
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
-  res.render('index', { req });
+  res.render('index', { req, res }, (err: Error, html: string) => {
+    html = html.replace('__SSR_TITLE__', `${TITLES[req.url]} ${TITLE_SUFFIX}`);
+    res.status(html ? 200 : 500).send(html || err.message);
+  });
 });
 
 // Start up the Node server
@@ -103,3 +108,22 @@ function requireHTTPS(req, res, next) {
   }
   next();
 }
+
+const TITLES = {
+  '/': 'Angular Consulting, Workshops and Open Source',
+  '/home': 'Angular Consulting, Workshops and Open Source',
+  '/workshops/angular-mastery': 'Angular Mastery Workshop',
+  '/workshops/angular-state-management-workshop-with-ngrx':
+    'Angular NgRx State Management Workshop',
+  '/consulting': 'Angular Consulting for Swiss Enterprises',
+  '/speaking/conferences': 'Public Speaking at Conferences & Meetups',
+  '/speaking/conference-kit': 'Conference Kit',
+  '/open-source': 'Open source projects',
+  '/community/angular-zurich': 'Angular Zurich Meetup',
+  '/community/release-butler': 'Release Butler',
+  '/community/medium-enhanced-stats': 'Medium Enhanced Stats',
+  '/contact': 'Contact'
+};
+
+const TITLE_SUFFIX =
+  'by Tomas Trajan - Google Developer Expert for Angular and Web';
