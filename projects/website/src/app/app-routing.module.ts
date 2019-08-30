@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './features/home/home/home.component';
+import { SelectedPreloadingStrategy } from './core/preloading/selected-preloading-strategy.service';
 
 const routes: Routes = [
   {
@@ -9,11 +10,16 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Angular Workshops and Consulting',
-      description: 'Empowering developer teams, taking initiative and getting things done with Angular focused consulting services and workshops...'
+      description:
+        'Empowering developer teams, taking initiative and getting things done with Angular focused consulting services and workshops...',
+      preload: true
     }
   },
   {
     path: 'consulting',
+    data: {
+      preload: true
+    },
     loadChildren: () =>
       import('./features/consulting/consulting.module').then(
         m => m.ConsultingModule
@@ -21,6 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'workshops',
+    data: {
+      preload: true
+    },
     loadChildren: () =>
       import('./features/workshops/workshops.module').then(
         m => m.WorkshopsModule
@@ -28,6 +37,9 @@ const routes: Routes = [
   },
   {
     path: 'speaking',
+    data: {
+      preload: true
+    },
     loadChildren: () =>
       import('./features/speaking/speaking.module').then(m => m.SpeakingModule)
   },
@@ -58,7 +70,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      preloadingStrategy: SelectedPreloadingStrategy
+    })
   ],
   exports: [RouterModule]
 })
