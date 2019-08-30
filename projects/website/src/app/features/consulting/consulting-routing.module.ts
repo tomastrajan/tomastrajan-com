@@ -8,7 +8,9 @@ const routes: Routes = [
     path: '',
     component: ConsultingComponent,
     data: {
-      title: 'Angular Consulting for Swiss Enterprises'
+      title: 'Angular Consulting for Swiss Enterprises',
+      description:
+        "Empowering developer teams, taking initiative and getting things done. Let's face it. It can be pretty hard to keep up with the recent frontend development technology churn. The development paradigms and frameworks come and go on a regular basis!"
     }
   }
 ];

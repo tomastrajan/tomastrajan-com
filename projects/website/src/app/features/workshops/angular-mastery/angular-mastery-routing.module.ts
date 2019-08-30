@@ -8,7 +8,8 @@ const routes: Routes = [
     path: '',
     component: AngularMasteryComponent,
     data: {
-      title: 'Angular Mastery Workshop'
+      title: 'Angular Mastery Workshop',
+      description: 'This workshop will teach you all necessary concepts to become proficient Angular developer by building a real world single page application!'
     }
   }
 ];

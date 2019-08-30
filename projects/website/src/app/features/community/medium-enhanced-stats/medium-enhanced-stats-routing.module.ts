@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: MediumEnhancedStatsComponent,
-    data: { title: 'Medium Enhanced Stats' }
+    data: {
+      title: 'Medium Enhanced Stats',
+      description:
+        'Medium Enhanced Stats is a Chrome extension which gives your total reach and summary stats of your articles (and responses) with a single click without need to visit Medium itself!'
+    }
   }
 ];
 
