@@ -35,14 +35,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformServer(this.platformId)) {
-      if (this.responsiveLayoutService.isServerMobile) {
-        const isMobile = this.responsiveLayoutService.isServerMobile;
+      const isMobile = this.responsiveLayoutService.isServerMobile;
 
-        this.initialNavOpened = !isMobile;
-        this.demoRootCssClass = isMobile ? 'responsive cols-1' : 'cols-3';
-        this.navOpened = of(this.initialNavOpened);
-        this.sidenavMode = of(isMobile ? 'push' : 'side');
-      }
+      this.initialNavOpened = !isMobile;
+      this.demoRootCssClass = isMobile ? 'responsive cols-1' : 'cols-3';
+      this.navOpened = of(this.initialNavOpened);
+      this.sidenavMode = of(isMobile ? 'push' : 'side');
     }
 
     if (isPlatformBrowser(this.platformId)) {
