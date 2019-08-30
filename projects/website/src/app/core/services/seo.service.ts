@@ -19,22 +19,25 @@ export class SeoService {
       .pipe(
         filter(event => event instanceof NavigationEnd),
         map(() => this.getCurrentRuteData()),
-        tap(data => this.updateTitle(data)),
-        tap(data => this.updateMetaTagsOpenGraph(data)),
-        tap(data => this.updateMetaTagsTwitter(data))
+        tap(data => {
+          this.updateTitleAndDescription(data);
+          this.updateMetaTagsOpenGraph(data);
+          this.updateMetaTagsTwitter(data);
+        })
       )
       .subscribe();
   }
 
-  private updateTitle(data: any) {
+  private updateTitleAndDescription(data: RouteSeoData) {
     const title = data.title;
     if (!title) {
       console.warn(`No title for ${this.router.url}`);
     }
     this.title.setTitle(`${title} ${TITLE_SUFFIX}`);
+    this.meta.updateTag({ property: 'description', content: data.description });
   }
 
-  private updateMetaTagsOpenGraph(data) {
+  private updateMetaTagsOpenGraph(data: RouteSeoData) {
     this.meta.updateTag({ property: 'og:title', content: data.title });
     this.meta.updateTag({ property: 'og:description', content: data.description });
     this.meta.updateTag({ property: 'og:site_name', content: 'Tomas Trajan - Google Developer Expert for Angular and Web technologies' });
@@ -43,7 +46,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:url', content: `${BASE_URL}${this.router.url}` });
   }
 
-  private updateMetaTagsTwitter(data) {
+  private updateMetaTagsTwitter(data: RouteSeoData) {
     this.meta.updateTag({ property: 'twitter:title', content: data.title });
     this.meta.updateTag({ property: 'twitter:description', content: data.description });
     this.meta.updateTag({ property: 'twitter:image', content: CARD_IMAGE_URL });
@@ -51,11 +54,16 @@ export class SeoService {
     this.meta.updateTag({ property: 'twitter:creator', content: '@tomastrajan' });
   }
 
-  private getCurrentRuteData() {
+  private getCurrentRuteData(): RouteSeoData {
     let current = this.router.routerState.snapshot.root;
     while (current.children && current.children.length) {
       current = current.children[0];
     }
-    return current.data;
+    return current.data as RouteSeoData;
   }
+}
+
+export interface RouteSeoData {
+  title: string;
+  description: string;
 }

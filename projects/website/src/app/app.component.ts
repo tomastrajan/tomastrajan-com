@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
-import { delay, map, startWith, tap } from 'rxjs/operators';
+import { debounceTime, delay, map, startWith, tap } from 'rxjs/operators';
 
 import { ResponsiveLayoutService } from './core/layout/responsive-layout.service';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
@@ -37,36 +37,37 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.isSmallOrSmaller = combineLatest(
-      this.responsiveLayoutService.isSmallOrSmaller,
-      this.responsiveLayoutService.isLargeOrBigger,
-      this.responsiveLayoutService.columnCount
-    ).pipe(
-      delay(1),
-      tap(([isSmall, isLarge, columnCount]) => {
-        this.demoRootCssClass = `cols-${columnCount}`;
-        if (isSmall) {
-          this.demoRootCssClass = `responsive cols-${columnCount}`;
-        }
-        if (isLarge) {
-          this.demoRootCssClass = `responsive-large cols-${columnCount}`;
-        }
-      }),
-      map(([isSmall]) => isSmall)
-    );
-
-    this.sidenavMode = this.isSmallOrSmaller.pipe(
-      map(isSmallOrSmaller => (isSmallOrSmaller ? 'push' : 'side'))
-    );
-
     if (isPlatformServer(this.platformId)) {
       if (this.req && this.req.useragent) {
-        this.initialNavOpened = !this.req.useragent.isMobile;
+        const isMobile = this.req.useragent.isMobile;
+
+        this.initialNavOpened = !isMobile;
+        this.demoRootCssClass = isMobile ? 'responsive cols-1' : 'cols-3';
         this.navOpened = of(this.initialNavOpened);
+        this.sidenavMode = of(isMobile ? 'push' : 'side');
       }
     }
 
     if (isPlatformBrowser(this.platformId)) {
+      this.isSmallOrSmaller = combineLatest(
+        this.responsiveLayoutService.isSmallOrSmaller,
+        this.responsiveLayoutService.isLargeOrBigger,
+        this.responsiveLayoutService.columnCount
+      ).pipe(
+        debounceTime(0),
+        tap(([isSmall, isLarge, columnCount]) => {
+          let resultClass = `cols-${columnCount}`;
+          if (isSmall) {
+            resultClass = `responsive cols-${columnCount}`;
+          }
+          if (isLarge) {
+            resultClass = `responsive-large cols-${columnCount}`;
+          }
+          this.demoRootCssClass = resultClass;
+        }),
+        map(([isSmall]) => isSmall)
+      );
+
       this.initialNavOpened = !this.responsiveLayoutService
         .isSmallOrSmallerSync;
       this.navOpened = combineLatest([
@@ -78,6 +79,11 @@ export class AppComponent implements OnInit {
         ),
         startWith(this.initialNavOpened)
       );
+
+      this.sidenavMode = this.isSmallOrSmaller.pipe(
+        map(isSmallOrSmaller => (isSmallOrSmaller ? 'push' : 'side'))
+      );
+
     }
   }
 
