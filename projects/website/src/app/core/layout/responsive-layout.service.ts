@@ -1,5 +1,7 @@
-import { Injectable } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Inject, Injectable, Optional, PLATFORM_ID } from '@angular/core';
+import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { combineLatest, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -20,7 +22,20 @@ export class ResponsiveLayoutService {
   isLargeOrBigger: Observable<boolean>;
   isSmallOrSmallerSync: boolean;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  // server
+  isServerMobile = false;
+
+  constructor(
+    @Inject(REQUEST) @Optional() private req: any,
+    @Inject(PLATFORM_ID) private platformId: any,
+    private breakpointObserver: BreakpointObserver
+  ) {
+    if (isPlatformServer(this.platformId)) {
+      if (this.req && this.req.useragent) {
+        this.isServerMobile = this.req.useragent.isMobile;
+      }
+    }
+
     this.isSmallOrSmallerSync =
       this.breakpointObserver.isMatched(Breakpoints.XSmall) ||
       this.breakpointObserver.isMatched(Breakpoints.Small);
@@ -46,9 +61,13 @@ export class ResponsiveLayoutService {
       this.isMediumScreen,
       this.isLargeScreen
     ]).pipe(
-      map(([isXSmall, isSmall, isMedium, isLarge]) =>
-        isXSmall ? 1 : isSmall ? 2 : isMedium ? 2 : isLarge ? 3 : 4
-      )
+      map(([isXSmall, isSmall, isMedium, isLarge]) => {
+        if (isPlatformServer(this.platformId)) {
+          return this.isServerMobile ? 1 : 3;
+        } else {
+          return isXSmall ? 1 : isSmall ? 2 : isMedium ? 2 : isLarge ? 3 : 4;
+        }
+      })
     );
 
     this.isSmallOrSmaller = this.breakpointObserver

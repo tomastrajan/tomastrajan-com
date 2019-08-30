@@ -4,12 +4,10 @@ import {
   OnInit,
   HostBinding,
   Inject,
-  Optional,
   PLATFORM_ID
 } from '@angular/core';
-import { REQUEST } from '@nguniversal/express-engine/tokens';
 import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
-import { debounceTime, delay, map, startWith, tap } from 'rxjs/operators';
+import { debounceTime, map, startWith, tap } from 'rxjs/operators';
 
 import { ResponsiveLayoutService } from './core/layout/responsive-layout.service';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
@@ -31,15 +29,14 @@ export class AppComponent implements OnInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    @Inject(REQUEST) @Optional() private req: any,
     private router: Router,
     private responsiveLayoutService: ResponsiveLayoutService
   ) {}
 
   ngOnInit() {
     if (isPlatformServer(this.platformId)) {
-      if (this.req && this.req.useragent) {
-        const isMobile = this.req.useragent.isMobile;
+      if (this.responsiveLayoutService.isServerMobile) {
+        const isMobile = this.responsiveLayoutService.isServerMobile;
 
         this.initialNavOpened = !isMobile;
         this.demoRootCssClass = isMobile ? 'responsive cols-1' : 'cols-3';
@@ -83,7 +80,6 @@ export class AppComponent implements OnInit {
       this.sidenavMode = this.isSmallOrSmaller.pipe(
         map(isSmallOrSmaller => (isSmallOrSmaller ? 'push' : 'side'))
       );
-
     }
   }
 
