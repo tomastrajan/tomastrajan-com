@@ -4,10 +4,10 @@ import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 import { SharedModule } from '../shared/shared.module';
 
+import { SeoService } from './services/seo.service';
+import { FooterComponent } from './layout/footer/footer.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { TitleService } from './services/title.service';
 import { CustomGestureConfig } from './gestures/custom-gestures.config';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { CustomGestureConfig } from './gestures/custom-gestures.config';
   exports: [ToolbarComponent, NavigationComponent, FooterComponent]
 })
 export class CoreModule {
-  constructor(private titleService: TitleService) {
-    this.titleService.start();
+  constructor(private seoService: SeoService) {
+    this.seoService.start();
   }
 }
