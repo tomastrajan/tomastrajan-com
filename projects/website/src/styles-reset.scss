@@ -102,8 +102,14 @@ blockquote {
   blockquote {
     &.large {
       font-size: 1.6em;
-      padding: 10px 20px;
-      padding-left: 65px;
+      padding: 30px 10px 10px 10px;
+      text-align: center;
+
+      &::after {
+        top: 0;
+        left: 50%;
+        margin-left: -25px;
+      }
     }
   }
 }
