@@ -41,7 +41,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: data.title });
     this.meta.updateTag({ property: 'og:description', content: data.description });
     this.meta.updateTag({ property: 'og:site_name', content: 'Tomas Trajan - Google Developer Expert for Angular and Web technologies' });
-    this.meta.updateTag({ property: 'og:image ', content: CARD_IMAGE_URL });
+    this.meta.updateTag({ property: 'og:image ', content: `${BASE_URL}${data.image}` || CARD_IMAGE_URL });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:url', content: `${BASE_URL}${this.router.url}` });
   }
@@ -49,7 +49,7 @@ export class SeoService {
   private updateMetaTagsTwitter(data: RouteSeoData) {
     this.meta.updateTag({ property: 'twitter:title', content: data.title });
     this.meta.updateTag({ property: 'twitter:description', content: data.description });
-    this.meta.updateTag({ property: 'twitter:image', content: CARD_IMAGE_URL });
+    this.meta.updateTag({ property: 'twitter:image', content: `${BASE_URL}${data.image}` || CARD_IMAGE_URL });
     this.meta.updateTag({ property: 'twitter:site', content: '@tomastrajan' });
     this.meta.updateTag({ property: 'twitter:creator', content: '@tomastrajan' });
   }
@@ -66,4 +66,5 @@ export class SeoService {
 export interface RouteSeoData {
   title: string;
   description: string;
+  image?: string;
 }
