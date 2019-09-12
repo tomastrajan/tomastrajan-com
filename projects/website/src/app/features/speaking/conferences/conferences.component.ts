@@ -174,5 +174,20 @@ const TALKS = [
       'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/',
     event:
       'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/'
+  },
+  {
+    title: 'Crazy personal stories about Angular and life in general',
+    subtitle: 'My Angular Story Podcast #92',
+    description:
+      'Tomas Trajan joins Aaron Frost to talk about his journey as a Angular consultant and Google Developer Expert. Tomas and Aaron mention that they are both drop-outs from college and share different sources of self-learning. They both agree they did not learn programming in school.',
+    logo: 'devchat-logo.png',
+    logoAlt: 'Devchat',
+    photo: 'mas201909.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about his Angular story',
+    recording:
+      'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',
+    event:
+      'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/'
   }
 ];
