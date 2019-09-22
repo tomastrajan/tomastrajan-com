@@ -47,6 +47,11 @@ const IMAGES: GalleryImage[] = [
     description: 'Actionable heuristics and decision making'
   },
   {
+    src: '../../../../assets/images/workshops/asmw-entity.jpg',
+    alt: 'Angular State Management Workshop by Tomas Trajan - Example',
+    description: 'Further massive reduction of boilerplate with @ngrx/entity'
+  },
+  {
     src: '../../../../assets/images/workshops/asmw-handson.jpg',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'Hands on exercises'
