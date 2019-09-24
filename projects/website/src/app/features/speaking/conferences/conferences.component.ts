@@ -24,19 +24,6 @@ export class ConferencesComponent implements OnInit {
 
 const TALKS = [
   {
-    title: 'Angular Schematics',
-    subtitle: 'NG-MY 2019 - Kuala Lumpur / Malaysia',
-    description:
-      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
-    logo: 'ngmy-logo.png',
-    logoAlt: 'NG-MY 2019',
-    photo: 'ngmy2019.jpg',
-    photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
-    slides: 'https://slides.com/tomastrajan/angular-schematics-ng-my',
-    event: 'https://2019.ng-my.org/speakers/tomas-trajan',
-    recording: 'https://www.youtube.com/watch?v=Y7irT8OS2zg'
-  },
-  {
     title: 'How to build custom Angular Schematics',
     subtitle: 'Angular Day 2019 - Verona / Italy',
     description:
@@ -48,7 +35,20 @@ const TALKS = [
       'Tomas Trajan speaking about Angular Schematics at Angular Day Verona 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://2019.angularday.it/talks.html',
-    recording: ''
+    recording: 'https://vimeo.com/356392795'
+  },
+  {
+    title: 'Angular Schematics',
+    subtitle: 'NG-MY 2019 - Kuala Lumpur / Malaysia',
+    description:
+      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
+    logo: 'ngmy-logo.png',
+    logoAlt: 'NG-MY 2019',
+    photo: 'ngmy2019.jpg',
+    photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
+    slides: 'https://slides.com/tomastrajan/angular-schematics-ng-my',
+    event: 'https://2019.ng-my.org/speakers/tomas-trajan',
+    recording: 'https://www.youtube.com/watch?v=Y7irT8OS2zg'
   },
   {
     title: 'Guide to custom Angular Schematics',
@@ -159,6 +159,21 @@ const TALKS = [
     slides:
       'https://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules',
     recording: 'https://www.youtube.com/watch?v=sz37GQ45rVI'
+  },
+  {
+    title: 'The Easiest Way to use Angular Elements',
+    subtitle: 'Adventures in Angular Podcast #257',
+    description:
+      'In this episode of Adventures in Angular Tomas Trajan, an Angular elements expert, breaks down how to use Angular elements for the panel including how are great they are for some use cases in large enterprise organizations.',
+    logo: 'devchat-logo.png',
+    logoAlt: 'Devchat',
+    photo: 'aid201904.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about The Easiest Way to use Angular Elements',
+    recording:
+      'https://devchat.tv/adv-in-angular/aia-257-the-easiest-way-to-use-angular-elements-with-tomas-trajan/',
+    event:
+      'https://devchat.tv/adv-in-angular/aia-257-the-easiest-way-to-use-angular-elements-with-tomas-trajan/'
   },
   {
     title: 'Getting Serious with Angular Schematics',
