@@ -6,13 +6,8 @@ import { SharedModule } from '../../../shared/shared.module';
 import { ConferencesRoutingModule } from './conferences-routing.module';
 import { ConferencesComponent } from './conferences.component';
 
-
 @NgModule({
   declarations: [ConferencesComponent],
-  imports: [
-    CommonModule,
-    SharedModule,
-    ConferencesRoutingModule
-  ]
+  imports: [CommonModule, SharedModule, ConferencesRoutingModule]
 })
-export class ConferencesModule { }
+export class ConferencesModule {}

@@ -198,11 +198,8 @@ const TALKS = [
     logo: 'devchat-logo.png',
     logoAlt: 'Devchat',
     photo: 'mas201909.jpg',
-    photoAlt:
-      'Tomas Trajan speaking about his Angular story',
-    recording:
-      'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',
-    event:
-      'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/'
+    photoAlt: 'Tomas Trajan speaking about his Angular story',
+    recording: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',
+    event: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/'
   }
 ];

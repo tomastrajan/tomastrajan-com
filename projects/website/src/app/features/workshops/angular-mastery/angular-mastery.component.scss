@@ -11,6 +11,10 @@
       flex: 1 1 0;
 
       ol {
+        &:first-of-type {
+          margin-right: 40px !important;
+        }
+
         ol {
           margin: 10px 0 10px 40px;
         }

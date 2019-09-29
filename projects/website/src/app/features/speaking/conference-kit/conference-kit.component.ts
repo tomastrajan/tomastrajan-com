@@ -8,13 +8,11 @@ import { GalleryImage } from '../../../shared/gallery/gallery.component';
   styleUrls: ['./conference-kit.component.scss']
 })
 export class ConferenceKitComponent implements OnInit {
-
   images = IMAGES;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
-
 }
 
 const IMAGES: GalleryImage[] = [
@@ -37,5 +35,5 @@ const IMAGES: GalleryImage[] = [
     src: '../../../../assets/images/speaking/kit/tomastrajan-profile-4.jpg',
     alt: 'Tomas Trajan profile pic',
     description: 'Tomas Trajan - sketch'
-  },
+  }
 ];

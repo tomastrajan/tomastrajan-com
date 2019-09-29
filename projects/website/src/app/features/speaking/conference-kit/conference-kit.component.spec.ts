@@ -8,9 +8,8 @@ describe('ConferenceKitComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConferenceKitComponent ]
-    })
-    .compileComponents();
+      declarations: [ConferenceKitComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

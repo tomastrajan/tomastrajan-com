@@ -9,7 +9,8 @@ const routes: Routes = [
     component: ContactComponent,
     data: {
       title: 'Contact',
-      description: 'Let\'s get in touch if you are interested in Angular consulting and workshops in Switzerland and wider European region'
+      description:
+        "Let's get in touch if you are interested in Angular consulting and workshops in Switzerland and wider European region"
     }
   }
 ];

@@ -9,7 +9,8 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Angular Workshops and Consulting',
-      description: 'Empowering developer teams, taking initiative and getting things done with Angular focused consulting services and workshops...'
+      description:
+        'Empowering developer teams, taking initiative and getting things done with Angular focused consulting services and workshops...'
     }
   },
   {

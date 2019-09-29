@@ -72,13 +72,15 @@ export class ResponsiveLayoutService {
 
     this.isSmallOrSmaller = this.breakpointObserver
       .observe([Breakpoints.XSmall, Breakpoints.Small])
-      .pipe(map(result => {
-        if (isPlatformServer(this.platformId)) {
-          return this.isServerMobile;
-        } else {
-          return result.matches;
-        }
-      }));
+      .pipe(
+        map(result => {
+          if (isPlatformServer(this.platformId)) {
+            return this.isServerMobile;
+          } else {
+            return result.matches;
+          }
+        })
+      );
 
     this.isLargeOrBigger = this.breakpointObserver
       .observe([Breakpoints.Large, Breakpoints.XLarge])
