@@ -9,8 +9,8 @@ const routes: Routes = [
     component: ConferencesComponent,
     data: {
       title: 'Public Speaking at Conferences & Meetups',
-      description: 'Tomas Trajan is an international conference and meetup speaker sharing his Angular passion and know how with the people around the world',
-      preload: true
+      description:
+        'Tomas Trajan is an international conference and meetup speaker sharing his Angular passion and know how with the people around the world'
     }
   }
 ];

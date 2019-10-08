@@ -34,6 +34,44 @@ const HIGHLIGHTS = [
     link: '../speaking/conferences'
   },
   {
+    title: 'Angular Zurich Meetup',
+    subtitle: 'Co-organizer of the Angular Zurich Meetup',
+    description:
+      'Angular Zurich is a local Swiss Angular community based in the beautiful city of Zurich. Local and international speakers are sharing their Angular know-how and experience in form of full length (45 min) and lightning (15 min) talks. The meetup is usually taking place once a month.',
+    logo: 'assets/logo/angularzurich.png',
+    logoAlt: 'Angular Zurich Meetup',
+    photo: 'assets/images/speaking/angularzurich201903.jpg',
+    photoAlt: 'Lets learn Angular together! ',
+    linkLabel: 'Learn more',
+    link: '../community/angular-zurich'
+  },
+  {
+    title: 'Angular Mastery Workshop',
+    subtitle:
+      'This workshop will teach you how to become proficient Angular developer!',
+    description:
+      'We will go step by step through all the interesting concepts and hands on exercises to build up your knowledge and skills from introduction to web development and Typescript to detailed topics like Angular routing or lazy loading...',
+    logo: 'assets/logo/angular.svg',
+    logoAlt: 'Angular the best web framework there is',
+    photo: 'assets/images/workshops/angular-mastery.jpg',
+    photoAlt: 'Angular Mastery Workshop',
+    linkLabel: 'Learn more',
+    link: '../workshops/angular-mastery'
+  },
+  {
+    title: 'Angular State Management Workshop',
+    subtitle:
+      'We will explore various ways of handling state in Angular apps and become a NgRx pro!',
+    description:
+      'This workshop will teach you all the necessary concepts to become confident and productive in relation to Angular state management. We will explore various ways of handling state, heuristics on which way to choose based on the particular use case and many hands on exercises!',
+    logo: 'assets/logo/ngrx.svg',
+    logoAlt: 'NgRx - Angular reactive state management library',
+    photo: 'assets/images/workshops/angular-state-management.jpg',
+    photoAlt: 'Angular State Management Workshop',
+    linkLabel: 'Learn more',
+    link: '../workshops/angular-state-management-workshop-with-ngrx'
+  },
+  {
     title: 'Release Butler',
     subtitle:
       'Twitter bot that tweets changelogs of popular frontend frameworks and libraries',
@@ -60,29 +98,5 @@ const HIGHLIGHTS = [
       'Medium Enhanced Stats is a Chrome extension which gives your total reach and summary stats of your articles (and responses) with a single click without need to visit Medium itself!',
     linkLabel: 'Learn more',
     link: '../community/medium-enhanced-stats'
-  },
-  {
-    title: 'Angular Zurich Meetup',
-    subtitle: 'Co-organizer of the Angular Zurich Meetup',
-    description:
-      'Angular Zurich is a local Swiss Angular community based in the beautiful city of Zurich. Local and international speakers are sharing their Angular know-how and experience in form of full length (45 min) and lightning (15 min) talks. The meetup is usually taking place once a month.',
-    logo: 'assets/logo/angularzurich.png',
-    logoAlt: 'Angular Zurich Meetup',
-    photo: 'assets/images/speaking/angularzurich201903.jpg',
-    photoAlt: 'Lets learn Angular together! ',
-    linkLabel: 'Learn more',
-    link: '../community/angular-zurich'
-  },
-  {
-    title: 'Angular State Management Workshop',
-    subtitle: 'We will explore various ways of handling state in Angular apps and become a NgRx pro!',
-    description:
-      'This workshop will teach you all the necessary concepts to become confident and productive in relation to Angular state management. We will explore various ways of handling state, heuristics on which way to choose based on the particular use case and many hands on exercises!',
-    logo: 'assets/logo/ngrx.svg',
-    logoAlt: 'NgRx - Angular reactive state management library',
-    photo: 'assets/images/workshops/angular-state-management.jpg',
-    photoAlt: 'Angular State Management Workshop',
-    linkLabel: 'Learn more',
-    link: '../workshops/angular-state-management-workshop-with-ngrx'
   }
 ];
