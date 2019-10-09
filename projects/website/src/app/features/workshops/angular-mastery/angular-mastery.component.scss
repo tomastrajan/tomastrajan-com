@@ -11,7 +11,11 @@
 
   .wrapper {
     display: flex;
-    margin: 110px 0 40px 0;
+    margin: 0 0 40px 0;
+
+    &:first-of-type {
+      margin-top: 110px;
+    }
 
     &:last-of-type {
       margin: 0 0 0 0;
