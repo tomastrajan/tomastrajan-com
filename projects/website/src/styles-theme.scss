@@ -41,6 +41,7 @@ $elements-tt-theme-dark: mat-dark-theme(
 @import './app/shared/get-in-touch/get-in-touch.component.scss-theme';
 @import './app/features/home/home/home.component.scss-theme';
 @import './app/features/open-source/open-source.component.scss-theme';
+@import './app/features/workshops/workshops/workshops.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   // include custom components themes
@@ -52,6 +53,7 @@ $elements-tt-theme-dark: mat-dark-theme(
   @include tt-get-in-touch-component-theme($theme);
   @include tt-home-component-theme($theme);
   @include tt-open-source-component-theme($theme);
+  @include tt-workshops-component-theme($theme);
 }
 
 // Include theme styles for core and each component used in your app.

@@ -4,35 +4,8 @@
   padding: 40px;
   overflow: hidden;
 
-  background-color: #ff0000;
-  background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 200px,
-      rgba(255, 255, 255, 1) 450px
-    ),
-    url('../../../../assets/images/workshops/workshops.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
   h3 {
-    background-color: #000000;
-    color: #ffffff;
     padding: 5px 10px;
     display: inline-block;
-  }
-}
-
-:host-context(.responsive) {
-  .background {
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 20px,
-        rgba(255, 255, 255, 1) 7%
-    ),
-    url('../../../../assets/images/workshops/workshops.jpg');
-    background-size: 200%;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
   }
 }
