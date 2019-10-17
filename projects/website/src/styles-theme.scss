@@ -40,7 +40,7 @@ $elements-tt-theme-dark: mat-dark-theme(
 @import './app/core/layout/footer/footer.component.scss-theme';
 @import './app/shared/get-in-touch/get-in-touch.component.scss-theme';
 @import './app/features/home/home/home.component.scss-theme';
-@import './app/features/open-source/open-source.component.scss-theme';
+@import 'app/features/open-source/projects/projects.component.scss-theme';
 @import './app/features/workshops/workshops/workshops.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
@@ -52,7 +52,7 @@ $elements-tt-theme-dark: mat-dark-theme(
   @include tt-footer-component-theme($theme);
   @include tt-get-in-touch-component-theme($theme);
   @include tt-home-component-theme($theme);
-  @include tt-open-source-component-theme($theme);
+  @include tt-open-source-projects-component-theme($theme);
   @include tt-workshops-component-theme($theme);
 }
 

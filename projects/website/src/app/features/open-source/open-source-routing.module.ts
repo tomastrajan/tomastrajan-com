@@ -1,17 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { OpenSourceComponent } from './open-source.component';
+import { OpenSourceComponent } from './open-source/open-source.component';
 
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'projects',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: OpenSourceComponent,
-    data: {
-      title: 'Open source projects',
-      description:
-        'Tomas Trajan is creator, contributor and maintainer of various Angular related open source project including popular Angular NgRx Material Starter and @angular-extensions/elements'
-    }
+    children: [
+      {
+        path: 'projects',
+        loadChildren: () =>
+          import('./projects/projects.module').then(m => m.ProjectsModule)
+      }
+    ]
   }
 ];
 

@@ -1,13 +1,13 @@
 @import '~@angular/material/theming';
 
-@mixin tt-open-source-component-theme($theme) {
+@mixin tt-open-source-projects-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
-  tt-open-source {
+  tt-projects {
     .projects {
       mat-card {
         &.placeholder {
@@ -18,10 +18,10 @@
           mat-card-subtitle {
             background-color: mat-color($background, app-bar);
             background-image: linear-gradient(
-              90deg,
-              mat-color($background, app-bar) 0px,
-              mat-color($background, card) 40px,
-              mat-color($background, app-bar) 80px
+                90deg,
+                mat-color($background, app-bar) 0px,
+                mat-color($background, card) 40px,
+                mat-color($background, app-bar) 80px
             );
             background-size: 600px;
           }

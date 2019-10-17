@@ -2,17 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { shareReplay, startWith } from 'rxjs/operators';
 
-import { GithubService, Repository } from '../../core/api/github.service';
-import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.service';
+import { GithubService, Repository } from '../../../core/api/github.service';
+import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 
 const PLACEHOLDERS: Placeholder[] = new Array(10).fill({ isPlaceholder: true });
 
 @Component({
-  selector: 'tt-open-source',
-  templateUrl: './open-source.component.html',
-  styleUrls: ['./open-source.component.scss']
+  selector: 'tt-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
-export class OpenSourceComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
+
   projects: Observable<Repository[] | Placeholder[]>;
   columnCount: Observable<number>;
 

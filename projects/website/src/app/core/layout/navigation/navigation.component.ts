@@ -39,7 +39,13 @@ const NAVIGATION = [
   },
   {
     label: 'OPEN SOURCE',
-    url: 'open-source'
+    url: 'open-source',
+    children: [
+      {
+        label: 'Projects',
+        url: 'open-source/projects'
+      }
+    ]
   },
   {
     label: 'COMMUNITY',
