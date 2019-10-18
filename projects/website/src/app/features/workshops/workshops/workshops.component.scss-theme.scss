@@ -7,17 +7,14 @@
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
-
   tt-workshops {
-
     .background {
-
       background: linear-gradient(
           to bottom,
           mat-color($background, card, 0) 200px,
           mat-color($background, card, 1) 450px
-      ),
-      url('./assets/images/workshops/workshops.jpg');
+        ),
+        url('./assets/images/workshops/workshops.jpg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -31,20 +28,21 @@
         color: mat-color($background, card) !important;
       }
     }
+  }
 
-    :host-context(.responsive) {
+  .responsive {
+    tt-workshops {
       .background {
         background: linear-gradient(
             to bottom,
             mat-color($background, card, 0) 20px,
             mat-color($background, card, 1) 7%
-        ),
-        url('./assets/images/workshops/workshops.jpg');
+          ),
+          url('./assets/images/workshops/workshops.jpg');
         background-size: 200%;
         background-repeat: no-repeat;
         background-position: 50% 0;
       }
     }
   }
-
 }

@@ -45,6 +45,14 @@ const NAVIGATION = [
         label: 'Projects',
         url: 'open-source/projects'
       }
+      // {
+      //   label: 'Angular Elements',
+      //   url: 'open-source/angular-elements'
+      // },
+      // {
+      //   label: 'Angular NgRx Material Starter',
+      //   url: 'open-source/angular-ngrx-material-starter'
+      // }
     ]
   },
   {

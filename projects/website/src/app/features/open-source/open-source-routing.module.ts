@@ -17,6 +17,20 @@ const routes: Routes = [
         path: 'projects',
         loadChildren: () =>
           import('./projects/projects.module').then(m => m.ProjectsModule)
+      },
+      {
+        path: 'angular-elements',
+        loadChildren: () =>
+          import('./angular-elements/angular-elements.module').then(
+            m => m.AngularElementsModule
+          )
+      },
+      {
+        path: 'angular-ngrx-material-starter',
+        loadChildren: () =>
+          import('./angular-starter/angular-starter.module').then(
+            m => m.AngularStarterModule
+          )
       }
     ]
   }

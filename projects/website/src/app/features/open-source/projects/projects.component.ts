@@ -13,7 +13,6 @@ const PLACEHOLDERS: Placeholder[] = new Array(10).fill({ isPlaceholder: true });
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
   projects: Observable<Repository[] | Placeholder[]>;
   columnCount: Observable<number>;
 
