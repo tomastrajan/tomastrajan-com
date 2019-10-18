@@ -59,7 +59,7 @@ const HIGHLIGHTS = [
     link: '../workshops/angular-mastery'
   },
   {
-    title: 'Angular State Management Workshop',
+    title: 'Angular NgRx Workshop',
     subtitle:
       'We will explore various ways of handling state in Angular apps and become a NgRx pro!',
     description:
@@ -70,6 +70,20 @@ const HIGHLIGHTS = [
     photoAlt: 'Angular State Management Workshop',
     linkLabel: 'Learn more',
     link: '../workshops/angular-state-management-workshop-with-ngrx'
+  },
+  {
+    title: 'Angular NgRx Starter',
+    subtitle:
+      'An community open-source project that helps you get started with Angular project',
+    description:
+      'The Angular NgRx Material Starter is a community built open source projects that helps you get started with Angular by exploring real world project! You will get theming, i18n, reactive forms and many other features and examples out of the box!',
+    logo: 'assets/logo/anms.png',
+    logoAlt: 'Angular NgRx Material Starter',
+    photo: 'assets/images/open-source/angular-starter/splash.jpg',
+    photoAlt:
+      'Angular NgRx Material Starter is a community based open source project',
+    linkLabel: 'Learn more',
+    link: '../open-source/angular-ngrx-material-starter'
   },
   {
     title: 'Release Butler',
