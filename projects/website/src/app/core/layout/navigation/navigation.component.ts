@@ -42,7 +42,7 @@ const NAVIGATION = [
     url: 'open-source',
     children: [
       {
-        label: 'Projects',
+        label: 'Projects Overview',
         url: 'open-source/projects'
       },
       // {
