@@ -1,0 +1,21 @@
+<span mat-dialog-title>{{ image.description }}</span>
+<mat-dialog-content>
+  <img [src]="image.src" [alt]="image.alt" />
+</mat-dialog-content>
+<button
+  class="left"
+  (click)="previous()"
+  mat-icon-button
+>
+  <mat-icon>keyboard_arrow_left</mat-icon>
+</button>
+<button
+  class="right"
+  (click)="next()"
+  mat-icon-button
+>
+  <mat-icon>keyboard_arrow_right</mat-icon>
+</button>
+<button class="close" mat-icon-button mat-dialog-close>
+  <mat-icon>close</mat-icon>
+</button>

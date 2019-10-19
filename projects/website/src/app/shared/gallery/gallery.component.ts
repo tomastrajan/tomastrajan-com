@@ -1,8 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
+import { MatDialog } from '@angular/material';
 
 import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.service';
+
+import { GalleryDialogComponent } from '../gallery-dialog/gallery-dialog.component';
 
 @Component({
   selector: 'tt-gallery',
@@ -16,12 +19,22 @@ export class GalleryComponent implements OnInit {
 
   columnCount: Observable<number>;
 
-  constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
+  constructor(
+    private dialog: MatDialog,
+    private responsiveLayoutService: ResponsiveLayoutService
+  ) {}
 
   ngOnInit() {
     this.columnCount = this.responsiveLayoutService.columnCount.pipe(
       shareReplay({ bufferSize: 1, refCount: true })
     );
+  }
+
+  openInDialog(index: number) {
+    this.dialog.open(GalleryDialogComponent, {
+      data: { images: this.images, index },
+      autoFocus: true
+    });
   }
 }
 

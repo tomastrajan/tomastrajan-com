@@ -5,9 +5,10 @@
   gutterSize="40"
 >
   <mat-grid-tile
-    *ngFor="let image of images"
+    *ngFor="let image of images; let index = index"
     [matTooltip]="image.description"
     matTooltipPosition="above"
+    (click)="openInDialog(index)"
   >
     <img [src]="image.src" [alt]="image.alt" />
   </mat-grid-tile>

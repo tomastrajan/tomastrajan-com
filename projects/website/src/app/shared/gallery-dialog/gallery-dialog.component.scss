@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+span {
+  padding-right: 40px;
+}
+
+.left {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.right {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.close {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+}
+
+mat-dialog-content {
+  padding: 5px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  img {
+    height: 60vh;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+}

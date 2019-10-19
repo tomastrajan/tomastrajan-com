@@ -9,6 +9,7 @@ import {
   MatTreeModule,
   MatChipsModule,
   MatInputModule,
+  MatDialogModule,
   MatIconRegistry,
   MatButtonModule,
   MatSidenavModule,
@@ -23,6 +24,7 @@ import {
 
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryDialogComponent } from './gallery-dialog/gallery-dialog.component';
 
 const ANGULAR_MATERIAL_MODULES = [
   MatCardModule,
@@ -31,6 +33,7 @@ const ANGULAR_MATERIAL_MODULES = [
   MatTreeModule,
   MatChipsModule,
   MatInputModule,
+  MatDialogModule,
   MatButtonModule,
   MatToolbarModule,
   MatTooltipModule,
@@ -43,15 +46,17 @@ const ANGULAR_MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  declarations: [GetInTouchComponent, GalleryComponent],
+  declarations: [GetInTouchComponent, GalleryComponent, GalleryDialogComponent],
   imports: [CommonModule, ReactiveFormsModule, ...ANGULAR_MATERIAL_MODULES],
   exports: [
     CommonModule,
     ReactiveFormsModule,
     ...ANGULAR_MATERIAL_MODULES,
     GetInTouchComponent,
-    GalleryComponent
-  ]
+    GalleryComponent,
+    GalleryDialogComponent
+  ],
+  entryComponents: [GalleryDialogComponent]
 })
 export class SharedModule {
   constructor(

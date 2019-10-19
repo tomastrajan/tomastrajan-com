@@ -119,3 +119,8 @@ snack-bar-container {
   position: relative;
   top: 60px;
 }
+
+.cdk-overlay-pane {
+  max-height: 95vh;
+  max-width: 90vw !important;
+}
