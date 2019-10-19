@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '../../../shared/shared.module';
 
 import { AngularElementsRoutingModule } from './angular-elements-routing.module';
 import { AngularElementsComponent } from './angular-elements.component';
 
 @NgModule({
   declarations: [AngularElementsComponent],
-  imports: [CommonModule, AngularElementsRoutingModule]
+  imports: [SharedModule, AngularElementsRoutingModule]
 })
 export class AngularElementsModule {}

@@ -1,6 +1,91 @@
+<h1>Angular Extensions - Elements</h1>
+
 <div class="wrapper">
-  <h1>Angular Extensions - Elements</h1>
-  <p>
-    ...
-  </p>
+  <div class="stats">
+    <p matTooltip="NPM installs / month"><mat-icon>get_app</mat-icon>4000+</p>
+    <p matTooltip="GitHub stars"><mat-icon>star</mat-icon>80+</p>
+    <p matTooltip="GitHub forks"><mat-icon>call_split</mat-icon>10+</p>
+    <p matTooltip="GitHub contributors"><mat-icon>people</mat-icon>5+</p>
+    <a
+      href="https://github.com/angular-extensions/elements"
+      target="_blank"
+      rel="noopener"
+      matTooltip="GitHub repo"
+    >
+      <mat-icon>code</mat-icon>
+
+      Repo
+    </a>
+    <a
+      href="https://angular-extensions.github.io/elements/"
+      target="_blank"
+      rel="noopener"
+      matTooltip="Documentation and live examples"
+    >
+      <mat-icon>menu_book</mat-icon>
+      Docs
+    </a>
+  </div>
+
+  <blockquote class="large">
+    The
+    <a
+      href="https://angular-extensions.github.io/elements/"
+      target="_blank"
+      rel="noopener"
+      >@angular-extensions/elements</a
+    >
+    is the easiest way to lazy load Angular Elements or any other web components
+    in your Angular application!
+  </blockquote>
+
+  <h2><mat-icon>double_arrow</mat-icon> Get started</h2>
+  <ol>
+    <li>
+      Install <code color="primary">npm i @angular-extensions/elements</code>
+    </li>
+    <li>
+      Add
+      <code
+        >import &#123; LazyElementsModule } from
+        '@angular-extensions/elements';</code
+      >
+    </li>
+    <li>
+      Append <code>LazyElementsModule</code> to the <code>imports: []</code> of
+      your <code>AppModule</code>
+    </li>
+    <li>
+      Add new <code>schemas: []</code> property with
+      <code>CUSTOM_ELEMENTS_SCHEMA</code> value to
+      <code>@NgModule</code> decorator of your <code>AppModule</code>
+    </li>
+    <li>
+      Use *<code>axLazyElement</code> directive on an element you wish to load
+      and pass in the url of the element bundle
+    </li>
+  </ol>
+
+  <img
+    src="../../../../assets/images/open-source/angular-elements/snippet.png"
+    alt="How to use @angular-extensions/elements"
+  />
+
+  <h2><mat-icon>style</mat-icon> Use cases</h2>
+  <ul>
+    <li>Microfrontends</li>
+    <li>Sub-applications</li>
+    <li>Heavy 3rd party components (like rich text editors,...)</li>
+  </ul>
+
+  <h2><mat-icon>playlist_add_check</mat-icon> Features</h2>
+  <ol>
+    <li>Lightweight</li>
+    <li>Simple API</li>
+    <li>Loading (and error) indicator support</li>
+    <li>Lazy by default</li>
+    <li>Uses standard Angular template bindings for props and events</li>
+    <li>Great performance (elements are guaranteed to load only once)</li>
+    <li>Pre-configuration & pre-loading</li>
+  </ol>
 </div>
