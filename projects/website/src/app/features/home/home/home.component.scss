@@ -5,25 +5,19 @@
     align-items: center;
     position: relative;
 
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      min-height: 600px;
-      z-index: -1;
-      content: '';
-      background: url('../../../../assets/images/home/splash.jpg') no-repeat
-        center center;
-      background-size: cover;
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    .avatar {
+      margin: 40px 0 10px 0;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
     }
 
-    .avatar {
-      margin: 80px 0 40px 0;
-      border-radius: 50%;
-      width: 200px;
-      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+    .main-quote {
+      margin: 0 0 0 50px;
+      max-width: 500px;
+      color: #000000 !important;
+      text-shadow: 1px 1px 2px #ffffff;
     }
 
     .intro {
@@ -40,7 +34,7 @@
       }
 
       .cta {
-        margin: 40px 0 40px 0;
+        margin: 40px 0 0 0;
 
         button {
           margin: 5px;
@@ -124,6 +118,10 @@
 }
 
 :host-context(.responsive) {
+  .main-quote {
+    margin: 50px 20px 0 20px !important;
+  }
+
   .cta {
     button {
       width: 100%;

@@ -40,9 +40,9 @@ $elements-tt-theme-dark: mat-dark-theme(
 @import './app/core/layout/footer/footer.component.scss-theme';
 @import './app/shared/get-in-touch/get-in-touch.component.scss-theme';
 @import './app/features/home/home/home.component.scss-theme';
-@import 'app/features/open-source/projects/projects.component.scss-theme';
-@import 'app/features/open-source/angular-starter/angular-starter.component.scss-theme';
-@import 'app/features/open-source/angular-elements/angular-elements.component.scss-theme';
+@import './app/features/open-source/projects/projects.component.scss-theme';
+@import './app/features/open-source/angular-starter/angular-starter.component.scss-theme';
+@import './app/features/open-source/angular-elements/angular-elements.component.scss-theme';
 @import './app/features/workshops/workshops/workshops.component.scss-theme';
 
 @mixin custom-components-theme($theme) {

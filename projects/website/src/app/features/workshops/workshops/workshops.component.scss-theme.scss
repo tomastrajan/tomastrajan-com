@@ -11,8 +11,8 @@
     .background {
       background: linear-gradient(
           to bottom,
-          mat-color($background, card, 0) 200px,
-          mat-color($background, card, 1) 450px
+          mat-color($background, background, 0) 200px,
+          mat-color($background, background, 1) 450px
         ),
         url('./assets/images/workshops/workshops.jpg');
       background-size: contain;

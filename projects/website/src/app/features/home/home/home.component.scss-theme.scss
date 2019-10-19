@@ -8,6 +8,27 @@
   $background: map-get($theme, background);
 
   tt-home {
+
+    .wrapper {
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 600px;
+        z-index: -1;
+        content: '';
+        background: linear-gradient(
+            to bottom,
+            mat-color($background, background, 0) 50%,
+            mat-color($background, background, 1) 100%
+        ),
+        url('./assets/images/home/splash.jpg') no-repeat center center;
+        background-size: cover;
+      }
+    }
+
     .intro {
       background-color: mat-color($background, card);
     }
