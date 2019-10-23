@@ -46,5 +46,11 @@ const IMAGES: GalleryImage[] = [
     alt: 'Angular Mastery Workshop by Tomas Trajan - Example',
     description:
       'Learn how to analyze production bundles to improve performance'
+  },
+  {
+    src: '../../../../assets/images/workshops/amw-components.gif',
+    alt: 'Angular Mastery Workshop by Tomas Trajan - Example',
+    description:
+      'Understand application structure with the help of animated content'
   }
 ];
