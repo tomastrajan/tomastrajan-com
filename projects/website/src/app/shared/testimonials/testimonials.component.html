@@ -1,0 +1,15 @@
+<mat-grid-list
+  class="images"
+  [cols]="columns || (columnCount | async)"
+  [rowHeight]="rowHeight || '2:2.6'"
+  gutterSize="40"
+>
+  <mat-grid-tile *ngFor="let testimonial of testimonials">
+    <div class="testimonial">
+      <p>{{ testimonial.message }}</p>
+      <img [src]="testimonial.src" [alt]="testimonial.name" />
+      <h2>{{ testimonial.name }}</h2>
+      <h4>{{ testimonial.role }}</h4>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

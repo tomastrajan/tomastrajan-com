@@ -38,8 +38,8 @@ export class GalleryComponent implements OnInit {
   }
 }
 
-export interface GalleryImage {
-  src: string;
-  alt: string;
-  description?: string;
-}
+  export interface GalleryImage {
+    src: string;
+    alt: string;
+    description?: string;
+  }

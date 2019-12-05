@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 import { GalleryImage } from '../../../shared/gallery/gallery.component';
+import { Testimonial } from '../../../shared/testimonials/testimonials.component';
 
 @Component({
   selector: 'tt-angular-mastery',
@@ -12,6 +13,7 @@ import { GalleryImage } from '../../../shared/gallery/gallery.component';
 export class AngularMasteryComponent implements OnInit {
   isSmallOrSmaller: Observable<boolean>;
   images = IMAGES;
+  testimonials = TESTIMONIALS;
 
   constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
 
@@ -19,6 +21,15 @@ export class AngularMasteryComponent implements OnInit {
     this.isSmallOrSmaller = this.responsiveLayoutService.isSmallOrSmaller;
   }
 }
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    message: 'The software engineers were very satisfied with the quality of the training. Sharing best practices and real life experiences during the training added extra value for us. We believe we found a professional Angular contact person.',
+    name: 'Janos Zatonai',
+    role: 'Manager, Varian Medical Systems',
+    src: '../../../assets/images/testimonials/janoszatonyi.jpg'
+  }
+];
 
 const IMAGES: GalleryImage[] = [
   {

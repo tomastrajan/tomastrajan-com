@@ -25,7 +25,7 @@ import {
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryDialogComponent } from './gallery-dialog/gallery-dialog.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 const ANGULAR_MATERIAL_MODULES = [
   MatCardModule,
@@ -47,7 +47,12 @@ const ANGULAR_MATERIAL_MODULES = [
 ];
 
 @NgModule({
-  declarations: [GetInTouchComponent, GalleryComponent, GalleryDialogComponent, TestimonialComponent],
+  declarations: [
+    GetInTouchComponent,
+    GalleryComponent,
+    GalleryDialogComponent,
+    TestimonialsComponent
+  ],
   imports: [CommonModule, ReactiveFormsModule, ...ANGULAR_MATERIAL_MODULES],
   exports: [
     CommonModule,
@@ -56,7 +61,7 @@ const ANGULAR_MATERIAL_MODULES = [
     GetInTouchComponent,
     GalleryComponent,
     GalleryDialogComponent,
-    TestimonialComponent
+    TestimonialsComponent
   ],
   entryComponents: [GalleryDialogComponent]
 })
