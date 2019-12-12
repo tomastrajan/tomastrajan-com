@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 import { GalleryImage } from '../../../shared/gallery/gallery.component';
+import { Testimonial } from '../../../shared/testimonials/testimonials.component';
 
 @Component({
   selector: 'tt-angular-state-management',
@@ -12,6 +13,7 @@ import { GalleryImage } from '../../../shared/gallery/gallery.component';
 export class AngularStateManagementComponent implements OnInit {
   isSmallOrSmaller: Observable<boolean>;
   images = IMAGES;
+  testimonials = TESTIMONIALS;
 
   constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
 
@@ -19,6 +21,16 @@ export class AngularStateManagementComponent implements OnInit {
     this.isSmallOrSmaller = this.responsiveLayoutService.isSmallOrSmaller;
   }
 }
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    message: 'Both beginners and experienced developers were able to take away a lot from this workshop. The 2-day format is great and provides enough time to cover all the bases. Tomas is a great teacher and is enthusiastic to share his experience and expertise',
+    name: 'Christof Leuenberger',
+    role: 'Software Architect, Die Mobiliar',
+    src: '../../../assets/images/testimonials/christofleuenberger.jpg'
+  }
+];
+
 
 const IMAGES: GalleryImage[] = [
   {
