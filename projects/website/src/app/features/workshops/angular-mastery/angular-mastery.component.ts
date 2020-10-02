@@ -24,10 +24,18 @@ export class AngularMasteryComponent implements OnInit {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    message: 'The software engineers were very satisfied with the quality of the training. Sharing best practices and real life experiences during the training added extra value for us. We believe we found a professional Angular contact person.',
+    message:
+      'The software engineers were very satisfied with the quality of the training. Sharing best practices and real life experiences during the training added extra value for us. We believe we found a professional Angular contact person.',
     name: 'Janos Zatonai',
     role: 'Manager, Varian Medical Systems',
     src: '../../../assets/images/testimonials/janoszatonyi.jpg'
+  },
+  {
+    message:
+      'This course has already been given to two teams of developers. The feedback has been very positive both times! The content is very complete and evolves along with the framework. I strongly recommend this course to all those who wish to improve their skills!',
+    name: 'Dany Marques',
+    role: 'Software Architect, La Mobilière',
+    src: '../../../assets/images/testimonials/danymarques.jpg'
   }
 ];
 
