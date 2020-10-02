@@ -6,7 +6,7 @@ import { combineLatest, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ResponsiveLayoutService {
   // basic
@@ -41,25 +41,25 @@ export class ResponsiveLayoutService {
       this.breakpointObserver.isMatched(Breakpoints.Small);
     this.isXSmallScreen = this.breakpointObserver
       .observe([Breakpoints.XSmall])
-      .pipe(map(result => result.matches));
+      .pipe(map((result) => result.matches));
     this.isSmallScreen = this.breakpointObserver
       .observe([Breakpoints.Small])
-      .pipe(map(result => result.matches));
+      .pipe(map((result) => result.matches));
     this.isMediumScreen = this.breakpointObserver
       .observe([Breakpoints.Medium])
-      .pipe(map(result => result.matches));
+      .pipe(map((result) => result.matches));
     this.isLargeScreen = this.breakpointObserver
       .observe([Breakpoints.Large])
-      .pipe(map(result => result.matches));
+      .pipe(map((result) => result.matches));
     this.isXLargeScreen = this.breakpointObserver
       .observe([Breakpoints.XLarge])
-      .pipe(map(result => result.matches));
+      .pipe(map((result) => result.matches));
 
     this.columnCount = combineLatest([
       this.isXSmallScreen,
       this.isSmallScreen,
       this.isMediumScreen,
-      this.isLargeScreen
+      this.isLargeScreen,
     ]).pipe(
       map(([isXSmall, isSmall, isMedium, isLarge]) => {
         if (isPlatformServer(this.platformId)) {
@@ -73,7 +73,7 @@ export class ResponsiveLayoutService {
     this.isSmallOrSmaller = this.breakpointObserver
       .observe([Breakpoints.XSmall, Breakpoints.Small])
       .pipe(
-        map(result => {
+        map((result) => {
           if (isPlatformServer(this.platformId)) {
             return this.isServerMobile;
           } else {
@@ -84,6 +84,6 @@ export class ResponsiveLayoutService {
 
     this.isLargeOrBigger = this.breakpointObserver
       .observe([Breakpoints.Large, Breakpoints.XLarge])
-      .pipe(map(result => result.matches));
+      .pipe(map((result) => result.matches));
   }
 }

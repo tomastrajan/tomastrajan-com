@@ -10,13 +10,13 @@ const routes: Routes = [
     data: {
       title: 'Contact',
       description:
-        "Let's get in touch if you are interested in Angular consulting and workshops in Switzerland and wider European region"
-    }
-  }
+        "Let's get in touch if you are interested in Angular consulting and workshops in Switzerland and wider European region",
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ContactRoutingModule {}

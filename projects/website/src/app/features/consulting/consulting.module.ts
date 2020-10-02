@@ -8,6 +8,6 @@ import { ConsultingComponent } from './consulting.component';
 
 @NgModule({
   declarations: [ConsultingComponent],
-  imports: [CommonModule, SharedModule, ConsultingRoutingModule]
+  imports: [CommonModule, SharedModule, ConsultingRoutingModule],
 })
 export class ConsultingModule {}

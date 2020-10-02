@@ -6,7 +6,7 @@ import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.
 @Component({
   selector: 'tt-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
   columnCount: Observable<number>;
@@ -31,7 +31,7 @@ const HIGHLIGHTS = [
     photo: 'assets/images/speaking/ngmy2019.jpg',
     photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
     linkLabel: 'Learn more',
-    link: '../speaking/conferences'
+    link: '../speaking/conferences',
   },
   {
     title: 'Angular Zurich Meetup',
@@ -43,7 +43,7 @@ const HIGHLIGHTS = [
     photo: 'assets/images/speaking/angularzurich201903.jpg',
     photoAlt: 'Lets learn Angular together! ',
     linkLabel: 'Learn more',
-    link: '../community/angular-zurich'
+    link: '../community/angular-zurich',
   },
   {
     title: 'Angular Mastery Workshop',
@@ -56,7 +56,7 @@ const HIGHLIGHTS = [
     photo: 'assets/images/workshops/angular-mastery.jpg',
     photoAlt: 'Angular Mastery Workshop',
     linkLabel: 'Learn more',
-    link: '../workshops/angular-mastery'
+    link: '../workshops/angular-mastery',
   },
   {
     title: 'Angular NgRx Workshop',
@@ -69,7 +69,7 @@ const HIGHLIGHTS = [
     photo: 'assets/images/workshops/angular-state-management.jpg',
     photoAlt: 'Angular State Management Workshop',
     linkLabel: 'Learn more',
-    link: '../workshops/angular-state-management-workshop-with-ngrx'
+    link: '../workshops/angular-state-management-workshop-with-ngrx',
   },
   {
     title: 'Angular NgRx Starter',
@@ -83,7 +83,7 @@ const HIGHLIGHTS = [
     photoAlt:
       'Angular NgRx Material Starter is a community based open source project',
     linkLabel: 'Learn more',
-    link: '../open-source/angular-ngrx-material-starter'
+    link: '../open-source/angular-ngrx-material-starter',
   },
   {
     title: 'Release Butler',
@@ -97,7 +97,7 @@ const HIGHLIGHTS = [
     photoAlt:
       'Release Butler a Twitter bot that tweets changelogs of popular frontend frameworks and libraries, follow @releasebutler',
     linkLabel: 'Learn more',
-    link: '../community/release-butler'
+    link: '../community/release-butler',
   },
   {
     title: 'Medium Enhanced Stats',
@@ -111,6 +111,6 @@ const HIGHLIGHTS = [
     photoAlt:
       'Medium Enhanced Stats is a Chrome extension which gives your total reach and summary stats of your articles (and responses) with a single click without need to visit Medium itself!',
     linkLabel: 'Learn more',
-    link: '../community/medium-enhanced-stats'
-  }
+    link: '../community/medium-enhanced-stats',
+  },
 ];

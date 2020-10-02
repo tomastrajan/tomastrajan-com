@@ -10,7 +10,7 @@ const PLACEHOLDERS: Placeholder[] = new Array(10).fill({ isPlaceholder: true });
 @Component({
   selector: 'tt-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
   projects: Observable<Repository[] | Placeholder[]>;

@@ -8,6 +8,6 @@ import { ConferencesComponent } from './conferences.component';
 
 @NgModule({
   declarations: [ConferencesComponent],
-  imports: [CommonModule, SharedModule, ConferencesRoutingModule]
+  imports: [CommonModule, SharedModule, ConferencesRoutingModule],
 })
 export class ConferencesModule {}

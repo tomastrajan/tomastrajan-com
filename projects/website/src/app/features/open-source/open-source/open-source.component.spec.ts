@@ -8,7 +8,7 @@ describe('OpenSourceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OpenSourceComponent]
+      declarations: [OpenSourceComponent],
     }).compileComponents();
   }));
 

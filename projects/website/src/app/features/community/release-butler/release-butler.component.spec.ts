@@ -8,7 +8,7 @@ describe('ReleaseButlerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ReleaseButlerComponent]
+      declarations: [ReleaseButlerComponent],
     }).compileComponents();
   }));
 

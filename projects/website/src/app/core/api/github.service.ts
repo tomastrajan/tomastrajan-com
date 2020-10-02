@@ -17,17 +17,19 @@ const REPO_NAMES = [
   'angular-model-pattern-example',
   'component-pattern-for-angular-js-1-x',
   'react-typescript-webpack',
-  'grunt-ngsrc'
+  'grunt-ngsrc',
 ];
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GithubService {
   repositories$: Observable<Repository[]> = this.http.get(API_URL).pipe(
     map((repos: Repository[]) => {
       const repoItems = repos.map(this.buildRepositoryItem);
-      return REPO_NAMES.map(name => repoItems.find(repo => repo.name === name));
+      return REPO_NAMES.map((name) =>
+        repoItems.find((repo) => repo.name === name)
+      );
     }),
     shareReplay(1)
   );
@@ -52,8 +54,8 @@ export class GithubService {
         name: item.owner.login,
 
         url: item.owner.html_url,
-        avatar: item.owner.avatar_url
-      }
+        avatar: item.owner.avatar_url,
+      },
     };
   }
 }

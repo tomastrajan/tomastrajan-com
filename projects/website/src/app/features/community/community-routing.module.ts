@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'angular-zurich',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
@@ -17,29 +17,29 @@ const routes: Routes = [
         path: 'angular-zurich',
         loadChildren: () =>
           import('./angular-zurich/angular-zurich.module').then(
-            m => m.AngularZurichModule
-          )
+            (m) => m.AngularZurichModule
+          ),
       },
       {
         path: 'release-butler',
         loadChildren: () =>
           import('./release-butler/release-butler.module').then(
-            m => m.ReleaseButlerModule
-          )
+            (m) => m.ReleaseButlerModule
+          ),
       },
       {
         path: 'medium-enhanced-stats',
         loadChildren: () =>
           import('./medium-enhanced-stats/medium-enhanced-stats.module').then(
-            m => m.MediumEnhancedStatsModule
-          )
-      }
-    ]
-  }
+            (m) => m.MediumEnhancedStatsModule
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class CommunityRoutingModule {}

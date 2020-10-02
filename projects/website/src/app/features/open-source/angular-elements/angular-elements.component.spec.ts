@@ -8,7 +8,7 @@ describe('AngularElementsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AngularElementsComponent]
+      declarations: [AngularElementsComponent],
     }).compileComponents();
   }));
 

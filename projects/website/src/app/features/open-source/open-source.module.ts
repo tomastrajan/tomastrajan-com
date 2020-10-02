@@ -8,6 +8,6 @@ import { OpenSourceRoutingModule } from './open-source-routing.module';
 
 @NgModule({
   declarations: [OpenSourceComponent],
-  imports: [CommonModule, SharedModule, OpenSourceRoutingModule]
+  imports: [CommonModule, SharedModule, OpenSourceRoutingModule],
 })
 export class OpenSourceModule {}

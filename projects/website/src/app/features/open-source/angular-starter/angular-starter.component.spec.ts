@@ -8,7 +8,7 @@ describe('AngularStarterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AngularStarterComponent]
+      declarations: [AngularStarterComponent],
     }).compileComponents();
   }));
 

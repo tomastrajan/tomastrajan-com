@@ -7,6 +7,6 @@ import { AngularElementsComponent } from './angular-elements.component';
 
 @NgModule({
   declarations: [AngularElementsComponent],
-  imports: [SharedModule, AngularElementsRoutingModule]
+  imports: [SharedModule, AngularElementsRoutingModule],
 })
 export class AngularElementsModule {}

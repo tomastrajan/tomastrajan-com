@@ -10,13 +10,13 @@ const routes: Routes = [
     data: {
       title: 'Open source projects',
       description:
-        'Tomas Trajan is creator, contributor and maintainer of various Angular related open source project including popular Angular NgRx Material Starter and @angular-extensions/elements'
-    }
-  }
+        'Tomas Trajan is creator, contributor and maintainer of various Angular related open source project including popular Angular NgRx Material Starter and @angular-extensions/elements',
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ProjectsRoutingModule {}

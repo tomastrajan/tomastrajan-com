@@ -8,7 +8,7 @@ describe('AngularStateManagementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AngularStateManagementComponent]
+      declarations: [AngularStateManagementComponent],
     }).compileComponents();
   }));
 

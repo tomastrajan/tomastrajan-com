@@ -7,7 +7,7 @@ import { shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'tt-testimonials',
   templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.scss']
+  styleUrls: ['./testimonials.component.scss'],
 })
 export class TestimonialsComponent implements OnInit {
   @Input() rowHeight: string;

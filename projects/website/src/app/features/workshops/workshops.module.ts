@@ -6,6 +6,6 @@ import { WorkshopsComponent } from './workshops/workshops.component';
 
 @NgModule({
   declarations: [WorkshopsComponent],
-  imports: [CommonModule, WorkshopsRoutingModule]
+  imports: [CommonModule, WorkshopsRoutingModule],
 })
 export class WorkshopsModule {}

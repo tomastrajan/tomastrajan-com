@@ -8,6 +8,6 @@ import { ReleaseButlerComponent } from './release-butler.component';
 
 @NgModule({
   declarations: [ReleaseButlerComponent],
-  imports: [CommonModule, SharedModule, ReleaseButlerRoutingModule]
+  imports: [CommonModule, SharedModule, ReleaseButlerRoutingModule],
 })
 export class ReleaseButlerModule {}

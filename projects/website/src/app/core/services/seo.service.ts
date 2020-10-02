@@ -9,7 +9,7 @@ const TITLE_SUFFIX =
   'by Tomas Trajan - Google Developer Expert for Angular and Web';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SeoService {
   constructor(
@@ -21,9 +21,9 @@ export class SeoService {
   start() {
     this.router.events
       .pipe(
-        filter(event => event instanceof NavigationEnd),
+        filter((event) => event instanceof NavigationEnd),
         map(() => this.getCurrentRuteData()),
-        tap(data => {
+        tap((data) => {
           this.updateTitleAndDescription(data);
           this.updateMetaTagsOpenGraph(data);
           this.updateMetaTagsTwitter(data);
@@ -45,21 +45,21 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: data.title });
     this.meta.updateTag({
       property: 'og:description',
-      content: data.description
+      content: data.description,
     });
     this.meta.updateTag({
       property: 'og:site_name',
       content:
-        'Tomas Trajan - Google Developer Expert for Angular and Web technologies'
+        'Tomas Trajan - Google Developer Expert for Angular and Web technologies',
     });
     this.meta.updateTag({
       property: 'og:image ',
-      content: `${BASE_URL}${data.image}` || CARD_IMAGE_URL
+      content: `${BASE_URL}${data.image}` || CARD_IMAGE_URL,
     });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({
       property: 'og:url',
-      content: `${BASE_URL}${this.router.url}`
+      content: `${BASE_URL}${this.router.url}`,
     });
   }
 
@@ -67,16 +67,16 @@ export class SeoService {
     this.meta.updateTag({ property: 'twitter:title', content: data.title });
     this.meta.updateTag({
       property: 'twitter:description',
-      content: data.description
+      content: data.description,
     });
     this.meta.updateTag({
       property: 'twitter:image',
-      content: `${BASE_URL}${data.image}` || CARD_IMAGE_URL
+      content: `${BASE_URL}${data.image}` || CARD_IMAGE_URL,
     });
     this.meta.updateTag({ property: 'twitter:site', content: '@tomastrajan' });
     this.meta.updateTag({
       property: 'twitter:creator',
-      content: '@tomastrajan'
+      content: '@tomastrajan',
     });
   }
 

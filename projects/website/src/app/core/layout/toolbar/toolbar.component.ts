@@ -6,7 +6,7 @@ import {
   Renderer2,
   Component,
   EventEmitter,
-  PLATFORM_ID
+  PLATFORM_ID,
 } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
@@ -20,7 +20,7 @@ import { SettingsService } from '../../services/settings.service';
 @Component({
   selector: 'tt-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
   @Input() navOpened: boolean;
@@ -43,10 +43,10 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      this.router.events.subscribe(event => {
+      this.router.events.subscribe((event) => {
         if (event instanceof NavigationEnd) {
           (this.document.defaultView as any).gtag('config', 'UA-53234284-4', {
-            page_url: event.urlAfterRedirects
+            page_url: event.urlAfterRedirects,
           });
         }
       });

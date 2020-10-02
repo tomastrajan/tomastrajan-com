@@ -7,7 +7,7 @@ import { NotificationService } from '../../core/services/notification.service';
 @Component({
   selector: 'tt-get-in-touch',
   templateUrl: './get-in-touch.component.html',
-  styleUrls: ['./get-in-touch.component.scss']
+  styleUrls: ['./get-in-touch.component.scss'],
 })
 export class GetInTouchComponent implements OnInit {
   @Input() title = 'Get in touch';
@@ -31,7 +31,7 @@ export class GetInTouchComponent implements OnInit {
       lastname: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       company: ['', [Validators.required]],
-      message: ['', [Validators.required, Validators.maxLength(250)]]
+      message: ['', [Validators.required, Validators.maxLength(250)]],
     });
   }
 
@@ -42,7 +42,7 @@ export class GetInTouchComponent implements OnInit {
           this.notificationService.success('Message sent');
           this.resetForm();
         },
-        error => {
+        (error) => {
           console.error(error);
           this.notificationService.error(
             'Something went wrong, please contact me using @tomastrajan on Twitter'

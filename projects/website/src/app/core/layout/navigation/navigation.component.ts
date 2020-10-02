@@ -3,7 +3,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 const NAVIGATION = [
   {
     label: 'HOME',
-    url: 'home'
+    url: 'home',
   },
   {
     label: 'WORKSHOPS',
@@ -11,17 +11,17 @@ const NAVIGATION = [
     children: [
       {
         label: 'Angular Mastery',
-        url: 'workshops/angular-mastery'
+        url: 'workshops/angular-mastery',
       },
       {
         label: 'Angular State Management',
-        url: 'workshops/angular-state-management-workshop-with-ngrx'
-      }
-    ]
+        url: 'workshops/angular-state-management-workshop-with-ngrx',
+      },
+    ],
   },
   {
     label: 'CONSULTING',
-    url: 'consulting'
+    url: 'consulting',
   },
   {
     label: 'SPEAKING',
@@ -29,13 +29,13 @@ const NAVIGATION = [
     children: [
       {
         label: 'Conferences & Meetups',
-        url: 'speaking/conferences'
+        url: 'speaking/conferences',
       },
       {
         label: 'Conference Kit',
-        url: 'speaking/conference-kit'
-      }
-    ]
+        url: 'speaking/conference-kit',
+      },
+    ],
   },
   {
     label: 'OPEN SOURCE',
@@ -43,17 +43,17 @@ const NAVIGATION = [
     children: [
       {
         label: 'Projects Overview',
-        url: 'open-source/projects'
+        url: 'open-source/projects',
       },
       {
         label: 'Angular Elements',
-        url: 'open-source/angular-elements'
+        url: 'open-source/angular-elements',
       },
       {
         label: 'Angular NgRx Material Starter',
-        url: 'open-source/angular-ngrx-material-starter'
-      }
-    ]
+        url: 'open-source/angular-ngrx-material-starter',
+      },
+    ],
   },
   {
     label: 'COMMUNITY',
@@ -61,32 +61,32 @@ const NAVIGATION = [
     children: [
       {
         label: 'Angular Zurich Meetup',
-        url: 'community/angular-zurich'
+        url: 'community/angular-zurich',
       },
       {
         label: 'Release Butler',
-        url: 'community/release-butler'
+        url: 'community/release-butler',
       },
       {
         label: 'Medium Enhanced Stats',
-        url: 'community/medium-enhanced-stats'
-      }
-    ]
+        url: 'community/medium-enhanced-stats',
+      },
+    ],
   },
   {
     label: 'BLOG',
-    externalUrl: 'https://medium.com/@tomastrajan'
+    externalUrl: 'https://medium.com/@tomastrajan',
   },
   {
     label: 'CONTACT',
-    url: 'contact'
-  }
+    url: 'contact',
+  },
 ];
 
 @Component({
   selector: 'tt-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit {
   @Output() closeSideNav = new EventEmitter<void>();

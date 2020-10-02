@@ -11,13 +11,13 @@ const routes: Routes = [
       title: 'Medium Enhanced Stats',
       description:
         'Medium Enhanced Stats is a Chrome extension which gives your total reach and summary stats of your articles (and responses) with a single click without need to visit Medium itself!',
-      image: '/assets/images/community/medium-enhanced-stats/contribution.jpg'
-    }
-  }
+      image: '/assets/images/community/medium-enhanced-stats/contribution.jpg',
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class MediumEnhancedStatsRoutingModule {}

@@ -8,6 +8,6 @@ import { AngularZurichComponent } from './angular-zurich.component';
 
 @NgModule({
   declarations: [AngularZurichComponent],
-  imports: [CommonModule, SharedModule, AngularZurichRoutingModule]
+  imports: [CommonModule, SharedModule, AngularZurichRoutingModule],
 })
 export class AngularZurichModule {}

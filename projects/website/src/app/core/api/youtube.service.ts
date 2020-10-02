@@ -9,7 +9,7 @@ const URL_ANGULAR_ZURICH = `https://api.rss2json.com/v1/api.json?rss_url=${encod
 )}`;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class YoutubeService {
   constructor(
@@ -22,7 +22,7 @@ export class YoutubeService {
       .get(URL_ANGULAR_ZURICH)
       .pipe(
         map((data: any) =>
-          data.items.map(item =>
+          data.items.map((item) =>
             this.domSanitizer.bypassSecurityTrustResourceUrl(
               `https://youtube.com/embed/${item.link.split('=')[1]}`
             )

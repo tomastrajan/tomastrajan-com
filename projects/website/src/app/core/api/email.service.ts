@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 const API_URL = `/api/email`;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EmailService {
   constructor(private http: HttpClient) {}

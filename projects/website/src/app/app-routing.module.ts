@@ -10,57 +10,59 @@ const routes: Routes = [
     data: {
       title: 'Angular Workshops and Consulting',
       description:
-        'Empowering developer teams, taking initiative and getting things done with Angular focused consulting services and workshops...'
-    }
+        'Empowering developer teams, taking initiative and getting things done with Angular focused consulting services and workshops...',
+    },
   },
   {
     path: 'consulting',
     loadChildren: () =>
       import('./features/consulting/consulting.module').then(
-        m => m.ConsultingModule
-      )
+        (m) => m.ConsultingModule
+      ),
   },
   {
     path: 'workshops',
     loadChildren: () =>
       import('./features/workshops/workshops.module').then(
-        m => m.WorkshopsModule
-      )
+        (m) => m.WorkshopsModule
+      ),
   },
   {
     path: 'speaking',
     loadChildren: () =>
-      import('./features/speaking/speaking.module').then(m => m.SpeakingModule)
+      import('./features/speaking/speaking.module').then(
+        (m) => m.SpeakingModule
+      ),
   },
   {
     path: 'open-source',
     loadChildren: () =>
       import('./features/open-source/open-source.module').then(
-        m => m.OpenSourceModule
-      )
+        (m) => m.OpenSourceModule
+      ),
   },
   {
     path: 'community',
     loadChildren: () =>
       import('./features/community/community.module').then(
-        m => m.CommunityModule
-      )
+        (m) => m.CommunityModule
+      ),
   },
   {
     path: 'contact',
     loadChildren: () =>
-      import('./features/contact/contact.module').then(m => m.ContactModule)
+      import('./features/contact/contact.module').then((m) => m.ContactModule),
   },
   {
     path: '**',
-    redirectTo: 'home'
-  }
+    redirectTo: 'home',
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

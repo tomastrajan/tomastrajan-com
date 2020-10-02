@@ -7,7 +7,7 @@ import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.
 @Component({
   selector: 'tt-conferences',
   templateUrl: './conferences.component.html',
-  styleUrls: ['./conferences.component.scss']
+  styleUrls: ['./conferences.component.scss'],
 })
 export class ConferencesComponent implements OnInit {
   talks = TALKS;
@@ -35,7 +35,7 @@ const TALKS = [
       'Tomas Trajan speaking about Angular Schematics at Angular Day Verona 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://2019.angularday.it/talks.html',
-    recording: 'https://vimeo.com/356392795'
+    recording: 'https://vimeo.com/356392795',
   },
   {
     title: 'Angular Schematics',
@@ -48,7 +48,7 @@ const TALKS = [
     photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics-ng-my',
     event: 'https://2019.ng-my.org/speakers/tomas-trajan',
-    recording: 'https://www.youtube.com/watch?v=Y7irT8OS2zg'
+    recording: 'https://www.youtube.com/watch?v=Y7irT8OS2zg',
   },
   {
     title: 'Guide to custom Angular Schematics',
@@ -62,7 +62,7 @@ const TALKS = [
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://www.meetup.com/AngularZRH/events/258725129/',
-    recording: 'https://www.youtube.com/watch?v=M5YSPas3qFo'
+    recording: 'https://www.youtube.com/watch?v=M5YSPas3qFo',
   },
   {
     title: 'How to leverage Angular Schematics',
@@ -76,7 +76,7 @@ const TALKS = [
       'Tomas Trajan speaking about Angular Schematics at Voxxed Days Zurich 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://cfpvdz19.confinabox.com/talk/DMF-3644',
-    recording: 'https://www.youtube.com/watch?v=eFzjY4uWgCA'
+    recording: 'https://www.youtube.com/watch?v=eFzjY4uWgCA',
   },
   {
     title: 'Release Butler (Twitter Bot Sideproject)',
@@ -91,7 +91,7 @@ const TALKS = [
     slides: 'https://slides.com/tomastrajan/release-butler/',
     event:
       'https://www.meetup.com/Junior-Developers-Malaysia/events/262661606/',
-    recording: ''
+    recording: '',
   },
   {
     title: 'How to lazy load ANgular Elements',
@@ -105,7 +105,7 @@ const TALKS = [
       'Tomas Trajan speaking about Angular Elements at Angular Zurich Meetup 08 2019',
     slides: 'https://slides.com/tomastrajan/angular-elements/',
     event: 'https://www.meetup.com/AngularZRH/events/263770872/',
-    recording: 'https://www.youtube.com/watch?v=X__jkPGYRUs'
+    recording: 'https://www.youtube.com/watch?v=X__jkPGYRUs',
   },
   {
     title: 'How to build Angular Schematics',
@@ -119,7 +119,7 @@ const TALKS = [
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
     event: 'https://www.meetup.com/Barner-JS-Talks/events/261475983/',
-    recording: ''
+    recording: '',
   },
   {
     title: 'Common Angular anti-patterns in Enterprise Applications',
@@ -131,7 +131,7 @@ const TALKS = [
     photo: 'diemobiliar2019.jpg',
     photoAlt:
       'Tomas Trajan speaking about Angular enterprise anti-patterns in Die Mobiliar',
-    recording: 'https://www.youtube.com/watch?v=lOMpq1rfrSM'
+    recording: 'https://www.youtube.com/watch?v=lOMpq1rfrSM',
   },
   {
     title: 'Theming of Angular Material Apps',
@@ -144,7 +144,7 @@ const TALKS = [
     photoAlt: 'Tomas Trajan speaking about custom theming of Angular Material',
     slides: 'https://slides.com/tomastrajan/angular-material-themes-guide',
     recording: 'https://www.youtube.com/watch?v=5I3BAL63QRM',
-    event: 'https://www.meetup.com/Barner-JS-Talks/events/242348660/'
+    event: 'https://www.meetup.com/Barner-JS-Talks/events/242348660/',
   },
   {
     title: 'Proper unit testing of Angular JS apps',
@@ -158,7 +158,7 @@ const TALKS = [
       'Tomas Trajan speaking about proper unit testing of Angular JS apps',
     slides:
       'https://slides.com/tomastrajan/angularjs-unit-testing-with-es6-modules',
-    recording: 'https://www.youtube.com/watch?v=sz37GQ45rVI'
+    recording: 'https://www.youtube.com/watch?v=sz37GQ45rVI',
   },
   {
     title: 'The Easiest Way to use Angular Elements',
@@ -173,7 +173,7 @@ const TALKS = [
     recording:
       'https://devchat.tv/adv-in-angular/aia-257-the-easiest-way-to-use-angular-elements-with-tomas-trajan/',
     event:
-      'https://devchat.tv/adv-in-angular/aia-257-the-easiest-way-to-use-angular-elements-with-tomas-trajan/'
+      'https://devchat.tv/adv-in-angular/aia-257-the-easiest-way-to-use-angular-elements-with-tomas-trajan/',
   },
   {
     title: 'Getting Serious with Angular Schematics',
@@ -188,7 +188,7 @@ const TALKS = [
     recording:
       'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/',
     event:
-      'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/'
+      'https://devchat.tv/adv-in-angular/aia-233-getting-serious-with-schematics-with-tomas-trajan/',
   },
   {
     title: 'Crazy personal stories about Angular and life in general',
@@ -200,6 +200,6 @@ const TALKS = [
     photo: 'mas201909.jpg',
     photoAlt: 'Tomas Trajan speaking about his Angular story',
     recording: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',
-    event: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/'
-  }
+    event: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',
+  },
 ];

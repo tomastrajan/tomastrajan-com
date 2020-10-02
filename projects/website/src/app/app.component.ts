@@ -4,7 +4,7 @@ import {
   OnInit,
   HostBinding,
   Inject,
-  PLATFORM_ID
+  PLATFORM_ID,
 } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
 import { debounceTime, map, startWith, tap } from 'rxjs/operators';
@@ -15,7 +15,7 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 @Component({
   selector: 'tt-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   @HostBinding('class')
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
         .isSmallOrSmallerSync;
       this.navOpened = combineLatest([
         this.isSmallOrSmaller,
-        this.navToggled
+        this.navToggled,
       ]).pipe(
         map(([isSmallScreen, navToggled]) =>
           !isSmallScreen ? true : navToggled
@@ -76,7 +76,7 @@ export class AppComponent implements OnInit {
       );
 
       this.sidenavMode = this.isSmallOrSmaller.pipe(
-        map(isSmallOrSmaller => (isSmallOrSmaller ? 'push' : 'side'))
+        map((isSmallOrSmaller) => (isSmallOrSmaller ? 'push' : 'side'))
       );
     }
   }

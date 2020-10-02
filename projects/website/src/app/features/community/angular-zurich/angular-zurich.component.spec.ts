@@ -8,7 +8,7 @@ describe('AngularZurichComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AngularZurichComponent]
+      declarations: [AngularZurichComponent],
     }).compileComponents();
   }));
 

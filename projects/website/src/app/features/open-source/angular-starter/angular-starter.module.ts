@@ -7,6 +7,6 @@ import { AngularStarterComponent } from './angular-starter.component';
 
 @NgModule({
   declarations: [AngularStarterComponent],
-  imports: [SharedModule, AngularStarterRoutingModule]
+  imports: [SharedModule, AngularStarterRoutingModule],
 })
 export class AngularStarterModule {}

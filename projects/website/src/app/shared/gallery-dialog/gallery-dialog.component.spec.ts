@@ -8,9 +8,8 @@ describe('GalleryDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalleryDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [GalleryDialogComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

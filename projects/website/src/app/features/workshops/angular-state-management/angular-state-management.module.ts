@@ -8,6 +8,6 @@ import { AngularStateManagementComponent } from './angular-state-management.comp
 
 @NgModule({
   declarations: [AngularStateManagementComponent],
-  imports: [CommonModule, AngularStateManagementRoutingModule, SharedModule]
+  imports: [CommonModule, AngularStateManagementRoutingModule, SharedModule],
 })
 export class AngularStateManagementModule {}

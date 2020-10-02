@@ -8,7 +8,7 @@ describe('AngularMasteryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AngularMasteryComponent]
+      declarations: [AngularMasteryComponent],
     }).compileComponents();
   }));
 

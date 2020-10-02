@@ -8,6 +8,6 @@ import { AngularMasteryComponent } from './angular-mastery.component';
 
 @NgModule({
   declarations: [AngularMasteryComponent],
-  imports: [CommonModule, AngularMasteryRoutingModule, SharedModule]
+  imports: [CommonModule, AngularMasteryRoutingModule, SharedModule],
 })
 export class AngularMasteryModule {}

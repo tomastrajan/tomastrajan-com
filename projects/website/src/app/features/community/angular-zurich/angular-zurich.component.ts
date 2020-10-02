@@ -9,7 +9,7 @@ import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.
 @Component({
   selector: 'tt-angular-zurich',
   templateUrl: './angular-zurich.component.html',
-  styleUrls: ['./angular-zurich.component.scss']
+  styleUrls: ['./angular-zurich.component.scss'],
 })
 export class AngularZurichComponent implements OnInit {
   videoUrls: Observable<SafeResourceUrl[]>;

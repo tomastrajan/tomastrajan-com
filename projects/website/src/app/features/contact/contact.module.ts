@@ -8,6 +8,6 @@ import { ContactComponent } from './contact.component';
 
 @NgModule({
   declarations: [ContactComponent],
-  imports: [CommonModule, ContactRoutingModule, SharedModule]
+  imports: [CommonModule, ContactRoutingModule, SharedModule],
 })
 export class ContactModule {}

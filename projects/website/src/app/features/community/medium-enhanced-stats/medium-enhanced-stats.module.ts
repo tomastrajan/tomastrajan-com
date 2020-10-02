@@ -8,6 +8,6 @@ import { MediumEnhancedStatsComponent } from './medium-enhanced-stats.component'
 
 @NgModule({
   declarations: [MediumEnhancedStatsComponent],
-  imports: [CommonModule, SharedModule, MediumEnhancedStatsRoutingModule]
+  imports: [CommonModule, SharedModule, MediumEnhancedStatsRoutingModule],
 })
 export class MediumEnhancedStatsModule {}

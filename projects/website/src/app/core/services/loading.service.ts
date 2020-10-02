@@ -15,7 +15,7 @@ export class LoadingService {
         result = result < 0 ? 0 : result;
         return result;
       }, 0),
-      map(value => value > 0)
+      map((value) => value > 0)
     );
   }
 

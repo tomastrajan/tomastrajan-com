@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'angular-mastery',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
@@ -17,22 +17,22 @@ const routes: Routes = [
         path: 'angular-mastery',
         loadChildren: () =>
           import('./angular-mastery/angular-mastery.module').then(
-            m => m.AngularMasteryModule
-          )
+            (m) => m.AngularMasteryModule
+          ),
       },
       {
         path: 'angular-state-management-workshop-with-ngrx',
         loadChildren: () =>
           import(
             './angular-state-management/angular-state-management.module'
-          ).then(m => m.AngularStateManagementModule)
-      }
-    ]
-  }
+          ).then((m) => m.AngularStateManagementModule),
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class WorkshopsRoutingModule {}

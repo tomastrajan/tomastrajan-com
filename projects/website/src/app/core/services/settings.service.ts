@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 export const LOCAL_STORAGE_KEY = 'tomastrajan-com';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SettingsService {
   constructor() {}

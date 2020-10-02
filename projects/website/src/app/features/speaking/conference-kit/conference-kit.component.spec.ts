@@ -8,7 +8,7 @@ describe('ConferenceKitComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ConferenceKitComponent]
+      declarations: [ConferenceKitComponent],
     }).compileComponents();
   }));
 

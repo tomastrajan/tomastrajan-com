@@ -8,6 +8,6 @@ import { SpeakingComponent } from './speaking/speaking.component';
 
 @NgModule({
   declarations: [SpeakingComponent],
-  imports: [CommonModule, SharedModule, SpeakingRoutingModule]
+  imports: [CommonModule, SharedModule, SpeakingRoutingModule],
 })
 export class SpeakingModule {}

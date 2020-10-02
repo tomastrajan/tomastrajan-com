@@ -8,7 +8,7 @@ describe('MediumEnhancedStatsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MediumEnhancedStatsComponent]
+      declarations: [MediumEnhancedStatsComponent],
     }).compileComponents();
   }));
 

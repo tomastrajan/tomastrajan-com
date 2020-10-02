@@ -10,13 +10,13 @@ const routes: Routes = [
     data: {
       title: 'Public Speaking at Conferences & Meetups',
       description:
-        'Tomas Trajan is an international conference and meetup speaker sharing his Angular passion and know how with the people around the world'
-    }
-  }
+        'Tomas Trajan is an international conference and meetup speaker sharing his Angular passion and know how with the people around the world',
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ConferencesRoutingModule {}

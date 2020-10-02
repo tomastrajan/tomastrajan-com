@@ -11,13 +11,13 @@ const routes: Routes = [
       title: 'Angular NgRx State Management Workshop',
       description:
         'This workshop will teach you all the necessary concepts to become confident and productive in relation to Angular state management.',
-      image: '/assets/images/workshops/angular-state-management.jpg'
-    }
-  }
+      image: '/assets/images/workshops/angular-state-management.jpg',
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AngularStateManagementRoutingModule {}

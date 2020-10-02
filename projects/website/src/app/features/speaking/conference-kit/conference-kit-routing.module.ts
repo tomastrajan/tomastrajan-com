@@ -10,13 +10,13 @@ const routes: Routes = [
     data: {
       title: 'Conference Kit',
       description:
-        'Would you like to provide interesting and valuable Angular content for the attendees of your conference or meetup? Check out current available topics and get in touch!'
-    }
-  }
+        'Would you like to provide interesting and valuable Angular content for the attendees of your conference or meetup? Check out current available topics and get in touch!',
+    },
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ConferenceKitRoutingModule {}
