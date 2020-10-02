@@ -8,9 +8,7 @@
   $background: map-get($theme, background);
 
   tt-home {
-
     .wrapper {
-
       &:before {
         position: absolute;
         top: 0;
@@ -23,8 +21,9 @@
             to bottom,
             mat-color($background, background, 0) 50%,
             mat-color($background, background, 1) 100%
-        ),
-        url('./assets/images/home/splash.jpg') no-repeat center center;
+          ),
+          url('../../../../assets/images/home/splash.jpg') no-repeat center
+            center;
         background-size: cover;
       }
     }

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 
 import { ResponsiveLayoutService } from '../../core/layout/responsive-layout.service';
 
@@ -10,7 +10,7 @@ import { GalleryDialogComponent } from '../gallery-dialog/gallery-dialog.compone
 @Component({
   selector: 'tt-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.scss']
+  styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
   @Input() images: GalleryImage[];
@@ -33,13 +33,13 @@ export class GalleryComponent implements OnInit {
   openInDialog(index: number) {
     this.dialog.open(GalleryDialogComponent, {
       data: { images: this.images, index },
-      autoFocus: true
+      autoFocus: true,
     });
   }
 }
 
-  export interface GalleryImage {
-    src: string;
-    alt: string;
-    description?: string;
-  }
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  description?: string;
+}

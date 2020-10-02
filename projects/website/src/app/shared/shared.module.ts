@@ -2,25 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import {
-  MatCardModule,
-  MatIconModule,
-  MatListModule,
-  MatTreeModule,
-  MatChipsModule,
-  MatInputModule,
-  MatDialogModule,
-  MatIconRegistry,
-  MatButtonModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatGridListModule,
-  MatSnackBarModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatProgressBarModule
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
 
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -43,7 +40,7 @@ const ANGULAR_MATERIAL_MODULES = [
   MatSnackBarModule,
   MatExpansionModule,
   MatFormFieldModule,
-  MatProgressBarModule
+  MatProgressBarModule,
 ];
 
 @NgModule({
@@ -51,7 +48,7 @@ const ANGULAR_MATERIAL_MODULES = [
     GetInTouchComponent,
     GalleryComponent,
     GalleryDialogComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, ...ANGULAR_MATERIAL_MODULES],
   exports: [
@@ -61,9 +58,9 @@ const ANGULAR_MATERIAL_MODULES = [
     GetInTouchComponent,
     GalleryComponent,
     GalleryDialogComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
   ],
-  entryComponents: [GalleryDialogComponent]
+  entryComponents: [GalleryDialogComponent],
 })
 export class SharedModule {
   constructor(

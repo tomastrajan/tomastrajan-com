@@ -1,11 +1,11 @@
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { GalleryImage } from '../gallery/gallery.component';
 
 @Component({
   selector: 'tt-gallery-dialog',
   templateUrl: './gallery-dialog.component.html',
-  styleUrls: ['./gallery-dialog.component.scss']
+  styleUrls: ['./gallery-dialog.component.scss'],
 })
 export class GalleryDialogComponent implements OnInit {
   image: GalleryImage;
@@ -29,14 +29,14 @@ export class GalleryDialogComponent implements OnInit {
   }
 
   next() {
-    const currentIndex = this.images.findIndex(i => i === this.image);
+    const currentIndex = this.images.findIndex((i) => i === this.image);
     const nextIndex =
       currentIndex + 1 > this.images.length - 1 ? 0 : currentIndex + 1;
     this.image = this.images[nextIndex];
   }
 
   previous() {
-    const currentIndex = this.images.findIndex(i => i === this.image);
+    const currentIndex = this.images.findIndex((i) => i === this.image);
     const nextIndex =
       currentIndex - 1 < 0 ? this.images.length - 1 : currentIndex - 1;
     this.image = this.images[nextIndex];

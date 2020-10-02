@@ -27,9 +27,7 @@
               "projects/website/src/robots.txt",
               "projects/website/src/assets"
             ],
-            "styles": [
-              "projects/website/src/styles.scss"
-            ],
+            "styles": ["projects/website/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -42,7 +40,6 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
@@ -54,6 +51,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -88,9 +89,7 @@
               "projects/website/src/favicon.ico",
               "projects/website/src/assets"
             ],
-            "styles": [
-              "projects/website/src/styles.scss"
-            ],
+            "styles": ["projects/website/src/styles.scss"],
             "scripts": []
           }
         },
@@ -102,9 +101,7 @@
               "projects/website/tsconfig.spec.json",
               "projects/website/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -123,7 +120,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "projects/website/src/main.server.ts",
+            "main": "projects/website/server.ts",
             "tsConfig": "projects/website/tsconfig.server.json"
           },
           "configurations": {
@@ -133,8 +130,33 @@
                   "replace": "projects/website/src/environments/environment.ts",
                   "with": "projects/website/src/environments/environment.prod.ts"
                 }
-              ]
+              ],
+              "optimization": true
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "website:build",
+            "serverTarget": "website:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "website:build:production",
+              "serverTarget": "website:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "website:build:production",
+            "serverTarget": "website:server:production",
+            "routes": ["/"]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
@@ -145,5 +167,8 @@
     "@schematics/angular:component": {
       "style": "scss"
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

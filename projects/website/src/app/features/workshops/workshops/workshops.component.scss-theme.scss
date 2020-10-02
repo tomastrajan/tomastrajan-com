@@ -14,7 +14,7 @@
           mat-color($background, background, 0) 200px,
           mat-color($background, background, 1) 450px
         ),
-        url('./assets/images/workshops/workshops.jpg');
+        url('../../../../assets/images/workshops/workshops.jpg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -38,7 +38,7 @@
             mat-color($background, card, 0) 20px,
             mat-color($background, card, 1) 7%
           ),
-          url('./assets/images/workshops/workshops.jpg');
+          url('../../../../assets/images/workshops/workshops.jpg');
         background-size: 200%;
         background-repeat: no-repeat;
         background-position: 50% 0;
