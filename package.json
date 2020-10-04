@@ -11,7 +11,7 @@
     "serve:ssr:dev": "ng run website:serve-ssr",
     "serve:ssr:prod": "npm run build:ssr && node dist/server/main.js",
     "build:ssr": "ng build --prod && ng run website:server:production --bundleDependencies all",
-    "heroku-postbuild": "npm run serve:ssr:prod",
+    "heroku-postbuild": "npm run build:ssr",
     "format:write": "prettier projects/**/*.{ts,json,md,html} --write",
     "format:test": "prettier projects/**/*.{ts,json,md,html} --list-different",
     "prerender": "ng run website:prerender"
