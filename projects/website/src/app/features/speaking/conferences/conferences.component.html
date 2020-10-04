@@ -55,6 +55,13 @@
           ><mat-icon title="Event">calendar_today</mat-icon
           ><span>Event</span></a
         >
+        <a
+          *ngIf="talk.article"
+          mat-stroked-button
+          [href]="talk.article"
+          target="_blank"
+          ><mat-icon title="Article">menu_book</mat-icon><span>Article</span></a
+        >
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

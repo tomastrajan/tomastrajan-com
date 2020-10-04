@@ -24,6 +24,45 @@ export class ConferencesComponent implements OnInit {
 
 const TALKS = [
   {
+    title: 'Microfrontends with Angular Elements',
+    subtitle: 'Angular Minsk Meetup 2020 - Remote',
+    description:
+      'Sub-applications (and full microfrontends) can help us solve many real world use cases in large enterprise organizations with many applications, teams and developers. ',
+    logo: 'angularminsk-logo.jpg',
+    logoAlt: 'Angular Minsk Meetup',
+    photo: 'angularminsk2020.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about Microfrontends with Angular Elements at Angular Minsk Meetup Remote',
+    recording: 'https://www.youtube.com/watch?v=ivPyIsUc1tE',
+  },
+  {
+    title: 'How to architect epic Angular applications!',
+    subtitle: 'Angular Air 2020 - Podcast',
+    description:
+      'In this podcast we are discussing how to scaffold new Angular application with clean, maintainable and extendable architecture and what are the benefits of doing so.',
+    logo: 'angularair-logo.png',
+    logoAlt: 'Angular Air Podcast',
+    photo: 'angularair202003.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about epic Angular application architecture at Angular Air Podcast',
+    recording: 'https://www.youtube.com/watch?v=fM_jWSfOUOo',
+    article:
+      'https://medium.com/@tomastrajan/how-to-build-epic-angular-app-with-clean-architecture-91640ed1656',
+  },
+  {
+    title: 'Angular Elements - Microfrontends',
+    subtitle: 'GDG DevFest 2019 - Moscow / Russia',
+    description:
+      "Let's explore powerful Angular features are here for the rescue enabling us to implement configurable dynamic Microfrontends with ease!",
+    logo: 'gdg-logo.png',
+    logoAlt: 'GDG DevFest',
+    photo: 'gdgmoscow2019.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about building Angular Microfrontends with Angular Elements at GDG DevFest Moscow 2019',
+    slides: 'https://slides.com/tomastrajan/angular-elements-microfrontends',
+    event: 'https://devfest-msk-2019.web.app/schedule/2019-11-09?sessionId=107',
+  },
+  {
     title: 'How to build custom Angular Schematics',
     subtitle: 'Angular Day 2019 - Verona / Italy',
     description:
