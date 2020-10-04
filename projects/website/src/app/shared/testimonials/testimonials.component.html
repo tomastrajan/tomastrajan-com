@@ -4,7 +4,10 @@
   [rowHeight]="rowHeight || '2:2.6'"
   gutterSize="40"
 >
-  <mat-grid-tile *ngFor="let testimonial of testimonials">
+  <mat-grid-tile
+    *ngFor="let testimonial of testimonials"
+    [title]="testimonial.message"
+  >
     <div class="testimonial">
       <p>{{ testimonial.message }}</p>
       <img [src]="testimonial.src" [alt]="testimonial.name" />

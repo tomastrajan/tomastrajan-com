@@ -37,6 +37,13 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'Software Architect, La Mobilière',
     src: '../../../assets/images/testimonials/danymarques.jpg',
   },
+  {
+    message:
+      'The instructors really knew topics they presented and what a training means - that’s more than sharing information. One person already said that he is so excited to do some improvement into his code because now he really sees how it should be done.',
+    name: 'Päivi Tuhkanen',
+    role: 'Manager, VMS Helsinki',
+    src: '../../../assets/images/testimonials/paivituhkanen.jpg',
+  },
 ];
 
 const IMAGES: GalleryImage[] = [
