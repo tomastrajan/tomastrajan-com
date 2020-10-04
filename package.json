@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve:ssr:dev",
+    "start": "node dist/server/main.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
