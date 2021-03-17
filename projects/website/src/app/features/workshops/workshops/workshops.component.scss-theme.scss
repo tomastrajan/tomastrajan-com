@@ -1,5 +1,29 @@
 @import '~@angular/material/theming';
 
+@mixin workshop-background($background, $image-url) {
+  background: linear-gradient(
+      to bottom,
+      mat-color($background, background, 0) 200px,
+      mat-color($background, background, 1) 450px
+    ),
+    url($image-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+@mixin workshop-background-responsive($background, $image-url) {
+  background: linear-gradient(
+      to bottom,
+      mat-color($background, card, 0) 20px,
+      mat-color($background, card, 1) 7%
+    ),
+    url($image-url);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
 @mixin tt-workshops-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
@@ -9,16 +33,6 @@
 
   tt-workshops {
     .background {
-      background: linear-gradient(
-          to bottom,
-          mat-color($background, background, 0) 200px,
-          mat-color($background, background, 1) 450px
-        ),
-        url('../../../../assets/images/workshops/workshops.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-
       h1 {
         background-color: mat-color($background, card) !important;
       }
@@ -27,21 +41,67 @@
         background-color: mat-color($foreground, text) !important;
         color: mat-color($background, card) !important;
       }
+
+      &.angular-state-management {
+        @include workshop-background(
+          $background,
+          '../../../../assets/images/workshops/workshops.jpg'
+        );
+      }
+
+      &.angular-mastery {
+        @include workshop-background(
+          $background,
+          '../../../../assets/images/workshops/amw-splash-alt.jpg'
+        );
+      }
+
+      &.angular-reactive-forms {
+        @include workshop-background(
+          $background,
+          '../../../../assets/images/workshops/arfw-splash.jpg'
+        );
+      }
+
+      &.frontend-heroes {
+        @include workshop-background(
+          $background,
+          '../../../../assets/images/workshops/fhw-splash.jpg'
+        );
+      }
     }
   }
 
   .responsive {
     tt-workshops {
       .background {
-        background: linear-gradient(
-            to bottom,
-            mat-color($background, card, 0) 20px,
-            mat-color($background, card, 1) 7%
-          ),
-          url('../../../../assets/images/workshops/workshops.jpg');
-        background-size: 200%;
-        background-repeat: no-repeat;
-        background-position: 50% 0;
+        &.angular-state-management {
+          @include workshop-background-responsive(
+            $background,
+            '../../../../assets/images/workshops/workshops.jpg'
+          );
+        }
+
+        &.angular-mastery {
+          @include workshop-background-responsive(
+            $background,
+            '../../../../assets/images/workshops/amw-splash-alt.jpg'
+          );
+        }
+
+        &.angular-reactive-forms {
+          @include workshop-background-responsive(
+            $background,
+            '../../../../assets/images/workshops/arfw-splash.jpg'
+          );
+        }
+
+        &.frontend-heroes {
+          @include workshop-background-responsive(
+            $background,
+            '../../../../assets/images/workshops/fhw-splash.jpg'
+          );
+        }
       }
     }
   }

@@ -17,6 +17,14 @@ const NAVIGATION = [
         label: 'Angular State Management',
         url: 'workshops/angular-state-management-workshop-with-ngrx',
       },
+      {
+        label: 'Angular Reactive Forms',
+        url: 'workshops/angular-reactive-forms-workshop',
+      },
+      {
+        label: 'Frontend Heroes',
+        url: 'workshops/frontend-heroes-workshop',
+      },
     ],
   },
   {

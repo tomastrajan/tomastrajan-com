@@ -27,6 +27,20 @@ const routes: Routes = [
             './angular-state-management/angular-state-management.module'
           ).then((m) => m.AngularStateManagementModule),
       },
+      {
+        path: 'angular-reactive-forms-workshop',
+        loadChildren: () =>
+          import('./angular-reactive-forms/angular-reactive-forms.module').then(
+            (m) => m.AngularReactiveFormsModule
+          ),
+      },
+      {
+        path: 'frontend-heroes-workshop',
+        loadChildren: () =>
+          import('./frontend-heroes/frontend-heroes.module').then(
+            (m) => m.FrontendHeroesModule
+          ),
+      },
     ],
   },
 ];
