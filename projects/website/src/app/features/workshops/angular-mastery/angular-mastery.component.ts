@@ -44,6 +44,40 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'Manager, VMS Helsinki',
     src: '../../../assets/images/testimonials/paivituhkanen_final.jpg',
   },
+  {
+    message:
+      'For me as a "newbie" it was very valuable. The tutorials are very very good, also for a later study or as a reference. Well done!',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_a.jpg',
+  },
+  {
+    message:
+      'It was a very good course. Your know how it is on a high level and you know what you talking about. I learned a lot!',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_b.jpg',
+  },
+  {
+    message:
+      "Great job! Lots and lots of topics that we went through. Great that you adjusted speed to group's level of knowledge.",
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_c.jpg',
+  },
+  {
+    message:
+      'Thank you! I really enjoyed the approach with alternating between theory and exercises.',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+  },
+  {
+    message: 'It was clearly a very insightful and fruitful course!',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_e.jpg',
+  },
 ];
 
 const IMAGES: GalleryImage[] = [
