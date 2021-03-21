@@ -30,6 +30,40 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'Software Architect, Die Mobiliar',
     src: '../../../assets/images/testimonials/christofleuenberger.jpg',
   },
+  {
+    message:
+      'Thanks a lot for the introduction to NgRx. The course was very clean structured and everything nicely explained.',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+  },
+  {
+    message:
+      'Great workshop with space for Q&A. Solid background information. Good balance between theory and hands-on.',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_a.jpg',
+  },
+  {
+    message:
+      'The course was really good. Very nice and helpful instructor! Thank you a lot!',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_b.jpg',
+  },
+  {
+    message:
+      'It was really well structured and really interesting! I learned a lot! Thank you!',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_c.jpg',
+  },
+  {
+    message: "Well-given / crafted course, good pedagogy. Let's keep in touch!",
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_e.jpg',
+  },
 ];
 
 const IMAGES: GalleryImage[] = [
