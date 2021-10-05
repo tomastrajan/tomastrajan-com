@@ -8,12 +8,16 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+$custom-typography: mat-typography-config(
+  $font-family: 'Sora, sans-serif',
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$elements-tt-primary: mat-palette($mat-indigo, 500, 400, 800);
-$elements-tt-primary-dark: mat-palette($mat-indigo, 200, 100, 400);
-$elements-tt-accent: mat-palette($mat-light-blue, 700, 500, 900);
+$elements-tt-primary: mat-palette($mat-blue, 800, 600, 900);
+$elements-tt-primary-dark: mat-palette($mat-blue, 300, 200, 400);
+$elements-tt-accent: mat-palette($mat-blue, 100, 100, 300);
 
 // The warn palette is optional (defaults to red).
 $elements-tt-warn: mat-palette($mat-red);
@@ -59,6 +63,8 @@ $elements-tt-theme-dark: mat-dark-theme(
   @include tt-open-source-angular-elements-component-theme($theme);
   @include tt-workshops-component-theme($theme);
 }
+
+@include angular-material-typography($custom-typography);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

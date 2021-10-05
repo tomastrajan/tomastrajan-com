@@ -10,11 +10,11 @@
   tt-get-in-touch {
     .cta {
       .call {
-        color: mat-color($accent) !important;
+        color: mat-color($primary) !important;
 
         a {
           text-decoration: underline;
-          color: mat-color($accent) !important;
+          color: mat-color($primary) !important;
         }
       }
     }

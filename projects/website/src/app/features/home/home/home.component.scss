@@ -5,59 +5,55 @@
     align-items: center;
     position: relative;
 
-    .avatar {
-      margin: 40px 0 10px 0;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
-    }
-
-    .main-quote {
-      margin: 0 0 0 50px;
-      max-width: 500px;
-      color: #000000 !important;
-      text-shadow: 1px 1px 2px #ffffff;
-    }
-
     .intro {
-      margin: 40px;
+      display: flex;
+      margin: 450px 40px 40px 40px;
       max-width: 800px;
       padding: 40px;
-      text-align: center;
       border-radius: 10px;
       box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      position: relative;
 
-      h1 {
-        margin: 0;
-      }
+      .main-quote {
+        max-width: 800px;
+        color: #000000 !important;
+        text-shadow: 1px 1px 2px #ffffff;
 
-      .cta {
-        margin: 40px 0 0 0;
-
-        button {
-          margin: 5px;
-          padding: 5px 35px;
+        h1 {
+          font-size: 18px !important;
+          margin: 0 0 0 80px !important;
+        }
+        p {
+          font-size: 13px !important;
+          line-height: 17px !important;
+          margin: 0 0 0 80px !important;
+          opacity: 0.7;
         }
       }
 
-      blockquote {
-        margin: 0;
+      .avatar {
+        position: absolute;
+        top: -113px;
+        left: 50%;
+        margin-left: -75px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
       }
     }
+  }
 
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 40px 0 40px;
 
-    .technologies {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0 40px;
-
-      img {
-        height: 64px;
-        margin: 10px;
-      }
+    img {
+      height: 64px;
+      margin: 10px;
     }
   }
 
@@ -70,7 +66,7 @@
 
         mat-card {
           &:hover {
-            box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
           }
 
           mat-card-header {
@@ -113,18 +109,26 @@
       }
     }
   }
-
-
 }
 
 :host-context(.responsive) {
-  .main-quote {
-    margin: 50px 20px 0 20px !important;
-  }
+  .wrapper {
+    &:before {
+      min-height: 275px !important;
+    }
 
-  .cta {
-    button {
-      width: 100%;
+    .intro {
+      flex-direction: column-reverse;
+      margin-top: 300px;
+
+      .main-quote {
+        text-align: center !important;
+        margin: 30px 20px 0 20px !important;
+        h1,
+        p {
+          margin-left: 0 !important;
+        }
+      }
     }
   }
 }

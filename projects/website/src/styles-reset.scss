@@ -12,12 +12,14 @@ body {
 
 h1 {
   font-size: 3em !important;
-  line-height: 1.25em !important;
+  line-height: 1.73em !important;
   text-transform: uppercase !important;
   font-weight: 700 !important;
+  margin-bottom: 40px !important;
 }
 
 h2 {
+  font-weight: 600 !important;
   font-size: 26px !important;
   mat-icon {
     font-size: 30px !important;
@@ -31,13 +33,16 @@ h3 {
   font-size: 20px !important;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 40px !important;
 }
 
-ul, ol {
+ul,
+ol {
   position: relative;
   left: 24px;
   list-style-position: outside;
@@ -70,15 +75,15 @@ pre {
 }
 
 blockquote {
-  font-style: italic;
   padding: 10px 20px;
   border-left: 2px solid;
   margin: 20px 0;
   font-size: 1.5em;
-  line-height: 1.2em;
+  line-height: 1.6em;
+  font-weight: 600;
 
   &.large {
-    font-family: Patua One, serif;
+    font-family: Poppins, serif;
     position: relative;
     font-style: normal;
     border: 0;
@@ -98,7 +103,6 @@ blockquote {
 }
 
 .responsive {
-
   blockquote {
     &.large {
       margin-top: 30px;

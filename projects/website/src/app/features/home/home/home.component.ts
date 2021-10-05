@@ -22,30 +22,6 @@ export class HomeComponent implements OnInit {
 
 const HIGHLIGHTS = [
   {
-    title: 'Angular Schematics',
-    subtitle: 'Angular Conference - NG-MY 2019 - Kuala Lumpur / Malaysia',
-    description:
-      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
-    logo: 'assets/images/speaking/ngmy-logo.png',
-    logoAlt: 'NG-MY 2019',
-    photo: 'assets/images/speaking/ngmy2019.jpg',
-    photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
-    linkLabel: 'Learn more',
-    link: '../speaking/conferences',
-  },
-  {
-    title: 'Angular Zurich Meetup',
-    subtitle: 'Co-organizer of the Angular Zurich Meetup',
-    description:
-      'Angular Zurich is a local Swiss Angular community based in the beautiful city of Zurich. Local and international speakers are sharing their Angular know-how and experience in form of full length (45 min) and lightning (15 min) talks. The meetup is usually taking place once a month.',
-    logo: 'assets/logo/angularzurich.png',
-    logoAlt: 'Angular Zurich Meetup',
-    photo: 'assets/images/speaking/angularzurich201903.jpg',
-    photoAlt: 'Lets learn Angular together! ',
-    linkLabel: 'Learn more',
-    link: '../community/angular-zurich',
-  },
-  {
     title: 'Angular Mastery Workshop',
     subtitle:
       'This workshop will teach you how to become proficient Angular developer!',
@@ -71,6 +47,33 @@ const HIGHLIGHTS = [
     linkLabel: 'Learn more',
     link: '../workshops/angular-state-management-workshop-with-ngrx',
   },
+  {
+    title: 'Conferences & Meetups',
+    subtitle:
+      'Talks about Angular and frontend at various conferences and meetups around the world ',
+    description:
+      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
+    logo: 'assets/logo/angular.svg',
+    logoAlt: 'Angular Logo',
+    photo: 'assets/images/speaking/angularday2019.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about Angular Schematics at Angular Day Verona 2019',
+    linkLabel: 'Learn more',
+    link: '../speaking/conferences',
+  },
+  {
+    title: 'Angular Zurich Meetup',
+    subtitle: 'Co-organizer of the Angular Zurich Meetup',
+    description:
+      'Angular Zurich is a local Swiss Angular community based in the beautiful city of Zurich. Local and international speakers are sharing their Angular know-how and experience in form of full length (45 min) and lightning (15 min) talks. The meetup is usually taking place once a month.',
+    logo: 'assets/logo/angularzurich.png',
+    logoAlt: 'Angular Zurich Meetup',
+    photo: 'assets/images/speaking/angularzurich201903.jpg',
+    photoAlt: 'Lets learn Angular together! ',
+    linkLabel: 'Learn more',
+    link: '../community/angular-zurich',
+  },
+
   {
     title: 'Angular NgRx Starter',
     subtitle:

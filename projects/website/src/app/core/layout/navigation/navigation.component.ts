@@ -58,7 +58,7 @@ const NAVIGATION = [
         url: 'open-source/angular-elements',
       },
       {
-        label: 'Angular NgRx Material Starter',
+        label: 'Angular Material Starter',
         url: 'open-source/angular-ngrx-material-starter',
       },
     ],

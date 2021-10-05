@@ -14,6 +14,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        max-width: 100%;
         min-height: 600px;
         z-index: -1;
         content: '';
@@ -22,8 +23,8 @@
             mat-color($background, background, 0) 50%,
             mat-color($background, background, 1) 100%
           ),
-          url('../../../../assets/images/home/splash.jpg') no-repeat center
-            center;
+          url('../../../../assets/images/home/splash-workshop.jpg') no-repeat
+            top left;
         background-size: cover;
       }
     }

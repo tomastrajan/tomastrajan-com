@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { GalleryImage } from '../../../shared/gallery/gallery.component';
+import { Testimonial } from '../../../shared/testimonials/testimonials.component';
 
 @Component({
   selector: 'tt-angular-reactive-forms',
@@ -9,10 +10,27 @@ import { GalleryImage } from '../../../shared/gallery/gallery.component';
 })
 export class AngularReactiveFormsComponent implements OnInit {
   images = IMAGES;
+  testimonials = TESTIMONIALS;
+
   constructor() {}
 
   ngOnInit(): void {}
 }
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    message: 'Live coding and demo stuff was awesome :)',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_c.jpg',
+  },
+  {
+    message: 'Thanks for a great content and experience!',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+  },
+];
 
 const IMAGES: GalleryImage[] = [
   {

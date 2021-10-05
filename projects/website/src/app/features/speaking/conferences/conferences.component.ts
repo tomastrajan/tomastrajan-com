@@ -24,6 +24,45 @@ export class ConferencesComponent implements OnInit {
 
 const TALKS = [
   {
+    title: 'The Best Way To Architect Your Angular Libraries',
+    subtitle: 'BernerJS Meetup 2021',
+    description:
+      "In this talk we're going to explore how to architect Angular libraries with the help of sub-entries so that our consumers can benefit from the smallest possible bundle size and our teammates from great developer experience when adding additional components and services to the library itself!",
+    logo: 'bernerjs-logo.png',
+    logoAlt: 'BernerJS Meetup 08 2021',
+    photo: 'bernerjs2021.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about The Best Way To Architect Your Angular Libraries at BernerJS meetup',
+    recording: 'https://www.youtube.com/watch?v=2vHJ3_Om_gU',
+    article:
+      'https://tomastrajan.medium.com/the-best-way-to-architect-your-angular-libraries-87959301d3d3',
+  },
+  {
+    title: 'Designing Reusable Components With Angular',
+    subtitle: 'Angular Rocks Podcast 2021',
+    description: `Component is the central piece in Angular. Sometimes you want to generalize a particular component, to make it shareable across your application or to move into a custom component library to share it around multiple applications. It is important to understand how to approach shareable components in your particular use-case.`,
+    logo: 'angularrocks-logo.png',
+    logoAlt: 'Angular Rocks Podcast 08 2021',
+    photo: 'angularrocks2021.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about Designing Reusable Components With Angular at Angular Rocks Podcast',
+    recording:
+      'https://angularrocks.com/episodes/designing-reusable-components-with-tomas-trajan',
+    article:
+      'https://tomastrajan.medium.com/the-6-best-practices-for-building-custom-angular-components-library-1d6a4cc8215e',
+  },
+  {
+    title: 'Master of Ceremony for JS day IT 2021',
+    subtitle: 'JSdayIT 2021 - Conference',
+    description:
+      'Managing Q/A sessions for all 7 talks of jsday.IT 2021 Virtual edition,\n' +
+      'facilitating viewers questions and coming up with relevant content based questions to further enhance viewer experience and communicate concepts presented by the speakers...',
+    logo: 'angularday-logo.png',
+    logoAlt: 'JSdayIT Conference',
+    photo: 'jsdayit2021mc.jpg',
+    photoAlt: 'Tomas Trajan in the role of MC for JSdayIT 2021 Conference',
+  },
+  {
     title: 'Microfrontends with Angular Elements',
     subtitle: 'Angular Minsk Meetup 2020 - Remote',
     description:
@@ -49,6 +88,7 @@ const TALKS = [
     article:
       'https://medium.com/@tomastrajan/how-to-build-epic-angular-app-with-clean-architecture-91640ed1656',
   },
+
   {
     title: 'Angular Elements - Microfrontends',
     subtitle: 'GDG DevFest 2019 - Moscow / Russia',

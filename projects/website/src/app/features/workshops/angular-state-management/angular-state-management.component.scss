@@ -5,7 +5,6 @@
     padding: 10px;
     margin: 30px 0;
     display: inline;
-    line-height: 60px !important;
   }
 
   .wrapper {
@@ -23,8 +22,11 @@
     .description {
       flex: 1 1 0;
 
-      ol {
-        ol {
+      ul {
+        &:first-of-type {
+          margin-right: 80px !important;
+        }
+        ul {
           margin: 10px 0 10px 40px;
         }
       }
