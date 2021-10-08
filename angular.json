@@ -28,7 +28,14 @@
               "projects/website/src/assets"
             ],
             "styles": ["projects/website/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "aot": false,
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -40,7 +47,6 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -58,7 +64,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -121,7 +128,9 @@
           "options": {
             "outputPath": "dist/server",
             "main": "projects/website/server.ts",
-            "tsConfig": "projects/website/tsconfig.server.json"
+            "tsConfig": "projects/website/tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
@@ -133,7 +142,8 @@
               ],
               "optimization": true
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",

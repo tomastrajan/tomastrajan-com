@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 @mixin tt-toolbar-component-theme($theme) {
   $primary: map-get($theme, primary);
@@ -8,21 +8,28 @@
   $background: map-get($theme, background);
 
   mat-toolbar {
-    background-color: mat-color($background, card) !important;
+    background-color: mat.get-color-from-palette($background, card) !important;
 
     button {
       &:hover {
-        color: mat-color($primary) !important;
+        color: mat.get-color-from-palette($primary) !important;
       }
       &.active {
-        color: mat-color($primary, lighter-contrast) !important;
-        background-color: mat-color($primary, lighter) !important;
+        color: mat.get-color-from-palette(
+          $primary,
+          lighter-contrast
+        ) !important;
+        background-color: mat.get-color-from-palette(
+          $primary,
+          lighter
+        ) !important;
       }
     }
 
-    a, mat-icon {
+    a,
+    mat-icon {
       &:hover {
-        color: mat-color($primary) !important;
+        color: mat.get-color-from-palette($primary) !important;
       }
     }
   }

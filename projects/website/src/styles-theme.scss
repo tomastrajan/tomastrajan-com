@@ -1,37 +1,37 @@
 // Custom Theming for Angular Material
+@use '~@angular/material' as mat;
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat.core();
 
-$custom-typography: mat-typography-config(
+$custom-typography: mat.define-typography-config(
   $font-family: 'Sora, sans-serif',
 );
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$elements-tt-primary: mat-palette($mat-blue, 800, 600, 900);
-$elements-tt-primary-dark: mat-palette($mat-blue, 200, 500, 800);
+$elements-tt-primary: mat.define-palette(mat.$blue-palette, 800, 600, 900);
+$elements-tt-primary-dark: mat.define-palette(mat.$blue-palette, 200, 500, 800);
 //$elements-tt-primary-dark: mat-palette($mat-blue, 300, 200, 400);
-$elements-tt-accent: mat-palette($mat-blue, 100, 100, 300);
+$elements-tt-accent: mat.define-palette(mat.$blue-palette, 100, 100, 300);
 
 // The warn palette is optional (defaults to red).
-$elements-tt-warn: mat-palette($mat-red);
+$elements-tt-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$elements-tt-theme: mat-light-theme(
+$elements-tt-theme: mat.define-light-theme(
   $elements-tt-primary,
   $elements-tt-accent,
   $elements-tt-warn
 );
 
 // Create the theme object (a Sass map containing all of the palettes).
-$elements-tt-theme-dark: mat-dark-theme(
+$elements-tt-theme-dark: mat.define-dark-theme(
   $elements-tt-primary-dark,
   $elements-tt-accent,
   $elements-tt-warn
@@ -65,15 +65,15 @@ $elements-tt-theme-dark: mat-dark-theme(
   @include tt-workshops-component-theme($theme);
 }
 
-@include angular-material-typography($custom-typography);
+@include mat.all-component-typographies($custom-typography);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($elements-tt-theme);
+@include mat.all-component-themes($elements-tt-theme);
 @include custom-components-theme($elements-tt-theme);
 
 .dark {
-  @include angular-material-theme($elements-tt-theme-dark);
+  @include mat.all-component-themes($elements-tt-theme-dark);
   @include custom-components-theme($elements-tt-theme-dark);
 }

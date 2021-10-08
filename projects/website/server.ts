@@ -1,4 +1,4 @@
-import 'zone.js/dist/zone-node';
+import 'zone.js/node';
 import fetch from 'node-fetch';
 import { join } from 'path';
 import { existsSync } from 'fs';
@@ -27,7 +27,9 @@ export function app(): express.Express {
   const server = express();
   server.use(bodyParser.json());
   server.use(useragent.express());
-  // server.use(requireHTTPS);
+  if (process.env.NODE_ENV !== 'development') {
+    server.use(requireHTTPS);
+  }
 
   const distFolder = join(process.cwd(), 'dist/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
@@ -45,7 +47,6 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
   // Example Express Rest API endpoints
   server.get('/api/github/repositories', (req, res) => {
     const options = { headers: { Authorization: `Basic ${API_TOKEN_GITHUB}` } };
@@ -122,11 +123,7 @@ export { renderModule, renderModuleFactory } from '@angular/platform-server';
 
 function requireHTTPS(req, res, next) {
   // The 'x-forwarded-proto' check is for Heroku
-  if (
-    !req.secure &&
-    req.get('x-forwarded-proto') !== 'https' &&
-    process.env.ENV !== 'development'
-  ) {
+  if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
     return res.redirect(`https://${req.get('host')}${req.url}`);
   }
   next();

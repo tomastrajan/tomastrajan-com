@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
   navToggled = new BehaviorSubject(false);
   isSmallOrSmaller: Observable<boolean>;
   sidenavMode: Observable<string>;
+  isServer = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
@@ -36,11 +37,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     if (isPlatformServer(this.platformId)) {
       const isMobile = this.responsiveLayoutService.isServerMobile;
-
       this.initialNavOpened = !isMobile;
       this.demoRootCssClass = isMobile ? 'responsive cols-1' : 'cols-3';
       this.navOpened = of(this.initialNavOpened);
       this.sidenavMode = of(isMobile ? 'push' : 'side');
+      this.isServer = true;
     }
 
     if (isPlatformBrowser(this.platformId)) {

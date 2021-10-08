@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 @mixin tt-get-in-touch-component-theme($theme) {
   $primary: map-get($theme, primary);
@@ -10,11 +10,11 @@
   tt-get-in-touch {
     .cta {
       .call {
-        color: mat-color($primary) !important;
+        color: mat.get-color-from-palette($primary) !important;
 
         a {
           text-decoration: underline;
-          color: mat-color($primary) !important;
+          color: mat.get-color-from-palette($primary) !important;
         }
       }
     }

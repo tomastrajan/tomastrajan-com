@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 @mixin tt-home-component-theme($theme) {
   $primary: map-get($theme, primary);
@@ -20,8 +20,8 @@
         content: '';
         background: linear-gradient(
             to bottom,
-            mat-color($background, background, 0) 50%,
-            mat-color($background, background, 1) 100%
+            mat.get-color-from-palette($background, background, 0) 50%,
+            mat.get-color-from-palette($background, background, 1) 100%
           ),
           url('../../../../assets/images/home/splash-workshop.jpg') no-repeat
             top left;
@@ -30,7 +30,7 @@
     }
 
     .intro {
-      background-color: mat-color($background, card);
+      background-color: mat.get-color-from-palette($background, card);
     }
   }
 }

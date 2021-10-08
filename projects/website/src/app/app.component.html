@@ -13,7 +13,13 @@
   >
     <tt-navigation (closeSideNav)="onBackdropClick()"></tt-navigation>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content
+    [style.margin-left]="initialNavOpened ? '270px' : 0"
+    *ngIf="isServer"
+  >
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+  <mat-sidenav-content *ngIf="!isServer">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 @mixin styles-reset-theme($theme) {
   $primary: map-get($theme, primary);
@@ -7,54 +7,54 @@
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
-  $success-colors: mat-palette($mat-green, 400);
-  $warning-colors: mat-palette($mat-amber, 400);
+  $success-colors: mat.define-palette(mat.$green-palette, 400);
+  $warning-colors: mat.define-palette(mat.$amber-palette, 400);
 
   a {
-    color: mat-color($primary);
+    color: mat.get-color-from-palette($primary);
 
     &:hover {
-      color: mat-color($primary, darker);
+      color: mat.get-color-from-palette($primary, darker);
     }
   }
 
   code {
-    color: mat-color($foreground, text);
-    background-color: mat-color($background, unselected-chip);
+    color: mat.get-color-from-palette($foreground, text);
+    background-color: mat.get-color-from-palette($background, unselected-chip);
 
     &[color='primary'] {
-      color: mat-color($primary, default-contrast);
-      background-color: mat-color($primary);
+      color: mat.get-color-from-palette($primary, default-contrast);
+      background-color: mat.get-color-from-palette($primary);
     }
 
     &[color='accent'] {
-      color: mat-color($accent, default-contrast);
-      background-color: mat-color($accent);
+      color: mat.get-color-from-palette($accent, default-contrast);
+      background-color: mat.get-color-from-palette($accent);
     }
 
     &[color='warn'] {
-      color: mat-color($warn, default-contrast);
-      background-color: mat-color($warn);
+      color: mat.get-color-from-palette($warn, default-contrast);
+      background-color: mat.get-color-from-palette($warn);
     }
   }
 
   .error-notification-overlay {
-    color: mat-color($warn, default-contrast);
-    background-color: mat-color($warn);
+    color: mat.get-color-from-palette($warn, default-contrast);
+    background-color: mat.get-color-from-palette($warn);
   }
 
   .info-notification-overlay {
-    color: mat-color($accent, default-contrast);
-    background-color: mat-color($accent);
+    color: mat.get-color-from-palette($accent, default-contrast);
+    background-color: mat.get-color-from-palette($accent);
   }
 
   .success-notification-overlay {
-    color: mat-color($success-colors, default-contrast);
-    background-color: mat-color($success-colors);
+    color: mat.get-color-from-palette($success-colors, default-contrast);
+    background-color: mat.get-color-from-palette($success-colors);
   }
 
   .warning-notification-overlay {
-    color: mat-color($warning-colors, default-contrast);
-    background-color: mat-color($warning-colors);
+    color: mat.get-color-from-palette($warning-colors, default-contrast);
+    background-color: mat.get-color-from-palette($warning-colors);
   }
 }

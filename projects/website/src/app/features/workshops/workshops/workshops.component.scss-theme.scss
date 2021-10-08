@@ -1,10 +1,10 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 @mixin workshop-background($background, $image-url) {
   background: linear-gradient(
       to bottom,
-      mat-color($background, background, 0) 200px,
-      mat-color($background, background, 1) 450px
+      mat.get-color-from-palette($background, background, 0) 200px,
+      mat.get-color-from-palette($background, background, 1) 450px
     ),
     url($image-url);
   background-size: contain;
@@ -15,8 +15,8 @@
 @mixin workshop-background-responsive($background, $image-url) {
   background: linear-gradient(
       to bottom,
-      mat-color($background, card, 0) 20px,
-      mat-color($background, card, 1) 500px
+      mat.get-color-from-palette($background, card, 0) 20px,
+      mat.get-color-from-palette($background, card, 1) 500px
     ),
     url($image-url);
   background-size: 200%;
@@ -34,12 +34,18 @@
   tt-workshops {
     .background {
       h1 {
-        background-color: mat-color($background, card) !important;
+        background-color: mat.get-color-from-palette(
+          $background,
+          card
+        ) !important;
       }
 
       h3 {
-        background-color: mat-color($foreground, text) !important;
-        color: mat-color($background, card) !important;
+        background-color: mat.get-color-from-palette(
+          $foreground,
+          text
+        ) !important;
+        color: mat.get-color-from-palette($background, card) !important;
       }
 
       &.angular-state-management {

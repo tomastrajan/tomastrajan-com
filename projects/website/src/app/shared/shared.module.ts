@@ -19,10 +19,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
+import { environment } from '../../environments/environment';
+
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryDialogComponent } from './gallery-dialog/gallery-dialog.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+
+const { host } = environment;
 
 const ANGULAR_MATERIAL_MODULES = [
   MatCardModule,
@@ -69,45 +73,51 @@ export class SharedModule {
   ) {
     this.matIconRegistry.addSvgIcon(
       'github',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/logo/github.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        host + '/assets/logo/github.svg'
+      )
     );
     this.matIconRegistry.addSvgIcon(
       'twitter',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/logo/twitter.svg'
+        host + '/assets/logo/twitter.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'medium',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/logo/medium.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        host + '/assets/logo/medium.svg'
+      )
     );
     this.matIconRegistry.addSvgIcon(
       'instagram',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/logo/instagram.svg'
+        host + '/assets/logo/instagram.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'youtube',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/logo/youtube.svg'
+        host + '/assets/logo/youtube.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'lightbulb-off',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/logo/lightbulb_off.svg'
+        host + '/assets/logo/lightbulb_off.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'lightbulb',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        'assets/logo/lightbulb.svg'
+        host + '/assets/logo/lightbulb.svg'
       )
     );
     this.matIconRegistry.addSvgIcon(
       'logo',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/logo/logo.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        host + '/assets/logo/logo.svg'
+      )
     );
   }
 }

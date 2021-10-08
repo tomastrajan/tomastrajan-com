@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '~@angular/material/theming';
 
 @mixin tt-open-source-projects-component-theme($theme) {
@@ -11,23 +12,23 @@
     .projects {
       mat-card {
         &.placeholder {
-          background-color: mat-color($background, card);
+          background-color: mat.get-color-from-palette($background, card);
 
           [mat-card-avatar],
           mat-card-title,
           mat-card-subtitle {
-            background-color: mat-color($background, app-bar);
+            background-color: mat.get-color-from-palette($background, app-bar);
             background-image: linear-gradient(
-                90deg,
-                mat-color($background, app-bar) 0px,
-                mat-color($background, card) 40px,
-                mat-color($background, app-bar) 80px
+              90deg,
+              mat.get-color-from-palette($background, app-bar) 0px,
+              mat.get-color-from-palette($background, card) 40px,
+              mat.get-color-from-palette($background, app-bar) 80px
             );
             background-size: 600px;
           }
 
           [mat-flat-button] {
-            background-color: mat-color($background, app-bar);
+            background-color: mat.get-color-from-palette($background, app-bar);
           }
         }
       }
