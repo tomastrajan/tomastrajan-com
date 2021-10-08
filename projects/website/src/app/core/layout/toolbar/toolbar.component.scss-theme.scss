@@ -10,7 +10,7 @@
   mat-toolbar {
     background-color: mat.get-color-from-palette($background, card) !important;
 
-    button {
+    a {
       &:hover {
         color: mat.get-color-from-palette($primary) !important;
       }
@@ -23,13 +23,13 @@
           $primary,
           lighter
         ) !important;
-      }
-    }
 
-    a,
-    mat-icon {
-      &:hover {
-        color: mat.get-color-from-palette($primary) !important;
+        &:hover {
+          color: mat.get-color-from-palette(
+            $primary,
+            lighter-contrast
+          ) !important;
+        }
       }
     }
   }

@@ -18,7 +18,7 @@
   flex: 1 0 auto;
 }
 
-button {
+a {
   margin: 0 0 0 10px;
 }
 
@@ -26,10 +26,8 @@ button {
   margin: 0 10px 0 0;
 }
 
-a {
-  &:hover {
-    color: #fff;
-  }
+.theme-selector {
+  margin: 0 0 0 15px;
 }
 
 iframe {

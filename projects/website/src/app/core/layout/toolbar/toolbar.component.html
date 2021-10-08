@@ -28,21 +28,19 @@
 
   <span class="spacer"></span>
   <ng-container *ngIf="(isResponsiveLayout | async) === false">
-    <button mat-flat-button routerLink="home" routerLinkActive="active">
-      HOME
-    </button>
-    <button mat-flat-button routerLink="workshops" routerLinkActive="active">
+    <a mat-flat-button routerLink="home" routerLinkActive="active"> HOME </a>
+    <a mat-flat-button routerLink="workshops" routerLinkActive="active">
       WORKSHOPS
-    </button>
-    <button mat-flat-button routerLink="consulting" routerLinkActive="active">
+    </a>
+    <a mat-flat-button routerLink="consulting" routerLinkActive="active">
       CONSULTING
-    </button>
-    <button mat-flat-button routerLink="speaking" routerLinkActive="active">
+    </a>
+    <a mat-flat-button routerLink="speaking" routerLinkActive="active">
       SPEAKING
-    </button>
-    <button mat-flat-button routerLink="open-source" routerLinkActive="active">
+    </a>
+    <a mat-flat-button routerLink="open-source" routerLinkActive="active">
       {{ (columnCount | async) > 2 ? 'OPEN SOURCE' : 'OSS' }}
-    </button>
+    </a>
     <a
       href="https://www.medium.com/@tomastrajan"
       target="_blank"
@@ -77,6 +75,7 @@
     ></mat-icon>
   </a>
   <mat-icon
+    class="theme-selector"
     [svgIcon]="isDarkMode ? 'lightbulb' : 'lightbulb-off'"
     (click)="toggleDarkMode()"
   ></mat-icon>
