@@ -18,6 +18,10 @@
   }
 }
 
+:host-context(.responsive) {
+  padding: 20px;
+}
+
 :host-context(.responsive-large) {
   .wrapper {
     width: 70%;

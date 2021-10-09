@@ -9,3 +9,9 @@
     display: inline-block;
   }
 }
+
+:host-context(.responsive) {
+  .background {
+    padding: 20px;
+  }
+}

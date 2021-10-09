@@ -8,3 +8,6 @@
     opacity: 0.5;
   }
 }
+:host-context(.responsive) {
+  padding: 20px !important;
+}

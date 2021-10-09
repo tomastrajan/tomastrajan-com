@@ -117,7 +117,7 @@
 
     .intro {
       flex-direction: column-reverse;
-      margin-top: 300px;
+      margin: 300px 20px 20px 20px;
 
       .main-quote {
         text-align: center !important;
@@ -128,5 +128,9 @@
         }
       }
     }
+  }
+
+  .wrapper-normal {
+    padding: 20px;
   }
 }

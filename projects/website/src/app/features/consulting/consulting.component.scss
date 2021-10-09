@@ -75,3 +75,7 @@
     padding: 0;
   }
 }
+
+:host-context(.responsive) {
+  padding: 20px !important;
+}
