@@ -50,9 +50,9 @@ const HIGHLIGHTS = [
   {
     title: 'Conferences & Meetups',
     subtitle:
-      'Talks about Angular and frontend at various conferences and meetups around the world ',
+      'Talks about Angular and frontend at various conferences and meetups',
     description:
-      'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
+      'Check out recordings and slides from various Angular and frontend related talks I shared with developers at conferences & meetups around the world!',
     logo: 'assets/logo/angular.svg',
     logoAlt: 'Angular Logo',
     photo: 'assets/images/speaking/angularday2019.jpg',

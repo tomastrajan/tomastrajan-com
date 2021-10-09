@@ -48,6 +48,13 @@
         color: mat.get-color-from-palette($background, card) !important;
       }
 
+      &.angular-mastery {
+        @include workshop-background(
+          $background,
+          '../../../../assets/images/workshops/amw-splash1.jpg'
+        );
+      }
+
       &.angular-state-management {
         @include workshop-background(
           $background,
@@ -55,17 +62,10 @@
         );
       }
 
-      &.angular-mastery {
-        @include workshop-background(
-          $background,
-          '../../../../assets/images/workshops/amw-splash-alt.jpg'
-        );
-      }
-
       &.angular-reactive-forms {
         @include workshop-background(
           $background,
-          '../../../../assets/images/workshops/arfw-splash.jpg'
+          '../../../../assets/images/workshops/amw-splash-alt.jpg'
         );
       }
 

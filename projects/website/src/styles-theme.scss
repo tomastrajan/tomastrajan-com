@@ -49,6 +49,7 @@ $elements-tt-theme-dark: mat.define-dark-theme(
 @import './app/features/open-source/angular-starter/angular-starter.component.scss-theme';
 @import './app/features/open-source/angular-elements/angular-elements.component.scss-theme';
 @import './app/features/workshops/workshops/workshops.component.scss-theme';
+@import './app/features/consulting/consulting.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   // include custom components themes
@@ -63,6 +64,7 @@ $elements-tt-theme-dark: mat.define-dark-theme(
   @include tt-open-source-angular-starter-component-theme($theme);
   @include tt-open-source-angular-elements-component-theme($theme);
   @include tt-workshops-component-theme($theme);
+  @include tt-consulting-component-theme($theme);
 }
 
 @include mat.all-component-typographies($custom-typography);
