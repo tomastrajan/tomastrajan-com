@@ -30,9 +30,9 @@
       flex: 1 1 0;
       display: flex;
       flex-direction: column;
-    }
-    img {
-      width: 100%;
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -47,7 +47,17 @@
   }
 }
 
+:host-context(.dark) {
+  .description {
+    img {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  }
+}
+
 :host-context(.responsive) {
+  padding: 20px !important;
+
   .wrapper {
     flex-direction: column;
 
@@ -74,8 +84,4 @@
   .quote-wrapper {
     padding: 0;
   }
-}
-
-:host-context(.responsive) {
-  padding: 20px !important;
 }
