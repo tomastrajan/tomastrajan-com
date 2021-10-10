@@ -81,24 +81,22 @@
   .responsive {
     tt-workshops {
       .background {
+        &.angular-mastery {
+          @include workshop-background-responsive(
+            $background,
+            '../../../../assets/images/workshops/amw-splash1.jpg'
+          );
+        }
         &.angular-state-management {
           @include workshop-background-responsive(
             $background,
             '../../../../assets/images/workshops/workshops.jpg'
           );
         }
-
-        &.angular-mastery {
-          @include workshop-background-responsive(
-            $background,
-            '../../../../assets/images/workshops/amw-splash-alt.jpg'
-          );
-        }
-
         &.angular-reactive-forms {
           @include workshop-background-responsive(
             $background,
-            '../../../../assets/images/workshops/arfw-splash.jpg'
+            '../../../../assets/images/workshops/amw-splash-alt.jpg'
           );
         }
 

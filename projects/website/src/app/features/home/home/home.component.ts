@@ -52,7 +52,7 @@ const HIGHLIGHTS = [
     subtitle:
       'Talks about Angular and frontend at various conferences and meetups',
     description:
-      'Check out recordings and slides from various Angular and frontend related talks I shared with developers at conferences & meetups around the world!',
+      'Check out recordings and slides from various Angular and frontend related talks I shared with developers at conferences & meetups around the world and learn about current offer of talks that I can present at your upcoming event...',
     logo: 'assets/logo/angular.svg',
     logoAlt: 'Angular Logo',
     photo: 'assets/images/speaking/angularday2019.jpg',
