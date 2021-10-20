@@ -1,0 +1,16 @@
+@media print {
+  tt-toolbar,
+  tt-get-in-touch,
+  tt-footer,
+  video {
+    display: none;
+  }
+
+  mat-sidenav {
+    display: none !important;
+  }
+
+  mat-sidenav-content {
+    margin-left: 0 !important;
+  }
+}
