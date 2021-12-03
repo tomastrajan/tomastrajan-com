@@ -32,6 +32,13 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     message:
+      'The course is a highlight. Tomas explains in great detail, shows pros and cons of alternatives, has tons of examples at hand and shares all the background of the features of NGRX.',
+    name: 'Emanuel Indermühle',
+    role: 'Software Architect, Die Mobiliar',
+    src: '../../../assets/images/testimonials/emanuelindermuhle.jpg',
+  },
+  {
+    message:
       'Thanks a lot for the introduction to NgRx. The course was very clean structured and everything nicely explained.',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
@@ -63,6 +70,13 @@ const TESTIMONIALS: Testimonial[] = [
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
     src: '../../../assets/images/testimonials/anonymous_grey_e.jpg',
+  },
+  {
+    message:
+      'Excellent Workshop! I particularly liked the explanation of code in small steps (also in the slides)',
+    name: 'Workshop Participant',
+    role: 'Software Engineer (anonymous feedback)',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
   },
 ];
 
