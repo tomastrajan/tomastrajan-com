@@ -6,6 +6,7 @@ import * as dotenv from 'dotenv';
 import * as express from 'express';
 import * as useragent from 'express-useragent';
 import * as bodyParser from 'body-parser';
+import * as cors from 'cors';
 
 import * as email from '@sendgrid/mail';
 import { APP_BASE_HREF } from '@angular/common';
@@ -14,6 +15,15 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import { AppServerModule } from './src/main.server';
 
 dotenv.config();
+
+const CORS_ORIGIN = [
+  'https://angularexpers.io',
+  'https://www.angularexpers.io',
+  'https://angularexpers.ch',
+  'https://www.angularexpers.ch',
+  'https://www.tomastrajan.com',
+  'https://tomastrajan.com',
+];
 
 const API_URL_GITHUB = 'https://api.github.com';
 const API_TOKEN_GITHUB = Buffer.from(
@@ -27,6 +37,7 @@ export function app(): express.Express {
   const server = express();
   server.use(bodyParser.json());
   server.use(useragent.express());
+  server.use(cors({ origin: CORS_ORIGIN }));
   if (process.env.NODE_ENV !== 'development') {
     server.use(requireHTTPS);
   }
