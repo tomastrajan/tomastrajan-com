@@ -17,10 +17,10 @@ import { AppServerModule } from './src/main.server';
 dotenv.config();
 
 const CORS_ORIGIN = [
-  'https://angularexpers.io',
-  'https://www.angularexpers.io',
-  'https://angularexpers.ch',
-  'https://www.angularexpers.ch',
+  'https://angularexperts.io',
+  'https://www.angularexperts.io',
+  'https://angularexperts.ch',
+  'https://www.angularexperts.ch',
   'https://www.tomastrajan.com',
   'https://tomastrajan.com',
 ];
