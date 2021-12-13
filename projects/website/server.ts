@@ -65,7 +65,7 @@ export function app(): express.Express {
     const msg = {
       to: 'tomas.trajan@gmail.com',
       from: req.body.email,
-      subject: req.body.domain || 'tomastrajan.com - Get in touch form',
+      subject: `${req.body.domain || 'tomastrajan.com'} - Get in touch form`,
       text: `
       From: ${req.body.firstname} ${req.body.lastname}
       Email: ${req.body.email}
