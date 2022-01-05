@@ -74,7 +74,7 @@ export function app(): express.Express {
   });
   server.post('/api/email', (req: express.Request, res: express.Response) => {
     const msg = {
-      to: 'tomas.trajan@gmail.com',
+      to: 'hello@tomastrajan.com',
       from: req.body.email,
       subject: `${req.body.domain || 'tomastrajan.com'} - Get in touch form`,
       text: `
