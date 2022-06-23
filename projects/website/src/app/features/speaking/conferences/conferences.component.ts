@@ -25,7 +25,7 @@ export class ConferencesComponent implements OnInit {
 const TALKS = [
   {
     title: 'The Top 10 Best Practices for NgRx',
-    subtitle: 'Angular Air 2020 - Podcast',
+    subtitle: 'Angular Air 2022 - Podcast',
     description:
       'In this podcast we are discussing top 10 proven NgRx best practices including NgRx 80/20 rule and general advice on architecture and clean dependency graph',
     logo: 'angularair-logo.png',
