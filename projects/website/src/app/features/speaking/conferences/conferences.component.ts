@@ -24,6 +24,20 @@ export class ConferencesComponent implements OnInit {
 
 const TALKS = [
   {
+    title: 'The Top 10 Best Practices for NgRx',
+    subtitle: 'Angular Air 2020 - Podcast',
+    description:
+      'In this podcast we are discussing top 10 proven NgRx best practices including NgRx 80/20 rule and general advice on architecture and clean dependency graph',
+    logo: 'angularair-logo.png',
+    logoAlt: 'Angular Air Podcast',
+    photo: 'angularair202206.jpg',
+    photoAlt:
+      'Tomas Trajan speaking about The Top 10 Best Practices for NgRx at Angular Air Podcast',
+    recording: 'https://www.youtube.com/watch?v=2QnCNR5nzhg',
+    article:
+      'https://tomastrajan.medium.com/level-up-your-ngrx-skills-with-10-time-tested-best-practices-6c837fb14877?sk=bcadc2453e32ff825e5eb8681ea01bb4',
+  },
+  {
     title: 'The Best Way To Architect Your Angular Libraries',
     subtitle: 'BernerJS Meetup 2021',
     description:
