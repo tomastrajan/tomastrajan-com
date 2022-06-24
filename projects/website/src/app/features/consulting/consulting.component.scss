@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 :host {
   display: flex;
   flex-direction: column;
@@ -38,6 +40,25 @@
 
   img {
     width: 100%;
+  }
+
+  .banner {
+    position: relative;
+    img {
+      border-radius: 10px;
+    }
+
+    a {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 30px;
+      font-weight: bold;
+
+      &:hover {
+        @include mat.elevation(8);
+      }
+    }
   }
 
   .quote-wrapper {

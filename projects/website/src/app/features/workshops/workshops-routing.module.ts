@@ -35,6 +35,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'getting-reactive-with-rxjs-workshop',
+        loadChildren: () =>
+          import(
+            './getting-reactive-with-rxjs/getting-reactive-with-rxjs.module'
+          ).then((m) => m.GettingReactiveWithRxjsModule),
+      },
+      {
         path: 'frontend-heroes-workshop',
         loadChildren: () =>
           import('./frontend-heroes/frontend-heroes.module').then(

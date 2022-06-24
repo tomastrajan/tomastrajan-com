@@ -14,6 +14,10 @@ const NAVIGATION = [
         url: 'workshops/angular-mastery',
       },
       {
+        label: 'Getting reactive with RxJs',
+        url: 'workshops/getting-reactive-with-rxjs-workshop',
+      },
+      {
         label: 'Angular State Management',
         url: 'workshops/angular-state-management-workshop-with-ngrx',
       },

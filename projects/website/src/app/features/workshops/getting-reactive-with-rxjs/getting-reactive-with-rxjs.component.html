@@ -1,0 +1,170 @@
+<h1>Getting reactive&nbsp;<br />With RxJs&nbsp;<br />&nbsp;Workshop</h1>
+
+<div class="wrapper">
+  <div class="description" style="align-self: center">
+    <blockquote>
+      This workshop will teach you why and how to use RxJs including all basic
+      concepts, best practices & real life Angular use cases and examples.
+    </blockquote>
+    <p>
+      A two day workshop where we're going to go on a journey of learning
+      reactive programming with RxJs. From comparison of previous way of
+      handling asynchronous logic with callbacks and promises all they way to
+      RxJs. Basic concepts, best practices & real life Angular use cases and
+      examples will be covered in-full!
+    </p>
+  </div>
+
+  <div class="banner">
+    <img
+      loading="lazy"
+      src="../../../../assets/images/workshops/getting-reactive-with-rxjs.jpg"
+    />
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="description">
+    <h2><mat-icon>hourglass_bottom</mat-icon> RxJs Introduction</h2>
+    <ul>
+      <li>Origins & Evolution</li>
+      <li>version history, major updates</li>
+      <li>What's new and most recent features overview</li>
+      <li>Roadmap for the future</li>
+      <li>Usage in frontend, popular frameworks and available alternatives</li>
+      <li>Amazing docs & operator decision tree</li>
+      <li>Installation (npm packages, imports, bundle size implications)</li>
+      <li>StackBlitz</li>
+      <li>your best friend from RxJs learning journey</li>
+    </ul>
+  </div>
+  <div class="description">
+    <h2><mat-icon>account_balance</mat-icon> RxJs Concepts</h2>
+    <ul>
+      <li>Async logic and its ubiquitousness in frontend</li>
+      <li>From Callbacks to Promises all the way to Observable Streams</li>
+      <li>Observer vs Observable</li>
+      <li>The best way to understand RxJs in one image</li>
+      <li>Handling multiple function calls together</li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="description">
+    <h2><mat-icon>directions_walk</mat-icon> RxJs Basics</h2>
+    <ul>
+      <li>Building blocks of RxJs</li>
+      <li>Observables (streams)</li>
+      <li>Observers (subscription)</li>
+      <li>Value, error and completion events</li>
+      <li>Subscription</li>
+      <li>Unsubscription approaches & best practices</li>
+      <li>Operators (creation & pipeable)</li>
+    </ul>
+  </div>
+  <div class="description">
+    <h2><mat-icon>directions_bike</mat-icon> RxJs Advanced Concepts</h2>
+    <ul>
+      <li>Higher-order Observables and flattening operators</li>
+      <li>Marble diagrams (& their ASCII representation)</li>
+      <li>Hot and Cold (lazy) Observables</li>
+      <li>Subjects</li>
+      <li>Observable and Observer in a single entity</li>
+      <li>Subject types</li>
+      <li>Stream sharing (Multicasting)</li>
+      <li>Reference counting</li>
+      <li>Schedulers</li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="description">
+    <h2>
+      <mat-icon>tips_and_updates</mat-icon> Practical tips & best practices
+    </h2>
+    <ul>
+      <li>How to resist the temptation to streamify your synchronous code</li>
+      <li>
+        What are Observable-like entities and their implicit casting to
+        Observable
+      </li>
+      <li>
+        Internalizing the difference between stream definition vs stream
+        execution
+      </li>
+      <li>Observable streams are declarative and the consequences of this</li>
+      <li>
+        How to stop re-creating observables as a result of user interaction
+        during runtimev
+      </li>
+      <li>How to never again write code with nested subscriptions</li>
+      <li>
+        How to not crash your stream permanently with incorrect error handling
+      </li>
+      <li>
+        How to write future-proof RxJs code based on upcoming deprecations
+      </li>
+      <li>Why you should never treat your stream as synchronous</li>
+      <li>*Never* mutate observable stream values</li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="description">
+    <h2><mat-icon>category</mat-icon> Examples & use cases</h2>
+    <ul>
+      <li>Converting promises and other async logic into RxJs streams</li>
+      <li>Streamifying browser APIs</li>
+      <li>Most commonly used operators</li>
+      <li>
+        When only way to filter is to map (how to transform array (steam value)
+        inside RxJs observable stream (stream of events))
+      </li>
+      <li>Flattening operators</li>
+      <li>Loading of data from backend APIs</li>
+    </ul>
+  </div>
+  <div class="description">
+    <h2><mat-icon>category</mat-icon> Examples & use cases</h2>
+    <ul>
+      <li>Caching of stream value (time limited caching)</li>
+      <li>CRUD orchestration</li>
+      <li>
+        How to unsubscribe (imperative vs <code>takeUntil</code> vs
+        <code>| async</code> pipe)
+      </li>
+      <li>Sharing of stream between multiple subscribers</li>
+      <li>Exception and error handling</li>
+      <li>Do not expose subject but only its observable stream</li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="description">
+    <h2><mat-icon>bug_report</mat-icon> RxJs Testing</h2>
+    <ul>
+      <li>Async logic testing</li>
+      <li>Use native <code>TestScheduler</code></li>
+      <li>Use provided helpers (hot, cold, expectObservable, ...)</li>
+      <li>Define streams with ASCII marble diagrams</li>
+      <li>Testing mocked services (after scheduler has run)</li>
+    </ul>
+  </div>
+  <div class="description">
+    <h2><mat-icon>attachment</mat-icon> Extra Resources</h2>
+    <ul>
+      <li>Full presentation as PDF for further reference</li>
+      <li>Working examples (StackBlitz)</li>
+      <li>Many exercises & solutions (StackBlitz)</li>
+      <li>Workshop participation certificate</li>
+      <li>Individual questions / exercise review during the hands on part</li>
+    </ul>
+  </div>
+</div>
+
+<tt-gallery [images]="images" rowHeight="1.70:1"></tt-gallery>
+
+<tt-testimonials [testimonials]="testimonials"></tt-testimonials>
+
+<tt-get-in-touch></tt-get-in-touch>

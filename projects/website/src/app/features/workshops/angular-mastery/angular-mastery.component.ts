@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
 
 import { ResponsiveLayoutService } from '../../../core/layout/responsive-layout.service';
 import { GalleryImage } from '../../../shared/gallery/gallery.component';
@@ -10,16 +9,12 @@ import { Testimonial } from '../../../shared/testimonials/testimonials.component
   templateUrl: './angular-mastery.component.html',
   styleUrls: ['./angular-mastery.component.scss'],
 })
-export class AngularMasteryComponent implements OnInit {
-  isSmallOrSmaller: Observable<boolean>;
+export class AngularMasteryComponent {
+  isSmallOrSmaller = this.responsiveLayoutService.isSmallOrSmaller;
   images = IMAGES;
   testimonials = TESTIMONIALS;
 
   constructor(private responsiveLayoutService: ResponsiveLayoutService) {}
-
-  ngOnInit() {
-    this.isSmallOrSmaller = this.responsiveLayoutService.isSmallOrSmaller;
-  }
 }
 
 const TESTIMONIALS: Testimonial[] = [

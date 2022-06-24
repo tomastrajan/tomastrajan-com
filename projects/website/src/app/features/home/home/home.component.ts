@@ -48,6 +48,32 @@ const HIGHLIGHTS = [
     link: '../workshops/angular-state-management-workshop-with-ngrx',
   },
   {
+    title: 'Getting Reactive with RxJs Workshop',
+    subtitle:
+      'Learn fundamental concepts and get hands on experience with RxJs!',
+    description:
+      'This workshop will teach you why and how to use RxJs including all basic concepts, best practices & real life Angular use cases and examples!',
+    logo: 'assets/logo/rxjs.svg',
+    logoAlt: 'RxJs - Reactive Extensions library',
+    photo: 'assets/images/workshops/getting-reactive-with-rxjs.jpg',
+    photoAlt: 'Getting Reactive With RxJs Workshop',
+    linkLabel: 'Learn more',
+    link: '../workshops/getting-reactive-with-rxjs-workshop',
+  },
+  {
+    title: 'Consulting Offer',
+    subtitle:
+      'Supercharge your Angular application development with our expert support',
+    description:
+      'Welcome to the world of Angular excellence by Google Developer Experts! Proven architecture, best practices and quality control ensure your team delivers an exceptional experience every time...',
+    logo: 'assets/logo/angular-experts.svg',
+    logoAlt: 'Angular Logo',
+    photo: 'assets/images/consulting/angular-experts.jpg',
+    photoAlt: 'Angular experts services',
+    linkLabel: 'Explore consulting offer',
+    externalLink: 'https://angularexperts.io',
+  },
+  {
     title: 'Conferences & Meetups',
     subtitle:
       'Talks about Angular and frontend at various conferences and meetups',

@@ -44,9 +44,21 @@
           <p>{{ item.description }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a color="accent" mat-flat-button [routerLink]="item.link">{{
-            item.linkLabel
-          }}</a>
+          <a
+            *ngIf="item.link"
+            color="accent"
+            mat-flat-button
+            [routerLink]="item.link"
+            >{{ item.linkLabel }}</a
+          >
+          <a
+            *ngIf="item.externalLink"
+            color="accent"
+            mat-flat-button
+            rel="noopener"
+            [href]="item.externalLink"
+            >{{ item.linkLabel }}</a
+          >
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>

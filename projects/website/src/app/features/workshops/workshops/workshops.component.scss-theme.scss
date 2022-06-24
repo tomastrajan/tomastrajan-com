@@ -75,6 +75,13 @@
           '../../../../assets/images/workshops/fhw-splash.jpg'
         );
       }
+
+      &.getting-reactive-with-rxjs {
+        @include workshop-background(
+          $background,
+          '../../../../assets/images/workshops/grwrw-splash.jpg'
+        );
+      }
     }
   }
 
