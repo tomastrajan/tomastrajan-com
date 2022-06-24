@@ -31,17 +31,17 @@
     }
   },
   "dependencies": {
-    "@angular/animations": "^12.2.8",
+    "@angular/animations": "^13.3.11",
     "@angular/cdk": "^12.2.8",
-    "@angular/common": "^12.2.8",
-    "@angular/compiler": "^12.2.8",
-    "@angular/core": "^12.2.8",
-    "@angular/forms": "^12.2.8",
+    "@angular/common": "^13.3.11",
+    "@angular/compiler": "^13.3.11",
+    "@angular/core": "^13.3.11",
+    "@angular/forms": "^13.3.11",
     "@angular/material": "^12.2.8",
-    "@angular/platform-browser": "^12.2.8",
-    "@angular/platform-browser-dynamic": "^12.2.8",
-    "@angular/platform-server": "^12.2.8",
-    "@angular/router": "^12.2.8",
+    "@angular/platform-browser": "^13.3.11",
+    "@angular/platform-browser-dynamic": "^13.3.11",
+    "@angular/platform-server": "^13.3.11",
+    "@angular/router": "^13.3.11",
     "@nguniversal/express-engine": "^12.1.1",
     "@sendgrid/mail": "^7.2.6",
     "body-parser": "^1.19.0",
@@ -54,10 +54,10 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.8",
-    "@angular/cli": "~12.2.8",
-    "@angular/compiler-cli": "~12.2.8",
-    "@angular/language-service": "~12.2.8",
+    "@angular-devkit/build-angular": "~13.3.8",
+    "@angular/cli": "~13.3.8",
+    "@angular/compiler-cli": "~13.3.11",
+    "@angular/language-service": "~13.3.11",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@nguniversal/builders": "^10.1.0",
@@ -81,7 +81,7 @@
     "ts-loader": "^8.0.4",
     "ts-node": "~9.0.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.3.5",
+    "typescript": "~4.6.4",
     "webpack-cli": "^3.3.12"
   }
 }

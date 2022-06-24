@@ -64,7 +64,6 @@ const ANGULAR_MATERIAL_MODULES = [
     GalleryDialogComponent,
     TestimonialsComponent,
   ],
-  entryComponents: [GalleryDialogComponent],
 })
 export class SharedModule {
   constructor(
