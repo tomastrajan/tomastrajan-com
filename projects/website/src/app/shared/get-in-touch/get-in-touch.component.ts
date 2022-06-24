@@ -1,5 +1,10 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import {
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  NgForm,
+  Validators,
+} from '@angular/forms';
 
 import { EmailService } from '../../core/api/email.service';
 import { NotificationService } from '../../core/services/notification.service';
@@ -17,10 +22,10 @@ export class GetInTouchComponent implements OnInit {
   call = `Let's get in touch to figure out the best way I can help you to <strong>achieve your goals</strong>!`;
 
   @ViewChild('formElement', { static: true }) formElement: NgForm;
-  form: FormGroup;
+  form: UntypedFormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private emailService: EmailService,
     private notificationService: NotificationService
   ) {}
