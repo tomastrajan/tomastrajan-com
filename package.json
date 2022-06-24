@@ -10,7 +10,7 @@
     "serve": "ng serve -o",
     "serve:ssr:dev": "ng run website:serve-ssr",
     "serve:ssr:prod": "npm run build:ssr && node dist/server/main.js",
-    "build:ssr": "ng build --configuration production && ng run website:server:production --bundleDependencies all",
+    "build:ssr": "ng build --configuration production && ng run website:server:production && mv ./dist/server/main*.js ./dist/server/main.js && mv ./dist/server/main*.js.map ./dist/server/main.js.map",
     "heroku-postbuild": "npm run build:ssr",
     "format:write": "prettier projects/**/*.{ts,json,md,html} --write",
     "format:test": "prettier projects/**/*.{ts,json,md,html} --list-different",

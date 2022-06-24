@@ -119,6 +119,7 @@
             "main": "projects/website/server.ts",
             "tsConfig": "projects/website/tsconfig.server.json",
             "sourceMap": true,
+            "outputHashing": "all",
             "optimization": false
           },
           "configurations": {
