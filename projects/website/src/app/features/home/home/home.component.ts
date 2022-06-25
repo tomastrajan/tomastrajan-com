@@ -74,6 +74,18 @@ const HIGHLIGHTS = [
     externalLink: 'https://angularexperts.io',
   },
   {
+    title: 'Enterprise Polyrepo Tooling',
+    subtitle: 'Understand and evolve your enterprise polyrepo environment',
+    description:
+      'Omniboard is the best tool for lead software engineers and architects that helps them to get an overview to drive change by querying and tracking all their code bases!',
+    logo: 'assets/logo/omniboard.png',
+    logoAlt: 'Omniboard Logo',
+    photo: 'assets/images/omniboard/omniboard-dashboard.png',
+    photoAlt: 'Omniboard dashboard example',
+    linkLabel: 'Learn more',
+    externalLink: 'https://omniboard.dev',
+  },
+  {
     title: 'Conferences & Meetups',
     subtitle:
       'Talks about Angular and frontend at various conferences and meetups',

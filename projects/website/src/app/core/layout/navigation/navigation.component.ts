@@ -36,6 +36,10 @@ const NAVIGATION = [
     url: 'consulting',
   },
   {
+    label: 'OMNIBOARD',
+    externalUrl: 'https://omniboard.dev/',
+  },
+  {
     label: 'SPEAKING',
     url: 'speaking',
     children: [
