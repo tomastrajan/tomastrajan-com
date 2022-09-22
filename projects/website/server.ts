@@ -74,7 +74,10 @@ export function app(): express.Express {
   });
   server.post('/api/email', (req: express.Request, res: express.Response) => {
     const msg = {
-      to: 'hello@tomastrajan.com',
+      to:
+        !req.body.domain || req.body.domain === 'tomastrajan.com'
+          ? 'hello@tomastrajan.com'
+          : 'get-in-touch@angularexperts.io',
       from: req.body.email,
       subject: `${req.body.domain || 'tomastrajan.com'} - Get in touch form`,
       text: `
