@@ -105,9 +105,9 @@ Hi there!
 
 I am happy to share with you my latest ebook "Angular Enterprise Architecture" which is available for free for a limited time.
 
-You can download it <a href="https://angularexperts.io/products/ebook-angular-enterprise-architecture?purchase=success">here</a> or using the link bellow
+You can download it using the link bellow
 
-https://angularexperts.io/products/angular-enterprise-architecture?purchase=success
+https://angularexperts.io/products/ebook-angular-enterprise-architecture?purchase=success
 
 Cheers
 
