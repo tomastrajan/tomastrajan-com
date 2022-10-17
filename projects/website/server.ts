@@ -93,6 +93,36 @@ export function app(): express.Express {
       .catch((error) => res.send(error));
   });
 
+  server.post(
+    '/ax/promotion/ebook/angular-enterprise-architecture',
+    (req: express.Request, res: express.Response) => {
+      const msg = {
+        to: req.body.email,
+        from: 'tomas@angularexperts.io',
+        subject: `FREE EBOOK | Angular Enterprise Architecture by Tomas Trajan - Angular Experts`,
+        text: `
+Hi there!
+
+I am happy to share with you my latest ebook "Angular Enterprise Architecture" which is available for free for a limited time.
+
+You can download it <a href="https://angularexperts.io/products/ebook-angular-enterprise-architecture?purchase=success">here</a> or using the link bellow
+
+https://angularexperts.io/products/angular-enterprise-architecture?purchase=success
+
+Cheers
+
+Tomas Trajan
+
+https://angularexperts.io
+`,
+      };
+      email
+        .send(msg)
+        .then(() => res.status(200).json('success'))
+        .catch((error) => res.send(error));
+    }
+  );
+
   // Serve static files from /browser
   server.get(
     '*.*',
