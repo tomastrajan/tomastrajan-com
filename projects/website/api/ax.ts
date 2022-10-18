@@ -5,6 +5,8 @@ export function registerAxHandlers(server: Express, email: any) {
     '/ax/promotion/ebook/angular-enterprise-architecture',
     handleEbookAngularEnterpriseArchitectureFactory(email)
   );
+  server.post('/ax/get-in-touch', handleGetInTouchFactory(email));
+  server.post('/ax/get-in-touch-mini', handleGetInTouchMiniFactory(email));
 }
 
 function handleEbookAngularEnterpriseArchitectureFactory(email) {
@@ -22,6 +24,46 @@ function handleEbookAngularEnterpriseArchitectureFactory(email) {
         title: 'Angular Enterprise Architecture by Tomas Trajan',
         link: 'https://angularexperts.io/products/ebook-angular-enterprise-architecture?purchase=success',
       },
+    };
+    email
+      .send(msg)
+      .then(() => res.status(200).json('success'))
+      .catch((error) => res.send(error));
+  };
+}
+
+function handleGetInTouchFactory(email) {
+  return function handleGetInTouch(req: Request, res: Response) {
+    const msg = {
+      to: 'get-in-touch@angularexperts.io',
+      from: req.body.email,
+      subject: `${req.body.domain} - Get in touch form`,
+      text: `
+      From: ${req.body.firstname} ${req.body.lastname}
+      Email: ${req.body.email}
+      Company: ${req.body.company}
+      Referer: ${req.body.referer}
+      Service: ${req.body.service}
+      Message: ${req.body.message}
+    `,
+    };
+    email
+      .send(msg)
+      .then(() => res.status(200).json('success'))
+      .catch((error) => res.send(error));
+  };
+}
+
+function handleGetInTouchMiniFactory(email) {
+  return function handleGetInTouch(req: Request, res: Response) {
+    const msg = {
+      to: 'get-in-touch@angularexperts.io',
+      from: req.body.email,
+      subject: `${req.body.domain} - Get in touch MINI`,
+      text: `
+      Get in touch MINI
+      Email: ${req.body.email}
+    `,
     };
     email
       .send(msg)
