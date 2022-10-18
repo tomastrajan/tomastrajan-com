@@ -1,8 +1,9 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import 'zone.js/node';
-import fetch from 'node-fetch';
 import { join } from 'path';
 import { existsSync } from 'fs';
-import * as dotenv from 'dotenv';
 import * as express from 'express';
 import * as useragent from 'express-useragent';
 import * as bodyParser from 'body-parser';
@@ -14,7 +15,8 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 
 import { AppServerModule } from './src/main.server';
 
-dotenv.config();
+import { registerAxHandlers } from './api/ax';
+import { registerGithubHandlers } from './api/github';
 
 const CORS_ORIGIN = [
   'https://angularexperts.io',
@@ -24,11 +26,6 @@ const CORS_ORIGIN = [
   'https://www.tomastrajan.com',
   'https://tomastrajan.com',
 ];
-
-const API_URL_GITHUB = 'https://api.github.com';
-const API_TOKEN_GITHUB = Buffer.from(
-  `tomastrajan:${process.env.API_TOKEN_GITHUB}`
-).toString('base64');
 
 email.setApiKey(process.env.API_TOKEN_SENDGRID);
 
@@ -58,20 +55,9 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  server.get('/api/github/repositories', (req, res) => {
-    const options = { headers: { Authorization: `Basic ${API_TOKEN_GITHUB}` } };
-    Promise.all([
-      fetch(`${API_URL_GITHUB}/users/angular/repos?per_page=10`, options),
-      fetch(`${API_URL_GITHUB}/users/tomastrajan/repos?per_page=100`, options),
-      fetch(`${API_URL_GITHUB}/users/angular-extensions/repos`, options),
-    ])
-      .then((responses) => Promise.all(responses.map((r) => r.json())))
-      .then((responses) =>
-        responses.reduce((result, next) => result.concat(next), [])
-      )
-      .then((repos) => res.json(repos));
-  });
+  registerAxHandlers(server, email);
+  registerGithubHandlers(server);
+
   server.post('/api/email', (req: express.Request, res: express.Response) => {
     const msg = {
       to:
@@ -92,36 +78,6 @@ export function app(): express.Express {
       .then(() => res.status(200).json('success'))
       .catch((error) => res.send(error));
   });
-
-  server.post(
-    '/ax/promotion/ebook/angular-enterprise-architecture',
-    (req: express.Request, res: express.Response) => {
-      const msg = {
-        to: req.body.email,
-        from: 'tomas@angularexperts.io',
-        subject: `FREE EBOOK | Angular Enterprise Architecture by Tomas Trajan - Angular Experts`,
-        text: `
-Hi there!
-
-I am happy to share with you my latest ebook "Angular Enterprise Architecture" which is available for free for a limited time.
-
-You can download it using the link bellow
-
-https://angularexperts.io/products/ebook-angular-enterprise-architecture?purchase=success
-
-Cheers
-
-Tomas Trajan
-
-https://angularexperts.io
-`,
-      };
-      email
-        .send(msg)
-        .then(() => res.status(200).json('success'))
-        .catch((error) => res.send(error));
-    }
-  );
 
   // Serve static files from /browser
   server.get(

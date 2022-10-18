@@ -1,0 +1,42 @@
+<!-- this is just a backup, real template is stored in sendgrid account-->
+<html>
+<head>
+  <title>Thank you for your interest in {{title}}</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;800&amp;family=Heebo:wght@700;900&amp;family=JetBrains+Mono&amp;display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * { font-family: Sora, sans-serif; }
+    h1, h2, h3 { font-family: Heebo, sans-serif; }
+    body { padding: 40px; }
+    p {margin: 0 0 20px 0; line-height: 26px;}
+    a {color: #2144a6; }
+    a:hover { color: #1d3c91; }
+  </style>
+</head>
+<body>
+<img src="https://angularexperts.io/assets/images/angular-experts.png"
+     alt="Angular Experts logo" style="height: 50px; display: inline; position: relative; top:15px;">
+<h2 style="color: #2144a6">
+
+  Free Ebook Download
+</h2>
+<h1>{{title}}</h1>
+
+<p>Hey there!</p>
+<p>I am very happy to share with you my latest ebook <strong>{{title}}</strong> which is available for free for a limited time.
+
+<p>Download the ebook using this <a href="{{link}}">link</a> or with the full link bellow...</p>
+
+<p><a href="{{link}}">{{link}}</a></p>
+
+<p>Cheers!</p>
+<p>{{name}}</p>
+<p>
+  <a href="https://angularexperts.io">angularexperts.io</a> <br>
+  <a href="https://twitter.com/{{username}}">@{{username}}</a>
+</p>
+<img style="max-width: 80%" src="https://angularexperts.io/assets/images/og-default.jpg" alt="Angular experts illustration" />
+</body>
+</html>
