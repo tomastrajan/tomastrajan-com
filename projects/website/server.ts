@@ -2,6 +2,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 import 'zone.js/node';
+import fetch from 'node-fetch';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import * as express from 'express';
