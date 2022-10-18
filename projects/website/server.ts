@@ -1,8 +1,5 @@
 import * as dotenv from 'dotenv';
-dotenv.config();
-
 import 'zone.js/node';
-import fetch from 'node-fetch';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import * as express from 'express';
@@ -18,6 +15,8 @@ import { AppServerModule } from './src/main.server';
 
 import { registerAxHandlers } from './api/ax';
 import { registerGithubHandlers } from './api/github';
+
+dotenv.config();
 
 const CORS_ORIGIN = [
   'https://angularexperts.io',
