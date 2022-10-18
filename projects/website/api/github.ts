@@ -1,4 +1,5 @@
 import { Express, Request, Response } from 'express';
+import fetch from 'node-fetch';
 
 const API_URL_GITHUB = 'https://api.github.com';
 const API_TOKEN_GITHUB = Buffer.from(
