@@ -15,7 +15,7 @@ function handleEbookAngularEnterpriseArchitectureFactory(email) {
     const msg = {
       to: req.body.email,
       from: 'tomas@angularexperts.io',
-      templateId: 'd-101babd5fdf34527956b232c11bbd248',
+      templateId: 'd-bd48162f17fd4584bb7c9ed9a51464c4',
       dynamic_template_data: {
         name: 'Tomas Trajan',
         username: 'tomastrajan',
