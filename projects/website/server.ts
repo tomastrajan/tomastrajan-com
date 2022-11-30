@@ -16,6 +16,9 @@ import { AppServerModule } from './src/main.server';
 import { registerAxHandlers } from './api/ax';
 import { registerGithubHandlers } from './api/github';
 
+console.log('[server] start');
+console.log('[server] NODE_ENV', process.env.NODE_ENV);
+
 dotenv.config();
 
 const CORS_ORIGIN = [
@@ -35,11 +38,8 @@ export function app(): express.Express {
   server.use(bodyParser.json());
   server.use(useragent.express());
   server.use(cors({ origin: CORS_ORIGIN }));
-  if (process.env.NODE_ENV !== 'development' && !process.env.DISABLE_SSL) {
-    server.use(requireHTTPS);
-  }
 
-  const distFolder = join(process.cwd(), 'dist/browser');
+  const distFolder = join(process.cwd(), 'browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
     ? 'index.original.html'
     : 'index';
@@ -117,11 +117,3 @@ if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
 export * from './src/main.server';
 
 export { renderModule, renderModuleFactory } from '@angular/platform-server';
-
-function requireHTTPS(req, res, next) {
-  // The 'x-forwarded-proto' check is for Heroku
-  if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
-    return res.redirect(`https://${req.get('host')}${req.url}`);
-  }
-  next();
-}

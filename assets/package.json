@@ -1,0 +1,7 @@
+{
+  "name": "tomastrajan.com",
+  "scripts": {
+    "start": "node server/main.js"
+  },
+  "main": "server/main.js"
+}
