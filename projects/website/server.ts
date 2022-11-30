@@ -35,7 +35,7 @@ export function app(): express.Express {
   server.use(bodyParser.json());
   server.use(useragent.express());
   server.use(cors({ origin: CORS_ORIGIN }));
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV !== 'development' && !process.env.DISABLE_SSL) {
     server.use(requireHTTPS);
   }
 

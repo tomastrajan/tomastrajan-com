@@ -18,6 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/browser",
+            "outputHashing": "none",
             "index": "projects/website/src/index.html",
             "main": "projects/website/src/main.ts",
             "polyfills": "projects/website/src/polyfills.ts",

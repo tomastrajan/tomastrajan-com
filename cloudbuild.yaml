@@ -1,0 +1,25 @@
+steps:
+  - name: node:16
+    entrypoint: npm
+    args: ['ci']
+  - name: node:16
+    entrypoint: npm
+    args: ['run', 'build:ssr']
+#  - name: gcr.io/cloud-builders/gcloud
+#    dir: dist/apps/api/
+#    args:
+#      [
+#        'app',
+#        'deploy',
+#        '--promote',
+#        '--version=prod',
+#        '--stop-previous-version',
+#      ]
+#  - name: gcr.io/cloud-builders/gcloud
+#    dir: dist/apps/api/
+#    args:
+#      [
+#        'app',
+#        'deploy',
+#        'cron.yaml',
+#      ]
