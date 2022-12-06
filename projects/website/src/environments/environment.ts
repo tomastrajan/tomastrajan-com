@@ -9,7 +9,7 @@ export const environment = {
   production: false,
   host: 'http://localhost:4200',
   apiUrl: 'https://crm-apis-gateway-cfv7bihm.nw.gateway.dev',
-  apiKey: process.env.API_KEY,
+  apiKey: process.env.NG_APP_API_KEY,
 };
 
 /*

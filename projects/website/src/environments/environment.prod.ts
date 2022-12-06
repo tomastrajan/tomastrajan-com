@@ -5,5 +5,5 @@ export const environment = {
   production: true,
   host: 'https://tomastrajan.com',
   apiUrl: 'https://crm-apis-gateway-cfv7bihm.nw.gateway.dev',
-  apiKey: process.env.API_KEY,
+  apiKey: process.env.NG_APP_API_KEY,
 };
