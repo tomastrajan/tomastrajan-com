@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "serve": "ng serve -o",
-    "build": "ng build --prod",
+    "build": "ng build --configuration production",
     "format:write": "prettier projects/**/*.{ts,json,md,html} --write",
     "format:test": "prettier projects/**/*.{ts,json,md,html} --list-different"
   },
