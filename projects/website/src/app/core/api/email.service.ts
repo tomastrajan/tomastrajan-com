@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
 
-const { apiUrl, apiKey, host } = environment;
+const { apiUrl, apiKey } = environment;
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,7 @@ export class EmailService {
   sendEmail(email: Email): Observable<any> {
     return this.http.post(
       `${apiUrl}/ax/get-in-touch`,
-      { domain: host, ...email },
+      { domain: 'tomastrajan.com', ...email },
       {
         headers: {
           'x-api-key': apiKey,
