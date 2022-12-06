@@ -8,6 +8,8 @@ export const environment = {
   // version:end
   production: false,
   host: 'http://localhost:4200',
+  apiUrl: 'https://crm-apis-gateway-cfv7bihm.nw.gateway.dev',
+  apiKey: process.env.API_KEY,
 };
 
 /*

@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-const API_URL = `https://crm-apis-gateway-cfv7bihm.nw.gateway.dev`;
+import { environment } from '../../../environments/environment';
+
+const { apiUrl, apiKey } = environment;
 
 const REPO_NAMES = [
   'angular-extensions/elements',
@@ -25,7 +27,11 @@ const REPO_NAMES = [
 })
 export class GithubService {
   repositories$: Observable<Repository[]> = this.http
-    .get(`${API_URL}/tt/github/repos`)
+    .get(`${apiUrl}/tt/github/repos`, {
+      headers: {
+        'x-api-key': apiKey,
+      },
+    })
     .pipe(
       map((repos: Repository[]) => {
         const repoItems = repos.map(this.buildRepositoryItem);

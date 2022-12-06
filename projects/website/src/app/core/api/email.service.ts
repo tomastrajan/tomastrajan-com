@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = `/api/email`;
+import { environment } from '../../../environments/environment';
+
+const { apiUrl, apiKey, host } = environment;
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +13,15 @@ export class EmailService {
   constructor(private http: HttpClient) {}
 
   sendEmail(email: Email): Observable<any> {
-    return this.http.post(API_URL, email);
+    return this.http.post(
+      `${apiUrl}/ax/get-in-touch`,
+      { domain: host, ...email },
+      {
+        headers: {
+          'x-api-key': apiKey,
+        },
+      }
+    );
   }
 }
 
