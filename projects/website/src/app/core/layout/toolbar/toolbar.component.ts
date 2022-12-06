@@ -60,9 +60,10 @@ export class ToolbarComponent implements OnInit {
         this.toggleDarkMode();
       }
     }
-    this.isResponsiveLayout = this.responsiveLayoutService.isSmallOrSmaller.pipe(
-      shareReplay({ bufferSize: 1, refCount: true })
-    );
+    this.isResponsiveLayout =
+      this.responsiveLayoutService.isSmallOrSmaller.pipe(
+        shareReplay({ bufferSize: 1, refCount: true })
+      );
     this.columnCount = this.responsiveLayoutService.columnCount;
     this.isLoading = this.loadingService.isLoading;
   }

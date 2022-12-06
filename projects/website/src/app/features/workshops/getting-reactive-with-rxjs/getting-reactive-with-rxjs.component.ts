@@ -22,8 +22,7 @@ const TESTIMONIALS: Testimonial[] = [
     message:
       'Tomas’s course is very well-thought-out and structured. It brought a lot of value, not only for the RxJS-newbies in our team. Plenty of real world examples, exercises and live codings made it a joy to learn and explore this topic!',
     name: 'Georg Ludewig',
-    role:
-      'Software Engineer, Federal Office for Information Technology, Systems and Telecommunication',
+    role: 'Software Engineer, Federal Office for Information Technology, Systems and Telecommunication',
     src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
   },
 

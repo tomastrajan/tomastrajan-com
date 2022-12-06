@@ -64,8 +64,8 @@ export class AppComponent implements OnInit {
         map(([isSmall]) => isSmall)
       );
 
-      this.initialNavOpened = !this.responsiveLayoutService
-        .isSmallOrSmallerSync;
+      this.initialNavOpened =
+        !this.responsiveLayoutService.isSmallOrSmallerSync;
       this.navOpened = combineLatest([
         this.isSmallOrSmaller,
         this.navToggled,

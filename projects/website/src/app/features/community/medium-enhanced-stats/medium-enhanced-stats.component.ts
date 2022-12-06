@@ -29,8 +29,7 @@ const IMAGES: GalleryImage[] = [
       'Medium Enhanced Stats allows you to export your stats as csv and download your total reach to share with your fans',
   },
   {
-    src:
-      '../../../../assets/images/community/medium-enhanced-stats/summary.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/summary.jpg',
     alt: 'Medium Enhanced Stats summary row',
     description:
       'Medium Enhanced Stats gives you a summary row with the total values',
@@ -42,22 +41,19 @@ const IMAGES: GalleryImage[] = [
       'Medium Enhanced Stats gives you a summary row with the total values',
   },
   {
-    src:
-      '../../../../assets/images/community/medium-enhanced-stats/contribution.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/contribution.jpg',
     alt: 'Medium Enhanced Stats article contribution chart',
     description:
       'Medium Enhanced Stats gives you ability to visualize article contribution to the total daily views',
   },
   {
-    src:
-      '../../../../assets/images/community/medium-enhanced-stats/article-indicator.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/article-indicator.jpg',
     alt: 'Medium Enhanced Stats article published indicator',
     description:
       'Medium Enhanced Stats marks day when you published articles directly in the main chart',
   },
   {
-    src:
-      '../../../../assets/images/community/medium-enhanced-stats/milestone.gif',
+    src: '../../../../assets/images/community/medium-enhanced-stats/milestone.gif',
     alt: 'Medium Enhanced Stats milestone reached animation',
     description:
       'Medium Enhanced Stats motivates you to write more by setting goals and milestones. Once reached, there must be a celebration right?',

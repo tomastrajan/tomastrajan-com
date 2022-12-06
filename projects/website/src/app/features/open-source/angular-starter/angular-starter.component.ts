@@ -23,8 +23,7 @@ const IMAGES: GalleryImage[] = [
       'Angular NgRx Material Starter is a great community built Angular starter',
   },
   {
-    src:
-      '../../../../assets/images/open-source/angular-starter/contributors.jpg',
+    src: '../../../../assets/images/open-source/angular-starter/contributors.jpg',
     alt: 'Angular NgRx Material Starter - Contributors',
     description:
       'Angular NgRx Material Starter was built by more than 30 contributors',
@@ -37,8 +36,7 @@ const IMAGES: GalleryImage[] = [
   },
   {
     src: '../../../../assets/images/open-source/angular-starter/i18n.jpg',
-    alt:
-      'Angular NgRx Material Starter - I18n support with runtime language switching',
+    alt: 'Angular NgRx Material Starter - I18n support with runtime language switching',
     description:
       'Angular NgRx Material Starter has I18n support with runtime language switching',
   },
