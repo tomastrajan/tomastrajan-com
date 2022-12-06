@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-const API_URL = `/api/github/repositories`;
+const API_URL = `https://crm-apis-gateway-cfv7bihm.nw.gateway.dev`;
 
 const REPO_NAMES = [
   'angular-extensions/elements',
@@ -24,15 +24,17 @@ const REPO_NAMES = [
   providedIn: 'root',
 })
 export class GithubService {
-  repositories$: Observable<Repository[]> = this.http.get(API_URL).pipe(
-    map((repos: Repository[]) => {
-      const repoItems = repos.map(this.buildRepositoryItem);
-      return REPO_NAMES.map((name) =>
-        repoItems.find((repo) => repo.name === name)
-      );
-    }),
-    shareReplay(1)
-  );
+  repositories$: Observable<Repository[]> = this.http
+    .get(`${API_URL}/tt/github/repos`)
+    .pipe(
+      map((repos: Repository[]) => {
+        const repoItems = repos.map(this.buildRepositoryItem);
+        return REPO_NAMES.map((name) =>
+          repoItems.find((repo) => repo.name === name)
+        );
+      }),
+      shareReplay(1)
+    );
 
   constructor(private http: HttpClient) {}
 
