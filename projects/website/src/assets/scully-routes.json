@@ -1,0 +1,23 @@
+[
+  { "route": "/home" },
+  { "route": "/consulting" },
+  { "route": "/workshops/angular-mastery" },
+  { "route": "/workshops/angular-state-management-workshop-with-ngrx" },
+  { "route": "/workshops/angular-reactive-forms-workshop" },
+  { "route": "/workshops/getting-reactive-with-rxjs-workshop" },
+  { "route": "/workshops/frontend-heroes-workshop" },
+  { "route": "/workshops" },
+  { "route": "/speaking/conferences" },
+  { "route": "/speaking/conference-kit" },
+  { "route": "/speaking" },
+  { "route": "/open-source/projects" },
+  { "route": "/open-source/angular-elements" },
+  { "route": "/open-source/angular-ngrx-material-starter" },
+  { "route": "/open-source" },
+  { "route": "/community/angular-zurich" },
+  { "route": "/community/release-butler" },
+  { "route": "/community/medium-enhanced-stats" },
+  { "route": "/community" },
+  { "route": "/contact" },
+  { "route": "/" }
+]
