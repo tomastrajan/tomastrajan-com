@@ -6,20 +6,12 @@
   [hasBackdrop]="isSmallOrSmaller | async"
   (backdropClick)="onBackdropClick()"
 >
-  <mat-sidenav
-    [mode]="sidenavMode | async"
-    [opened]="navOpened | async"
-    disableClose
-  >
+  <mat-sidenav mode="over" [opened]="navOpened | async" disableClose>
     <tt-navigation (closeSideNav)="onBackdropClick()"></tt-navigation>
   </mat-sidenav>
   <mat-sidenav-content
-    [style.margin-left]="initialNavOpened ? '270px' : 0"
-    *ngIf="isServer"
+    [style.margin-left]="(isSmallOrSmaller | async) === true ? 0 : '270px'"
   >
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-  <mat-sidenav-content *ngIf="!isServer">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

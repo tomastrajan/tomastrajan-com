@@ -2,69 +2,45 @@ import { isPlatformServer } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Inject, Injectable, Optional, PLATFORM_ID } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ResponsiveLayoutService {
   // basic
-  isXSmallScreen: Observable<boolean>;
-  isSmallScreen: Observable<boolean>;
-  isMediumScreen: Observable<boolean>;
-  isLargeScreen: Observable<boolean>;
-  isXLargeScreen: Observable<boolean>;
+  isXSmallScreen = this.register([Breakpoints.XSmall]);
+  isSmallScreen = this.register([Breakpoints.Small]);
+  isMediumScreen = this.register([Breakpoints.Medium]);
+  isLargeScreen = this.register([Breakpoints.Large]);
+  isXLargeScreen = this.register([Breakpoints.XLarge]);
 
   // derived
-  columnCount: Observable<number>;
-  isSmallOrSmaller: Observable<boolean>;
-  isLargeOrBigger: Observable<boolean>;
-  isSmallOrSmallerSync: boolean;
+  isSmallOrSmallerSync =
+    this.breakpointObserver.isMatched(Breakpoints.XSmall) ||
+    this.breakpointObserver.isMatched(Breakpoints.Small);
 
-  // server
-  isServerMobile = false;
+  isSmallOrSmaller = this.register([Breakpoints.XSmall, Breakpoints.Small]);
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.isSmallOrSmallerSync =
-      this.breakpointObserver.isMatched(Breakpoints.XSmall) ||
-      this.breakpointObserver.isMatched(Breakpoints.Small);
-    this.isXSmallScreen = this.breakpointObserver
-      .observe([Breakpoints.XSmall])
-      .pipe(map((result) => result.matches));
-    this.isSmallScreen = this.breakpointObserver
-      .observe([Breakpoints.Small])
-      .pipe(map((result) => result.matches));
-    this.isMediumScreen = this.breakpointObserver
-      .observe([Breakpoints.Medium])
-      .pipe(map((result) => result.matches));
-    this.isLargeScreen = this.breakpointObserver
-      .observe([Breakpoints.Large])
-      .pipe(map((result) => result.matches));
-    this.isXLargeScreen = this.breakpointObserver
-      .observe([Breakpoints.XLarge])
-      .pipe(map((result) => result.matches));
+  isLargeOrBigger = this.register([Breakpoints.Large, Breakpoints.XLarge]);
 
-    this.columnCount = combineLatest([
-      this.isXSmallScreen,
-      this.isSmallScreen,
-      this.isMediumScreen,
-      this.isLargeScreen,
-    ]).pipe(
-      map(([isXSmall, isSmall, isMedium, isLarge]) => {
-        return isXSmall ? 1 : isSmall ? 2 : isMedium ? 2 : isLarge ? 3 : 4;
-      })
+  columnCount = combineLatest([
+    this.isXSmallScreen,
+    this.isSmallScreen,
+    this.isMediumScreen,
+    this.isLargeScreen,
+  ]).pipe(
+    map(([isXSmall, isSmall, isMedium, isLarge]) => {
+      return isXSmall ? 1 : isSmall ? 2 : isMedium ? 2 : isLarge ? 3 : 4;
+    })
+  );
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  private register(breakpoints: string[]) {
+    return this.breakpointObserver.observe(breakpoints).pipe(
+      map((result) => result.matches),
+      startWith(this.breakpointObserver.isMatched(breakpoints))
     );
-
-    this.isSmallOrSmaller = this.breakpointObserver
-      .observe([Breakpoints.XSmall, Breakpoints.Small])
-      .pipe(
-        map((result) => {
-          return result.matches;
-        })
-      );
-
-    this.isLargeOrBigger = this.breakpointObserver
-      .observe([Breakpoints.Large, Breakpoints.XLarge])
-      .pipe(map((result) => result.matches));
   }
 }

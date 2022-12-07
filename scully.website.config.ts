@@ -1,14 +1,11 @@
 import '@scullyio/scully-plugin-puppeteer';
 import { ScullyConfig } from '@scullyio/scully';
-import { getFlashPreventionPlugin } from '@scullyio/scully-plugin-flash-prevention';
 
 const { LOCALE = 'en' } = process.env;
 
 console.log(`[scully config] building for locale: ${LOCALE}`);
 
-const defaultPostRenderers = [
-  getFlashPreventionPlugin({ appRootSelector: 'tt-root' }),
-];
+const defaultPostRenderers = [];
 
 export const config: ScullyConfig = {
   defaultPostRenderers,

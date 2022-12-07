@@ -10,6 +10,7 @@
     "build": "ng build --configuration production",
     "scully:serve": "scully serve --project website",
     "scully:build": "scully --scan-routes --project website --noPrompt",
+    "ci:build": "npm run build && npm run scully:build",
     "format:write": "prettier projects/**/*.{ts,json,md,html} --write",
     "format:test": "prettier projects/**/*.{ts,json,md,html} --list-different"
   },

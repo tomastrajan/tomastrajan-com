@@ -5,12 +5,13 @@ import {
   HostBinding,
   Inject,
   PLATFORM_ID,
+  ElementRef,
 } from '@angular/core';
 import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
 import { debounceTime, map, startWith, tap } from 'rxjs/operators';
 
 import { ResponsiveLayoutService } from './core/layout/responsive-layout.service';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'tt-root',
@@ -18,30 +19,26 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  @HostBinding('class')
-  demoRootCssClass = '';
-
   initialNavOpened: boolean;
   navOpened: Observable<boolean>;
   navToggled = new BehaviorSubject(false);
   isSmallOrSmaller: Observable<boolean>;
-  sidenavMode: Observable<string>;
-  isServer = false;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
+    private host: ElementRef,
     private router: Router,
     private responsiveLayoutService: ResponsiveLayoutService
   ) {}
 
   ngOnInit() {
     if (isPlatformServer(this.platformId)) {
-      const isMobile = this.responsiveLayoutService.isServerMobile;
+      const isMobile = true;
       this.initialNavOpened = !isMobile;
-      this.demoRootCssClass = isMobile ? 'responsive cols-1' : 'cols-3';
+      this.host.nativeElement.className = isMobile
+        ? 'responsive cols-1'
+        : 'cols-3';
       this.navOpened = of(this.initialNavOpened);
-      this.sidenavMode = of(isMobile ? 'push' : 'side');
-      this.isServer = true;
     }
 
     if (isPlatformBrowser(this.platformId)) {
@@ -59,7 +56,13 @@ export class AppComponent implements OnInit {
           if (isLarge) {
             resultClass = `responsive-large cols-${columnCount}`;
           }
-          this.demoRootCssClass = resultClass;
+          console.log('AppComponent', {
+            isSmall,
+            isLarge,
+            columnCount,
+            resultClass,
+          });
+          this.host.nativeElement.className = resultClass;
         }),
         map(([isSmall]) => isSmall)
       );
@@ -74,10 +77,6 @@ export class AppComponent implements OnInit {
           !isSmallScreen ? true : navToggled
         ),
         startWith(this.initialNavOpened)
-      );
-
-      this.sidenavMode = this.isSmallOrSmaller.pipe(
-        map((isSmallOrSmaller) => (isSmallOrSmaller ? 'push' : 'side'))
       );
     }
   }
