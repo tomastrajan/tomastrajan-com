@@ -28,9 +28,9 @@ const TALKS = [
     subtitle: 'Angular Air 2022 - Podcast',
     description:
       'In this podcast we are discussing top 10 proven NgRx best practices including NgRx 80/20 rule and general advice on architecture and clean dependency graph',
-    logo: 'angularair-logo.png',
+    logo: 'angularair-logo.webp',
     logoAlt: 'Angular Air Podcast',
-    photo: 'angularair202206.jpg',
+    photo: 'angularair202206.webp',
     photoAlt:
       'Tomas Trajan speaking about The Top 10 Best Practices for NgRx at Angular Air Podcast',
     recording: 'https://www.youtube.com/watch?v=2QnCNR5nzhg',
@@ -42,9 +42,9 @@ const TALKS = [
     subtitle: 'BernerJS Meetup 2021',
     description:
       "In this talk we're going to explore how to architect Angular libraries with the help of sub-entries so that our consumers can benefit from the smallest possible bundle size and our teammates from great developer experience when adding additional components and services to the library itself!",
-    logo: 'bernerjs-logo.png',
+    logo: 'bernerjs-logo.webp',
     logoAlt: 'BernerJS Meetup 08 2021',
-    photo: 'bernerjs2021.jpg',
+    photo: 'bernerjs2021.webp',
     photoAlt:
       'Tomas Trajan speaking about The Best Way To Architect Your Angular Libraries at BernerJS meetup',
     recording: 'https://www.youtube.com/watch?v=2vHJ3_Om_gU',
@@ -55,9 +55,9 @@ const TALKS = [
     title: 'Designing Reusable Components With Angular',
     subtitle: 'Angular Rocks Podcast 2021',
     description: `Component is the central piece in Angular. Sometimes you want to generalize a particular component, to make it shareable across your application or to move into a custom component library to share it around multiple applications. It is important to understand how to approach shareable components in your particular use-case.`,
-    logo: 'angularrocks-logo.png',
+    logo: 'angularrocks-logo.webp',
     logoAlt: 'Angular Rocks Podcast 08 2021',
-    photo: 'angularrocks2021.jpg',
+    photo: 'angularrocks2021.webp',
     photoAlt:
       'Tomas Trajan speaking about Designing Reusable Components With Angular at Angular Rocks Podcast',
     recording:
@@ -71,9 +71,9 @@ const TALKS = [
     description:
       'Managing Q/A sessions for all 7 talks of jsday.IT 2021 Virtual edition,\n' +
       'facilitating viewers questions and coming up with relevant content based questions to further enhance viewer experience and communicate concepts presented by the speakers...',
-    logo: 'angularday-logo.png',
+    logo: 'angularday-logo.webp',
     logoAlt: 'JSdayIT Conference',
-    photo: 'jsdayit2021mc.jpg',
+    photo: 'jsdayit2021mc.webp',
     photoAlt: 'Tomas Trajan in the role of MC for JSdayIT 2021 Conference',
   },
   {
@@ -81,9 +81,9 @@ const TALKS = [
     subtitle: 'Angular Minsk Meetup 2020 - Remote',
     description:
       'Sub-applications (and full microfrontends) can help us solve many real world use cases in large enterprise organizations with many applications, teams and developers. ',
-    logo: 'angularminsk-logo.jpg',
+    logo: 'angularminsk-logo.webp',
     logoAlt: 'Angular Minsk Meetup',
-    photo: 'angularminsk2020.jpg',
+    photo: 'angularminsk2020.webp',
     photoAlt:
       'Tomas Trajan speaking about Microfrontends with Angular Elements at Angular Minsk Meetup Remote',
     recording: 'https://www.youtube.com/watch?v=ivPyIsUc1tE',
@@ -93,9 +93,9 @@ const TALKS = [
     subtitle: 'Angular Air 2020 - Podcast',
     description:
       'In this podcast we are discussing how to scaffold new Angular application with clean, maintainable and extendable architecture and what are the benefits of doing so.',
-    logo: 'angularair-logo.png',
+    logo: 'angularair-logo.webp',
     logoAlt: 'Angular Air Podcast',
-    photo: 'angularair202003.jpg',
+    photo: 'angularair202003.webp',
     photoAlt:
       'Tomas Trajan speaking about epic Angular application architecture at Angular Air Podcast',
     recording: 'https://www.youtube.com/watch?v=fM_jWSfOUOo',
@@ -108,9 +108,9 @@ const TALKS = [
     subtitle: 'GDG DevFest 2019 - Moscow / Russia',
     description:
       "Let's explore powerful Angular features are here for the rescue enabling us to implement configurable dynamic Microfrontends with ease!",
-    logo: 'gdg-logo.png',
+    logo: 'gdg-logo.webp',
     logoAlt: 'GDG DevFest',
-    photo: 'gdgmoscow2019.jpg',
+    photo: 'gdgmoscow2019.webp',
     photoAlt:
       'Tomas Trajan speaking about building Angular Microfrontends with Angular Elements at GDG DevFest Moscow 2019',
     slides: 'https://slides.com/tomastrajan/angular-elements-microfrontends',
@@ -121,9 +121,9 @@ const TALKS = [
     subtitle: 'Angular Day 2019 - Verona / Italy',
     description:
       'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned best practices.',
-    logo: 'angularday-logo.png',
+    logo: 'angularday-logo.webp',
     logoAlt: 'Angular Day Verona',
-    photo: 'angularday2019.jpg',
+    photo: 'angularday2019.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Day Verona 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -135,9 +135,9 @@ const TALKS = [
     subtitle: 'NG-MY 2019 - Kuala Lumpur / Malaysia',
     description:
       'Modern tooling provided by Angular CLI enables us to provide amazing developer experience. Providing built-in library specific schematics enables us to cut on the learning curve that is needed to get developers productive straight from the start by generating code which follows intentioned patterns.',
-    logo: 'ngmy-logo.png',
+    logo: 'ngmy-logo.webp',
     logoAlt: 'NG-MY 2019',
-    photo: 'ngmy2019.jpg',
+    photo: 'ngmy2019.webp',
     photoAlt: 'Tomas Trajan speaking about Angular Schematics at NG-MY 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics-ng-my',
     event: 'https://2019.ng-my.org/speakers/tomas-trajan',
@@ -148,9 +148,9 @@ const TALKS = [
     subtitle: 'Angular Zurich Meetup 03 2019 - Switzerland',
     description:
       'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
-    logo: 'angularzurich-logo.png',
+    logo: 'angularzurich-logo.webp',
     logoAlt: 'Angular Zurich Meetup 03 2019',
-    photo: 'angularzurich201903.jpg',
+    photo: 'angularzurich201903.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -162,9 +162,9 @@ const TALKS = [
     subtitle: 'Voxed Days Zurich 2019 - Switzerland',
     description:
       'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
-    logo: 'voxxeddays-logo.png',
+    logo: 'voxxeddays-logo.webp',
     logoAlt: 'Voxxed Days Zurich 2019',
-    photo: 'voxxeddays2019.jpg',
+    photo: 'voxxeddays2019.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Voxxed Days Zurich 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -176,9 +176,9 @@ const TALKS = [
     subtitle: 'Kuala Lumpur JS Meetup 2019 - Malaysia',
     description:
       'Release Butler - A twitter bot that helps you to stay up to date by with releases with popular frontend framework and libraries like Angular, React, Vue... by tweeting their changelogs!',
-    logo: 'kljs-logo.png',
+    logo: 'kljs-logo.webp',
     logoAlt: 'Kuala Lumpur JS Meetup 2019',
-    photo: 'kljs2019.jpg',
+    photo: 'kljs2019.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/release-butler/',
@@ -191,9 +191,9 @@ const TALKS = [
     subtitle: 'Angular Zurich Meetup 08 2019 - Switzerland',
     description:
       'Web components and Angular elements are exciting new web technologies! They enable us to build and compose our frontend application in unprecedented ways. Learn about the new seamless way of using them in your Angular applications & various use cases.',
-    logo: 'angularzurich-logo.png',
+    logo: 'angularzurich-logo.webp',
     logoAlt: 'Angular Zurich Meetup 08 2019',
-    photo: 'angularzurich201908.jpg',
+    photo: 'angularzurich201908.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular Elements at Angular Zurich Meetup 08 2019',
     slides: 'https://slides.com/tomastrajan/angular-elements/',
@@ -205,9 +205,9 @@ const TALKS = [
     subtitle: 'BernerJS Meetup 04 2019 - Switzerland',
     description:
       'This presentation will be in form of live coding in which we explore how we can use Angular Schematics provided out of the box, how to create our own custom schematics and how to integrate them into Angular CLI workspaces.',
-    logo: 'bernerjs-logo.png',
+    logo: 'bernerjs-logo.webp',
     logoAlt: 'BernerJS Meetup 04 2019',
-    photo: 'bernerjs201904.jpg',
+    photo: 'bernerjs201904.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular Schematics at Angular Zurich Meetup 03 2019',
     slides: 'https://slides.com/tomastrajan/angular-schematics',
@@ -219,9 +219,9 @@ const TALKS = [
     subtitle: 'Die Mobiliar 2019 - Switzerland',
     description:
       'This presentation explored most common anti-patterns in the enteprise codebases related to performance, and implementation of the RxJs streams and proposed solutions and improvements to remedy the situation.',
-    logo: 'diemobiliar-logo.png',
+    logo: 'diemobiliar-logo.webp',
     logoAlt: 'Die Mobiliar 2019',
-    photo: 'diemobiliar2019.jpg',
+    photo: 'diemobiliar2019.webp',
     photoAlt:
       'Tomas Trajan speaking about Angular enterprise anti-patterns in Die Mobiliar',
     recording: 'https://www.youtube.com/watch?v=lOMpq1rfrSM',
@@ -231,9 +231,9 @@ const TALKS = [
     subtitle: 'BernerJS Meetup 2017 - Switzerland',
     description:
       'Angular Material is a great component framework for Angular! It also comes with amazing theming support which enables us to customize primary, accent and wanr colors, define custom colors and even get and dark theme out of the box.',
-    logo: 'bernerjs-logo.png',
+    logo: 'bernerjs-logo.webp',
     logoAlt: 'Berner JS 2017',
-    photo: 'bernerjs2017.jpg',
+    photo: 'bernerjs2017.webp',
     photoAlt: 'Tomas Trajan speaking about custom theming of Angular Material',
     slides: 'https://slides.com/tomastrajan/angular-material-themes-guide',
     recording: 'https://www.youtube.com/watch?v=5I3BAL63QRM',
@@ -244,9 +244,9 @@ const TALKS = [
     subtitle: 'BernerJS Meetup 2015 - Switzerland',
     description:
       'Standard way of testing of Angular JS 1.X app is using “official” Karma / Jasmine solution, which uses a lot of Angular specific APIs. Let’s explore how can we implement our unit-tests independently from Angular with help of (ES6) modules and Mocha.',
-    logo: 'bernerjs-logo.png',
+    logo: 'bernerjs-logo.webp',
     logoAlt: 'Berner JS 2015',
-    photo: 'bernerjs2015.jpg',
+    photo: 'bernerjs2015.webp',
     photoAlt:
       'Tomas Trajan speaking about proper unit testing of Angular JS apps',
     slides:
@@ -258,9 +258,9 @@ const TALKS = [
     subtitle: 'Adventures in Angular Podcast #257',
     description:
       'In this episode of Adventures in Angular Tomas Trajan, an Angular elements expert, breaks down how to use Angular elements for the panel including how are great they are for some use cases in large enterprise organizations.',
-    logo: 'devchat-logo.png',
+    logo: 'devchat-logo.webp',
     logoAlt: 'Devchat',
-    photo: 'aid201904.jpg',
+    photo: 'aid201904.webp',
     photoAlt:
       'Tomas Trajan speaking about The Easiest Way to use Angular Elements',
     recording:
@@ -273,9 +273,9 @@ const TALKS = [
     subtitle: 'Adventures in Angular Podcast #233',
     description:
       'In this episode of Adventures in Angular, the panel speaks with Tomas Trajan a Google Developer Expert for Angular from Switzerland. Tomas explains what Angular Schematics is and how it simplifies a developer’s life. He goes through cases where Angular Schematics would be great to use.',
-    logo: 'devchat-logo.png',
+    logo: 'devchat-logo.webp',
     logoAlt: 'Devchat',
-    photo: 'aid201904.jpg',
+    photo: 'aid201904.webp',
     photoAlt:
       'Tomas Trajan speaking about getting serious with Angular Schematics',
     recording:
@@ -288,9 +288,9 @@ const TALKS = [
     subtitle: 'My Angular Story Podcast #92',
     description:
       'Tomas Trajan joins Aaron Frost to talk about his journey as a Angular consultant and Google Developer Expert. Tomas and Aaron mention that they are both drop-outs from college and share different sources of self-learning. They both agree they did not learn programming in school.',
-    logo: 'devchat-logo.png',
+    logo: 'devchat-logo.webp',
     logoAlt: 'Devchat',
-    photo: 'mas201909.jpg',
+    photo: 'mas201909.webp',
     photoAlt: 'Tomas Trajan speaking about his Angular story',
     recording: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',
     event: 'https://devchat.tv/my-angular-story/mas-092-tomas-trajan/',

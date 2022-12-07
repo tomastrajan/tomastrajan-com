@@ -10,7 +10,7 @@ const routes: Routes = [
     data: {
       title: 'Frontend Heroes Workshop',
       description: 'Kickstart Your Enterprise Frontend Development Expertise',
-      image: '/assets/images/workshops/frontend-heroes.jpg',
+      image: '/assets/images/workshops/frontend-heroes.webp',
       background: 'frontend-heroes',
     },
   },

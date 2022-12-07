@@ -11,7 +11,7 @@ const routes: Routes = [
       title: 'Angular Zurich Meetup',
       description:
         'Angular Zurich is a local Swiss Angular community based in the beautiful city of Zurich. Local and international speakers are sharing their Angular know-how and experience in form of full length (45 min) and lightning (15 min) talks. The meetup is usually taking place once a month.',
-      image: '/assets/images/speaking/angularzurich201903.jpg',
+      image: '/assets/images/speaking/angularzurich201903.webp',
     },
   },
 ];

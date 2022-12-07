@@ -6,7 +6,7 @@ import { tap, map, filter } from 'rxjs/operators';
 import { IdleMonitorService, ScullyRoutesService } from '@scullyio/ng-lib';
 
 const BASE_URL = 'https://tomastrajan.com';
-const CARD_IMAGE_URL = `${BASE_URL}/assets/images/social/splash.jpg`;
+const CARD_IMAGE_URL = `${BASE_URL}/assets/images/social/splash.webp`;
 const TITLE_SUFFIX =
   'by Tomas Trajan - Google Developer Expert for Angular and Web';
 

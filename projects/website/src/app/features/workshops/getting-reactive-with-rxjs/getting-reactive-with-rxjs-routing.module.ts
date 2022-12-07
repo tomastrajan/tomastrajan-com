@@ -11,7 +11,7 @@ const routes: Routes = [
       title: 'Getting Reactive with RxJs Workshop',
       description:
         'This workshop will teach you why and how to use RxJs including all basic concepts, best practices & real life Angular use cases and examples',
-      image: '/assets/images/workshops/getting-reactive-with-rxjs.jpg',
+      image: '/assets/images/workshops/getting-reactive-with-rxjs.webp',
       background: 'getting-reactive-with-rxjs',
     },
   },

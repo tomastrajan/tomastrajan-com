@@ -51,35 +51,35 @@
       &.angular-mastery {
         @include workshop-background(
           $background,
-          '../../../../assets/images/workshops/amw-splash1.jpg'
+          '../../../../assets/images/workshops/amw-splash1.webp'
         );
       }
 
       &.angular-state-management {
         @include workshop-background(
           $background,
-          '../../../../assets/images/workshops/workshops.jpg'
+          '../../../../assets/images/workshops/workshops.webp'
         );
       }
 
       &.angular-reactive-forms {
         @include workshop-background(
           $background,
-          '../../../../assets/images/workshops/amw-splash-alt.jpg'
+          '../../../../assets/images/workshops/amw-splash-alt.webp'
         );
       }
 
       &.frontend-heroes {
         @include workshop-background(
           $background,
-          '../../../../assets/images/workshops/fhw-splash.jpg'
+          '../../../../assets/images/workshops/fhw-splash.webp'
         );
       }
 
       &.getting-reactive-with-rxjs {
         @include workshop-background(
           $background,
-          '../../../../assets/images/workshops/grwrw-splash.jpg'
+          '../../../../assets/images/workshops/grwrw-splash.webp'
         );
       }
     }
@@ -91,26 +91,26 @@
         &.angular-mastery {
           @include workshop-background-responsive(
             $background,
-            '../../../../assets/images/workshops/amw-splash1.jpg'
+            '../../../../assets/images/workshops/amw-splash1.webp'
           );
         }
         &.angular-state-management {
           @include workshop-background-responsive(
             $background,
-            '../../../../assets/images/workshops/workshops.jpg'
+            '../../../../assets/images/workshops/workshops.webp'
           );
         }
         &.angular-reactive-forms {
           @include workshop-background-responsive(
             $background,
-            '../../../../assets/images/workshops/amw-splash-alt.jpg'
+            '../../../../assets/images/workshops/amw-splash-alt.webp'
           );
         }
 
         &.frontend-heroes {
           @include workshop-background-responsive(
             $background,
-            '../../../../assets/images/workshops/fhw-splash.jpg'
+            '../../../../assets/images/workshops/fhw-splash.webp'
           );
         }
       }

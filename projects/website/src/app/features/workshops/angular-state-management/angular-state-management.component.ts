@@ -23,91 +23,91 @@ const TESTIMONIALS: Testimonial[] = [
       'Both beginners and experienced developers were able to take away a lot from this workshop. The 2-day format is great and provides enough time to cover all the bases. Tomas is a great teacher and is enthusiastic to share his experience and expertise',
     name: 'Christof Leuenberger',
     role: 'Software Architect, Die Mobiliar',
-    src: '../../../assets/images/testimonials/christofleuenberger.jpg',
+    src: '../../../assets/images/testimonials/christofleuenberger.webp',
   },
   {
     message:
       'The course is a highlight. Tomas explains in great detail, shows pros and cons of alternatives, has tons of examples at hand and shares all the background of the features of NGRX.',
     name: 'Emanuel Indermühle',
     role: 'Software Architect, Die Mobiliar',
-    src: '../../../assets/images/testimonials/emanuelindermuhle.jpg',
+    src: '../../../assets/images/testimonials/emanuelindermuhle.webp',
   },
   {
     message:
       'Thanks a lot for the introduction to NgRx. The course was very clean structured and everything nicely explained.',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.webp',
   },
   {
     message:
       'Great workshop with space for Q&A. Solid background information. Good balance between theory and hands-on.',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_a.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_a.webp',
   },
   {
     message:
       'The course was really good. Very nice and helpful instructor! Thank you a lot!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_b.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_b.webp',
   },
   {
     message:
       'It was really well structured and really interesting! I learned a lot! Thank you!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_c.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_c.webp',
   },
   {
     message: "Well-given / crafted course, good pedagogy. Let's keep in touch!",
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_e.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_e.webp',
   },
   {
     message:
       'Excellent Workshop! I particularly liked the explanation of code in small steps (also in the slides)',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.webp',
   },
 ];
 
 const IMAGES: GalleryImage[] = [
   {
-    src: '../../../../assets/images/workshops/angular-state-management.jpg',
+    src: '../../../../assets/images/workshops/angular-state-management.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'Angular State Management Workshop',
   },
   {
-    src: '../../../../assets/images/workshops/asmw-modules.jpg',
+    src: '../../../../assets/images/workshops/asmw-modules.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'NgRx state modularization',
   },
   {
-    src: '../../../../assets/images/workshops/asmw-selectors.jpg',
+    src: '../../../../assets/images/workshops/asmw-selectors.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'NgRx state selectors',
   },
   {
-    src: '../../../../assets/images/workshops/asmw-tips.jpg',
+    src: '../../../../assets/images/workshops/asmw-tips.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'Many practical tips & best practices',
   },
   {
-    src: '../../../../assets/images/workshops/asmw-heuristics.jpg',
+    src: '../../../../assets/images/workshops/asmw-heuristics.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'Actionable heuristics and decision making',
   },
   {
-    src: '../../../../assets/images/workshops/asmw-entity.jpg',
+    src: '../../../../assets/images/workshops/asmw-entity.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'Further massive reduction of boilerplate with @ngrx/entity',
   },
   {
-    src: '../../../../assets/images/workshops/asmw-handson.jpg',
+    src: '../../../../assets/images/workshops/asmw-handson.webp',
     alt: 'Angular State Management Workshop by Tomas Trajan - Example',
     description: 'Hands on exercises',
   },

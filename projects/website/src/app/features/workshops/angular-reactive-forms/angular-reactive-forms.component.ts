@@ -22,44 +22,44 @@ const TESTIMONIALS: Testimonial[] = [
     message: 'Live coding and demo stuff was awesome :)',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_c.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_c.webp',
   },
   {
     message: 'Thanks for a great content and experience!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.webp',
   },
 ];
 
 const IMAGES: GalleryImage[] = [
   {
-    src: '../../../../assets/images/workshops/angular-reactive-forms.jpg',
+    src: '../../../../assets/images/workshops/angular-reactive-forms.webp',
     alt: 'Angular Reactive Forms Workshop by Tomas Trajan - Example',
     description: 'Angular Reactive Forms',
   },
   {
-    src: '../../../../assets/images/workshops/arfw-overview.jpg',
+    src: '../../../../assets/images/workshops/arfw-overview.webp',
     alt: 'Angular Reactive Forms Workshop by Tomas Trajan - Example',
     description: 'What is a form?',
   },
   {
-    src: '../../../../assets/images/workshops/arfw-comparison.jpg',
+    src: '../../../../assets/images/workshops/arfw-comparison.webp',
     alt: 'Angular Reactive Forms Workshop by Tomas Trajan - Example',
     description: 'Angular Template Drive vs Reactive Forms',
   },
   {
-    src: '../../../../assets/images/workshops/arfw-form-array.jpg',
+    src: '../../../../assets/images/workshops/arfw-form-array.webp',
     alt: 'Angular Reactive Forms Workshop by Tomas Trajan - Example',
     description: 'Form Arrays',
   },
   {
-    src: '../../../../assets/images/workshops/arfw-cva.jpg',
+    src: '../../../../assets/images/workshops/arfw-cva.webp',
     alt: 'Angular Reactive Forms Workshop by Tomas Trajan - Example',
     description: 'Custom Control Value Accessorts (CVA)',
   },
   {
-    src: '../../../../assets/images/workshops/arfw-dependent-form-fields.jpg',
+    src: '../../../../assets/images/workshops/arfw-dependent-form-fields.webp',
     alt: 'Angular Reactive Forms Workshop by Tomas Trajan - Example',
     description: 'Dependent form fields',
   },

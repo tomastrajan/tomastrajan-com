@@ -23,7 +23,7 @@
           mat.get-color-from-palette($background, background, 0) 200px,
           mat.get-color-from-palette($background, background, 1) 450px
         ),
-        url('../../../assets/images/consulting/office.jpg');
+        url('../../../assets/images/consulting/office.webp');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -38,7 +38,7 @@
             mat.get-color-from-palette($background, background, 0) 200px,
             mat.get-color-from-palette($background, background, 1) 300px
           ),
-          url('../../../assets/images/consulting/office.jpg');
+          url('../../../assets/images/consulting/office.webp');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 0 0;

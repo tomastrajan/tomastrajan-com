@@ -17,22 +17,22 @@ export class ConferenceKitComponent implements OnInit {
 
 const IMAGES: GalleryImage[] = [
   {
-    src: '../../../../assets/images/speaking/kit/gde2021_round.png',
+    src: '../../../../assets/images/speaking/kit/gde2021_round.webp',
     alt: 'Tomas Trajan profile pic',
     description: 'Tomas Trajan - GDE 2021',
   },
   {
-    src: '../../../../assets/images/speaking/kit/gde2021.png',
+    src: '../../../../assets/images/speaking/kit/gde2021.webp',
     alt: 'Tomas Trajan profile pic',
     description: 'Tomas Trajan - GDE 2021',
   },
   {
-    src: '../../../../assets/images/speaking/kit/tomastrajan-profile-1.jpg',
+    src: '../../../../assets/images/speaking/kit/tomastrajan-profile-1.webp',
     alt: 'Tomas Trajan profile pic',
     description: 'Tomas Trajan - GDE 2019',
   },
   {
-    src: '../../../../assets/images/speaking/kit/tomastrajan-profile-2.png',
+    src: '../../../../assets/images/speaking/kit/tomastrajan-profile-2.webp',
     alt: 'Tomas Trajan profile pic',
     description: 'Tomas Trajan - GDE 2018',
   },

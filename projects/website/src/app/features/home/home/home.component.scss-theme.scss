@@ -23,7 +23,7 @@
             mat.get-color-from-palette($background, background, 0) 50%,
             mat.get-color-from-palette($background, background, 1) 100%
           ),
-          url('../../../../assets/images/home/splash-workshop.jpg') no-repeat
+          url('../../../../assets/images/home/splash-workshop.webp') no-repeat
             top left;
         background-size: cover;
       }

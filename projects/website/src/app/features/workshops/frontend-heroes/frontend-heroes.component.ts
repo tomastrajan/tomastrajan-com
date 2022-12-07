@@ -22,58 +22,58 @@ const TESTIMONIALS: Testimonial[] = [
       'I enjoyed the course, and liked the presentation and exercises. I learned some angular good practices, which I could apply in my project!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_c.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_c.webp',
   },
   {
     message:
       'After having used Angular without having had much web dev experience, I was struggling on understanding the black magic behind it all. Having all those bits and pieces together have helped me to grasp the philosophy of it. Thank you!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_d.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_d.webp',
   },
   {
     message: 'Both training agenda and hands-on work are well prepared!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_a.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_a.webp',
   },
   {
     message:
       'Good workshop, basics are refreshed and concepts were presented in very clear manner!',
     name: 'Workshop Participant',
     role: 'Software Engineer (anonymous feedback)',
-    src: '../../../assets/images/testimonials/anonymous_grey_b.jpg',
+    src: '../../../assets/images/testimonials/anonymous_grey_b.webp',
   },
 ];
 
 const IMAGES: GalleryImage[] = [
   {
-    src: '../../../../assets/images/workshops/frontend-heroes.jpg',
+    src: '../../../../assets/images/workshops/frontend-heroes.webp',
     alt: 'Frontend Heroes Workshop by Tomas Trajan  and Kevin Kreuzer - Example',
     description: 'Frontend Heroes Workshop',
   },
   {
-    src: '../../../../assets/images/workshops/fhw-html.jpg',
+    src: '../../../../assets/images/workshops/fhw-html.webp',
     alt: 'Frontend Heroes Workshop by Tomas Trajan  and Kevin Kreuzer - Example',
     description: 'HTML tags',
   },
   {
-    src: '../../../../assets/images/workshops/fhw-document.jpg',
+    src: '../../../../assets/images/workshops/fhw-document.webp',
     alt: 'Frontend Heroes Workshop by Tomas Trajan  and Kevin Kreuzer - Example',
     description: 'Basic document structure',
   },
   {
-    src: '../../../../assets/images/workshops/fhw-flexbox.jpg',
+    src: '../../../../assets/images/workshops/fhw-flexbox.webp',
     alt: 'Frontend Heroes Workshop by Tomas Trajan  and Kevin Kreuzer - Example',
     description: 'CSS flexbox',
   },
   {
-    src: '../../../../assets/images/workshops/fhw-js.jpg',
+    src: '../../../../assets/images/workshops/fhw-js.webp',
     alt: 'Frontend Heroes Workshop by Tomas Trajan  and Kevin Kreuzer - Example',
     description: 'JavaScript function vs block scope',
   },
   {
-    src: '../../../../assets/images/workshops/fhw-ts.jpg',
+    src: '../../../../assets/images/workshops/fhw-ts.webp',
     alt: 'Frontend Heroes Workshop by Tomas Trajan  and Kevin Kreuzer - Example',
     description: 'Typescript shorthand syntax example',
   },

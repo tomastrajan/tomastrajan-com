@@ -17,37 +17,37 @@ export class MediumEnhancedStatsComponent implements OnInit {
 
 const IMAGES: GalleryImage[] = [
   {
-    src: '../../../../assets/images/community/medium-enhanced-stats/popup.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/popup.webp',
     alt: 'Medium Enhanced Stats total reach popup',
     description:
       'Medium Enhanced Stats total reach popup gives you your total stats overview from anywhere',
   },
   {
-    src: '../../../../assets/images/community/medium-enhanced-stats/export.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/export.webp',
     alt: 'Medium Enhanced Stats total reach popup actions',
     description:
       'Medium Enhanced Stats allows you to export your stats as csv and download your total reach to share with your fans',
   },
   {
-    src: '../../../../assets/images/community/medium-enhanced-stats/summary.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/summary.webp',
     alt: 'Medium Enhanced Stats summary row',
     description:
       'Medium Enhanced Stats gives you a summary row with the total values',
   },
   {
-    src: '../../../../assets/images/community/medium-enhanced-stats/extras.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/extras.webp',
     alt: 'Medium Enhanced Stats extra info',
     description:
       'Medium Enhanced Stats gives you a summary row with the total values',
   },
   {
-    src: '../../../../assets/images/community/medium-enhanced-stats/contribution.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/contribution.webp',
     alt: 'Medium Enhanced Stats article contribution chart',
     description:
       'Medium Enhanced Stats gives you ability to visualize article contribution to the total daily views',
   },
   {
-    src: '../../../../assets/images/community/medium-enhanced-stats/article-indicator.jpg',
+    src: '../../../../assets/images/community/medium-enhanced-stats/article-indicator.webp',
     alt: 'Medium Enhanced Stats article published indicator',
     description:
       'Medium Enhanced Stats marks day when you published articles directly in the main chart',

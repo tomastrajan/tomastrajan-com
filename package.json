@@ -12,7 +12,8 @@
     "scully:build": "scully --scan-routes --project website --noPrompt",
     "ci:build": "npm run build && npm run scully:build",
     "format:write": "prettier projects/**/*.{ts,json,md,html} --write",
-    "format:test": "prettier projects/**/*.{ts,json,md,html} --list-different"
+    "format:test": "prettier projects/**/*.{ts,json,md,html} --list-different",
+    "webp": "node ./tools/imagemin.mjs"
   },
   "engines": {
     "node": "16.x"
@@ -58,6 +59,8 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "husky": "^4.3.0",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^7.0.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",
     "ts-loader": "^8.0.4",
