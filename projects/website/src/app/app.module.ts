@@ -21,7 +21,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     HttpClientModule,
     ScullyLibModule.forRoot({
-      alwaysMonitor: true,
+      alwaysMonitor: false,
+      manualIdle: true,
     }),
 
     // local

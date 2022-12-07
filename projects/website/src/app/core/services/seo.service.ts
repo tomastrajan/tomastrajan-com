@@ -1,7 +1,9 @@
 import { Title, Meta } from '@angular/platform-browser';
-import { Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { tap, map, filter } from 'rxjs/operators';
+import { IdleMonitorService, ScullyRoutesService } from '@scullyio/ng-lib';
 
 const BASE_URL = 'https://tomastrajan.com';
 const CARD_IMAGE_URL = `${BASE_URL}/assets/images/social/splash.jpg`;
@@ -12,11 +14,18 @@ const TITLE_SUFFIX =
   providedIn: 'root',
 })
 export class SeoService {
+  canonicalLink: HTMLLinkElement = this.document.createElement('link');
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     private title: Title,
     private meta: Meta,
-    private router: Router
-  ) {}
+    private router: Router,
+    private scully: ScullyRoutesService,
+    private ims: IdleMonitorService
+  ) {
+    this.canonicalLink.setAttribute('rel', 'canonical');
+    this.document.head.appendChild(this.canonicalLink);
+  }
 
   start() {
     this.router.events
@@ -27,6 +36,13 @@ export class SeoService {
           this.updateTitleAndDescription(data);
           this.updateMetaTagsOpenGraph(data);
           this.updateMetaTagsTwitter(data);
+
+          const { pathname } = this.document.location;
+          this.canonicalLink.setAttribute(
+            'href',
+            `https://tomastrajan.com${pathname}`
+          );
+          this.ims.fireManualMyAppReadyEvent();
         })
       )
       .subscribe();
