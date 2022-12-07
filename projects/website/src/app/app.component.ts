@@ -56,12 +56,6 @@ export class AppComponent implements OnInit {
           if (isLarge) {
             resultClass = `responsive-large cols-${columnCount}`;
           }
-          console.log('AppComponent', {
-            isSmall,
-            isLarge,
-            columnCount,
-            resultClass,
-          });
           this.host.nativeElement.className = resultClass;
         }),
         map(([isSmall]) => isSmall)
