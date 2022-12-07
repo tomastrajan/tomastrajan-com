@@ -50,3 +50,5 @@ Thumbs.db
 # local
 .scully
 scully.log
+scully/plugins/**/*.js
+scully/plugins/**/*.js.map
