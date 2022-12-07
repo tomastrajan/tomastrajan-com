@@ -10,6 +10,6 @@
     matTooltipPosition="above"
     (click)="openInDialog(index)"
   >
-    <img [src]="image.src" [alt]="image.alt" />
+    <img loading="lazy" [src]="image.src" [alt]="image.alt" />
   </mat-grid-tile>
 </mat-grid-list>

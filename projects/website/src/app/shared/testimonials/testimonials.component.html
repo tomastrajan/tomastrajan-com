@@ -9,7 +9,7 @@
   >
     <div class="testimonial">
       <p>{{ testimonial.message }}</p>
-      <img [src]="testimonial.src" [alt]="testimonial.name" />
+      <img loading="lazy" [src]="testimonial.src" [alt]="testimonial.name" />
       <h2>{{ testimonial.name }}</h2>
       <h4>{{ testimonial.role }}</h4>
     </div>
