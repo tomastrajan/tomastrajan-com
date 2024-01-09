@@ -15,16 +15,16 @@ const NAVIGATION = [
       },
       {
         label: 'Getting reactive with RxJs',
-        url: 'workshops/getting-reactive-with-rxjs-workshop',
+        externalUrl: 'https://angularexperts.io/workshop-rxjs',
       },
       {
         label: 'Angular State Management',
-        url: 'workshops/angular-state-management-workshop-with-ngrx',
+        externalUrl: 'https://angularexperts.io/workshop-ngrx-state-management',
       },
-      {
-        label: 'Angular Reactive Forms',
-        url: 'workshops/angular-reactive-forms-workshop',
-      },
+      // {
+      //   label: 'Angular Reactive Forms',
+      //   url: 'workshops/angular-reactive-forms-workshop',
+      // },
       {
         label: 'Frontend Heroes',
         url: 'workshops/frontend-heroes-workshop',
